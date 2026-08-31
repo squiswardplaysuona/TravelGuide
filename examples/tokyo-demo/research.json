@@ -1,0 +1,252 @@
+{
+  "destination": { "country": "日本", "region": null, "city": "东京" },
+  "overview": {
+    "basics": "东京都：日本首都圈核心城市",
+    "positioning": "都市型目的地：商业、历史街区、美食密度高，轨道交通为出行骨干",
+    "key_features": [
+      "轨道交通高度发达，IC 卡（Suica/PASMO）通行面广",
+      "区域功能分化明显：历史街区、商业、夜生活各有集中区",
+      "面向游客的票种丰富（Tokyo Subway Ticket、都营+Metro 一日券、JR 周游券等）"
+    ],
+    "climate_note": "本次研究未核验气候数据；10 月上旬天气与台风影响由 weather Skill 临近确认",
+    "profile_relevant": [
+      "历史文化资源集中在城市东侧（浅草·上野一带，官方地区介绍口径），与 history/culture/photography 兴趣匹配",
+      "住宿地新宿为轨道枢纽且有机场直达轨道/巴士衔接，利于少步行完成机场—酒店转移"
+    ]
+  },
+  "gateway_transport": [
+    {
+      "name": "成田国际机场（NRT）",
+      "type": "airport",
+      "relevant": true,
+      "to_city": [
+        {
+          "mode": "N'EX 成田特快（JR 东日本，直达新宿）",
+          "approx_time": "成田机场→东京站最速约 53 分钟（官方）；至新宿约 80-85 分钟（多平台时刻口径）",
+          "source_tier": "S",
+          "confidence": "multi_source_consistent"
+        },
+        {
+          "mode": "京成 Skyliner（至日暮里/京成上野，往新宿需换乘 JR 山手线）",
+          "approx_time": "至日暮里约 36 分钟、京成上野约 41 分钟；含换乘往新宿约 70 分钟（聚合口径）",
+          "source_tier": "S",
+          "confidence": "multi_source_consistent"
+        },
+        {
+          "mode": "利木津巴士（新宿区域直达）",
+          "approx_time": "约 80-100 分钟，受路况影响",
+          "source_tier": "S",
+          "confidence": "multi_source_consistent"
+        },
+        {
+          "mode": "京成本线 Access 特快（廉价选项）",
+          "approx_time": "约 60-90 分钟",
+          "source_tier": "A",
+          "confidence": "single_source"
+        }
+      ],
+      "night_limit": "攻略口径称 N'EX 成田末班约 21:44（B 层单源，未官方核验）；本次 13:30 到达不受影响，临近出行仍需确认当日实际班次"
+    }
+  ],
+  "local_transport": [
+    {
+      "mode": "metro",
+      "summary": "东京 Metro 与都营地铁双网覆盖核心城区，游客专用票种多",
+      "tourist_tips": [
+        "Tokyo Subway Ticket（24/48/72 小时）仅限短期游客购买，覆盖东京 Metro+都营全线",
+        "都营+Metro 通用一日券成人 1,100 日元（官方口径）"
+      ],
+      "source_tier": "S",
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "mode": "transit_card",
+      "summary": "Suica/PASMO 等 IC 卡可用于电车、地铁、巴士",
+      "tourist_tips": ["充值即用，适合零散乘坐与站内消费"],
+      "source_tier": "S",
+      "confidence": "verified_official"
+    },
+    {
+      "mode": "rail",
+      "summary": "JR 山手线为环状骨干，衔接新宿、涩谷、上野、东京站等大站",
+      "tourist_tips": ["JR 东京广域周游券（成人 16,000 日元档）面向跨城/深度使用，本次市内 5 日行程非必要"],
+      "source_tier": "S",
+      "confidence": "verified_official"
+    }
+  ],
+  "entry_requirements": [
+    {
+      "subject": "visa",
+      "rule": "中国普通护照赴日观光需事先取得签证；赴日旅游签证（团队/个人）须经日本驻华大使馆指定代办机构办理，不受理个人直接递交",
+      "applies_to": "origin=中国, party=2 adults",
+      "status": "confirmed_current",
+      "source_tier": "S",
+      "confidence": "verified_official",
+      "checked_at": "2026-08-30"
+    },
+    {
+      "subject": "visa_electronic",
+      "rule": "单次旅游电子签证已上线（面向在中国大陆居住、持中国护照的申请人）",
+      "applies_to": "同上",
+      "status": "needs_nearer_confirmation",
+      "source_tier": "A",
+      "confidence": "single_source",
+      "checked_at": "2026-08-30"
+    },
+    {
+      "subject": "visa_policy_change",
+      "rule": "媒体报道称日本拟放宽中国公民签证措施，大使馆现行页面尚未反映放宽后口径",
+      "applies_to": "同上",
+      "status": "needs_nearer_confirmation",
+      "source_tier": "B",
+      "confidence": "single_source",
+      "checked_at": "2026-08-30"
+    }
+  ],
+  "current_events": [
+    {
+      "event": "中国国庆黄金周（10 月 1-7 日放假调休）",
+      "date": "2026-10-01 ~ 2026-10-07",
+      "location": "中国全域 → 日本方向航线及东京热门区域",
+      "expected_impact": "赴日客流高峰：机票/酒店价格上行、机场与热门街区排队增加；本次行程（10-01~05）完全落在假期内，建议临近关注票价与预约余量",
+      "source": "中国政府网《国务院办公厅关于2026年部分节假日安排的通知》（国庆节 10 月 1 日至 7 日放假调休共 7 天）",
+      "source_tier": "S",
+      "confidence": "verified_official",
+      "checked_at": "2026-08-30"
+    },
+    {
+      "event": "中国外交部/文旅部『避免前往日本』提醒（生效状态待确认）",
+      "date": "2026-03-26",
+      "date_note": "外交部提醒页更新于 2026-03-26；文旅部提醒始于 2025-11-15；驻日本大使馆 2026 年 7 月仍在发布地震防范（07-29）、交通安全（07-21）等日常领事提醒——『避免前往』提醒是否已解除未能确认",
+      "location": "中国 → 日本全域",
+      "expected_impact": "重大：直接影响本次旅行可行性、签证受理节奏、航班供给与旅行保险判断；须在进入候选/规划阶段前由用户知情决策",
+      "source": "中国外交部官网安全提醒页；中国驻日本大使馆领事提醒专栏",
+      "source_tier": "S",
+      "confidence": "verified_official",
+      "checked_at": "2026-08-30"
+    },
+    {
+      "event": "FaW TOKYO 秋季展（东京时尚产业展）",
+      "date": null,
+      "date_note": "仅确认『2026 年 10 月秋季举办』，具体日期未确认，是否落在 10-01~05 窗口内未知",
+      "location": "东京（会场未确认）",
+      "expected_impact": "行业展会，对普通游客影响有限；若与行程重叠可能推高部分区域酒店入住率",
+      "source": "展会聚合平台（聚展网/去展网）",
+      "source_tier": "B",
+      "confidence": "single_source",
+      "checked_at": "2026-08-30"
+    }
+  ],
+  "travel_regions": [
+    {
+      "region": "浅草·上野（台东区）",
+      "character": ["历史文化", "传统街区"],
+      "fits_interests": ["history", "culture", "photography"],
+      "experience_note": "官方定位：浅草拥有古老寺庙与传统商店（JNTO）；攻略普遍将其视为『老东京』历史文化散步区",
+      "confidence": "verified_official"
+    },
+    {
+      "region": "谷根千（谷中·根津·千驮木）",
+      "character": ["老街风貌", "摄影"],
+      "fits_interests": ["photography", "history", "culture"],
+      "experience_note": "仅攻略社区口径（B 层）：低层老街与巷弄被视为东京怀旧摄影代表区；官方页面未见专门板块",
+      "confidence": "single_source"
+    },
+    {
+      "region": "新宿",
+      "character": ["商业娱乐", "美食", "夜生活"],
+      "fits_interests": ["food", "photography"],
+      "experience_note": "官方定位：繁华商业区、摩天楼与情调后街酒吧（JNTO）；攻略普遍提示新宿站规模大、站内步行与换乘距离长——对 cannot_walk_long 用户，区域内部移动需预留余量",
+      "confidence": "verified_official"
+    },
+    {
+      "region": "涩谷·原宿",
+      "character": ["时尚潮流", "青年文化"],
+      "fits_interests": ["photography"],
+      "experience_note": "官方定位：时尚购物区（JNTO）；与本次画像相关度中等",
+      "confidence": "verified_official"
+    },
+    {
+      "region": "银座·东京站周边",
+      "character": ["高端商业", "建筑街区"],
+      "fits_interests": ["food"],
+      "experience_note": "官方定位：奢侈品旗舰店聚集（JNTO 繁中版）；美食资源密度高",
+      "confidence": "verified_official"
+    }
+  ],
+  "accommodation_areas": [
+    {
+      "area": "新宿（本次已订，区域级）",
+      "character": "轨道枢纽型住宿带：多线交汇、有机场直达轨道与巴士、餐饮与便利店密度高",
+      "access": "成田方向：N'EX 直达（约 80-85 分钟）或利木津巴士直达（约 80-100 分钟）——与 profile 中 10-01 13:30 成田到达直接衔接",
+      "fits": "节奏慢（slow）、少步行（cannot_walk_long）偏好的游客：直达少换乘最能压缩步行与拖行李距离；但新宿站站区步行距离需留意",
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "area": "上野·浅草（对照项）",
+      "character": "历史文化近邻型住宿带",
+      "access": "无机场直达轨道，需换乘",
+      "fits": "历史文化偏好者；价格带通常更友好（B 层攻略口径，非官方）",
+      "confidence": "single_source"
+    }
+  ],
+  "source_registry": [
+    { "name": "中国政府网（国务院办公厅 2026 年节假日安排通知）", "url": "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html", "tier": "S", "topic": "events", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "中国外交部官网·安全提醒（避免前往日本，2026-03-26）", "url": "https://www.mfa.gov.cn/wjbzwfwpt/kzx/aqtx/zwqw/202603/t20260326_11881693.html", "tier": "S", "topic": "safety", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "中国驻日本大使馆·领事提醒专栏", "url": "https://jp.china-embassy.gov.cn/lsfw_0/lstx_138409/", "tier": "S", "topic": "safety", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "日本国驻华大使馆·赴日签证咨询", "url": "https://www.cn.emb-japan.go.jp/consular.htm", "tier": "S", "topic": "visa", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "日本国驻华大使馆·赴日旅游签证（团队与个人）", "url": "https://www.cn.emb-japan.go.jp/consular/visa_dantai.htm", "tier": "S", "topic": "visa", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "JR 东日本·N'EX 成田特快官方页", "url": "https://www.jreast.co.jp/multi/nex/", "tier": "S", "topic": "railway", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "京成电铁·Skyliner 票价官方页", "url": "https://www.keisei.co.jp/keisei/tetudou/skyliner/tc/traffic/skyliner_fares.php", "tier": "S", "topic": "railway", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "利木津巴士·新宿区域⇔成田机场线官方页", "url": "https://www.limousinebus.co.jp/ja/line/detail/Narita-Shinjuku/", "tier": "S", "topic": "airport", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "东京旅游官方网站 GO TOKYO·交通 IC 卡与优惠车票", "url": "https://www.gotokyo.org/cn/plan/getting-around/ic-card/index.html", "tier": "S", "topic": "local_transport", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "东京 Metro·一日通票/Tokyo Subway Ticket 官方页", "url": "https://www.tokyometro.jp/cn/ticket/1day/index.html", "tier": "S", "topic": "local_transport", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "JR 东日本·JR 东京广域周游券官方页", "url": "https://www.jreast.co.jp/zh-CHS/multi/pass/tokyowidepass.html", "tier": "S", "topic": "local_transport", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "东京旅游官方网站 GO TOKYO·各地区 SPOT 导览", "url": "https://www.gotokyo.org/tc/spot/index.html", "tier": "S", "topic": "tourism", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "日本国家旅游局 JNTO·东京目的地页（中文官方）", "url": "https://www.japan-travel.cn/destinations/kanto/tokyo/", "tier": "S", "topic": "tourism", "checked_at": "2026-08-30", "reliability": "primary_official" },
+    { "name": "NAVITIME·成田机场⇔新宿 N'EX 时刻", "url": "https://www.navitime.co.jp/diagram/depArrTimeList?departure=00004637&arrival=00004254&line=00000161&updown=0", "tier": "A", "topic": "railway", "checked_at": "2026-08-30", "reliability": "high" },
+    { "name": "駅探·N'EX 新宿⇔成田空港时刻/票价", "url": "https://ekitan.com/transit/express/section/exm-110392/exs-110392001/sf-2334/st-2692", "tier": "A", "topic": "railway", "checked_at": "2026-08-30", "reliability": "high" },
+    { "name": "乐吃购！日本·成田机场交通攻略（N'EX 班次/末班口径）", "url": "https://tokyo.letsgojp.com/archives/806704/", "tier": "B", "topic": "railway", "checked_at": "2026-08-30", "reliability": "medium" },
+    { "name": "展会聚合平台（聚展网/去展网）·2026 年 10 月日本展会", "url": "https://www.qufair.com/", "tier": "B", "topic": "events", "checked_at": "2026-08-30", "reliability": "medium" }
+  ],
+  "conflicts": [
+    {
+      "topic": "中国公民赴日签证政策口径",
+      "positions": [
+        { "source": "日本国驻华大使馆官网（现行规程）", "claim": "旅游签证须经指定代办机构办理，现行页面未反映放宽口径" },
+        { "source": "媒体报道（DW 等）", "claim": "日本拟放宽中国公民签证措施" }
+      ],
+      "adopted": "按现行官方要求规划（代办机构 + 签证办理时间），不以未生效的放宽口径做假设",
+      "needs_recheck": true
+    },
+    {
+      "topic": "赴日安全口径",
+      "positions": [
+        { "source": "外交部/文旅部（2025-11 起）", "claim": "多次提醒中国公民避免前往日本" },
+        { "source": "驻日使馆领事提醒专栏（2026-07）", "claim": "仅有地震/交通等常规提醒，未见『避免前往』的解除公告" }
+      ],
+      "adopted": "取更保守口径：按提醒仍生效处理，临近出行复核官方页面后再决策",
+      "needs_recheck": true
+    }
+  ],
+  "warnings": [
+    { "topic": "trip_feasibility", "note": "外交部『避免前往日本』提醒（2026-03-26 更新）未见解除公告——是本次研究的第一不确定项，直接关系行程可行性，须由用户知情决策并临近复核官方页面" },
+    { "topic": "visa", "note": "签证政策处于变动窗口（媒体称放宽 vs 官方未更新），代办办理周期可能变化，需临近确认并预留办理时间" },
+    { "topic": "events", "note": "10-01~05 窗口内东京大型活动未获确认条目（音乐厅 10 月公历自 10/6 起密集）；临近需复查活动日历与场馆公告" },
+    { "topic": "transport_night", "note": "N'EX 成田末班时刻仅 B 层单源（约 21:44，未官方核验）；本次 13:30 到达不受影响，如航班变动需临近确认" }
+  ],
+  "research_meta": {
+    "researched_for": { "destination": "日本/东京", "start": "2026-10-01", "end": "2026-10-05" },
+    "checked_at": "2026-08-30",
+    "coverage": "7/7 模块完成；gateway 按 booked 锚点聚焦成田机场并深化成田→新宿衔接（官方三来源）；current_events 聚焦旅行窗口（中国国庆黄金周 + 赴日安全提醒）；搜索服务多次超时，已换措辞/换语言重试后补齐",
+    "limitations": [
+      "天气与气候未研究（weather Skill 职责）；overview.climate_note 未核验",
+      "出租车/网约车/渡轮/步行环境未做专项核验",
+      "日本 10 月上旬法定假日安排未单独核验（初算体育之日 10-12 在窗口外，未获官方来源确认）",
+      "酒店名称未定（profile 中为新宿区域级锚点），accommodation_areas 按区域研究",
+      "窗口内演唱会/展会具体日程未获确认条目，活动日历需临近复查",
+      "成田机场官方 access 页为枢纽页，具体交通细节以铁路/巴士运营方官方页核验（JR 东日本/京成/利木津均已登记）",
+      "POI 画像、评论分析、POI 间路线、逐景点票务不在本 Skill 范围"
+    ]
+  }
+}

@@ -1,0 +1,1167 @@
+{
+  "destination": {
+    "country": "日本",
+    "region": null,
+    "city": "东京"
+  },
+  "checked_at": "2026-08-30",
+  "poi_constraints": [
+    {
+      "poi_name": "浅草寺（含仲见世通）",
+      "fact_status": "official_confirmed",
+      "opening": {
+        "regular": "境内 24 小时开放；本堂 10 月～3 月 6:30-17:00（官方）",
+        "special_dates": [],
+        "last_entry": "不适用（境内常时开放）",
+        "status": "official_confirmed"
+      },
+      "ticket": [
+        {
+          "amount": 0,
+          "currency": "JPY",
+          "basis": "per_entry",
+          "category": "adult",
+          "status": "official_confirmed"
+        }
+      ],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "无预约体系",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "official_confirmed"
+      },
+      "availability": {
+        "status": "available",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05 全窗口",
+        "source": {
+          "name": "浅草寺官网",
+          "url": "https://www.senso-ji.jp/",
+          "tier": "S"
+        }
+      },
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "浅草寺官网（candidates 阶段登记，本轮复用）",
+          "url": "https://www.senso-ji.jp/",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        }
+      ]
+    },
+    {
+      "poi_name": "东京国立博物馆",
+      "fact_status": "official_confirmed",
+      "opening": {
+        "regular": "9:30-17:00；周五、周六、特定节假日前周日延长至 20:00（官方 FAQ）",
+        "special_dates": [
+          {
+            "date": "2026-10-02",
+            "note": "周五——当日开馆至 20:00（延长规则适用，官方规则推断）"
+          },
+          {
+            "date": "2026-10-05",
+            "note": "周一——常规闭馆日（官方）"
+          }
+        ],
+        "last_entry": "闭馆前 30 分钟（平日 16:30 / 延长日 19:30）",
+        "status": "official_confirmed"
+      },
+      "ticket": [
+        {
+          "amount": 1000,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "adult",
+          "status": "official_confirmed"
+        },
+        {
+          "amount": 500,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "other（大学生）",
+          "status": "official_confirmed"
+        },
+        {
+          "amount": 0,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "other（70 岁以上/18 岁以下/高中生以下，需年龄证明）",
+          "status": "official_confirmed"
+        }
+      ],
+      "reservation": {
+        "required": true,
+        "recommended": true,
+        "channel": "官网在线预约（含免费入馆者与会员在内，所有参观者须事先预约）",
+        "advance": "unknown（官方 FAQ 未载明提前量）",
+        "booking_open_window": null,
+        "status": "official_confirmed"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05",
+        "source": {
+          "name": "官方系统未展示目标日期余票",
+          "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=156&lang=zh_cn",
+          "tier": "S"
+        }
+      },
+      "hard_constraints": [
+        {
+          "type": "closed",
+          "date": "2026-10-05",
+          "reason": "周一常规闭馆（官方；逢节假日则开馆翌日闭——10-05 非节假日）"
+        },
+        {
+          "type": "reservation_required",
+          "target": "东京国立博物馆",
+          "reason": "官方明确：所有参观者（含免费者）须事先网上预约"
+        },
+        {
+          "type": "ticket_required",
+          "target": "东京国立博物馆",
+          "reason": "常规展成人 1,000 日元（官方）；特展票价另计"
+        }
+      ],
+      "sources": [
+        {
+          "source": "东京国立博物馆官网 FAQ（中文）",
+          "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=156&lang=zh_cn",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        }
+      ]
+    },
+    {
+      "poi_name": "谷中银座·谷根千街区",
+      "fact_status": "unverified",
+      "opening": {
+        "regular": "开放式街区，无统一闭门时间（B 层口径）",
+        "special_dates": [],
+        "last_entry": "不适用",
+        "status": "unverified"
+      },
+      "ticket": [
+        {
+          "amount": 0,
+          "currency": "JPY",
+          "basis": "per_entry",
+          "category": "adult",
+          "status": "preliminary"
+        }
+      ],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "无预约体系（街区）",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05",
+        "source": {
+          "name": "街区型，无官方核验来源",
+          "url": "",
+          "tier": null
+        }
+      },
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "KKday 谷根千攻略（街区属性，非官方）",
+          "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi",
+          "source_tier": "B",
+          "checked_at": "2026-08-30",
+          "confidence": "single_source"
+        }
+      ]
+    },
+    {
+      "poi_name": "根津神社",
+      "fact_status": "unverified",
+      "opening": {
+        "regular": "unknown（本次未获得官方开门/闭门时间）",
+        "special_dates": [],
+        "last_entry": "unknown",
+        "status": "unverified"
+      },
+      "ticket": [
+        {
+          "amount": 0,
+          "currency": "JPY",
+          "basis": "per_entry",
+          "category": "adult",
+          "status": "preliminary"
+        }
+      ],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "无预约体系（神社境内）",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05",
+        "source": {
+          "name": "未获得官方来源",
+          "url": "",
+          "tier": null
+        }
+      },
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "仅 B 层攻略（candidates 阶段）",
+          "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi",
+          "source_tier": "B",
+          "checked_at": "2026-08-30",
+          "confidence": "single_source"
+        }
+      ]
+    },
+    {
+      "poi_name": "新宿御苑",
+      "fact_status": "official_confirmed",
+      "opening": {
+        "regular": "10/1～3/14 期间：9:00-16:30（官方入园指南，本轮直接核验）",
+        "special_dates": [
+          {
+            "date": "2026-10-05",
+            "note": "周一——常规休园日（官方：每周一休园，逢节假日顺延翌平日；10-05 非节假日）"
+          },
+          {
+            "note": "春季 3/25-4/24、秋季 11/1-15 无休园日——10 月上旬不在无休园特别期"
+          }
+        ],
+        "last_entry": "闭园前 30 分钟（10 月档为 16:00）",
+        "status": "official_confirmed"
+      },
+      "ticket": [
+        {
+          "amount": 500,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "adult",
+          "status": "official_confirmed"
+        },
+        {
+          "amount": 250,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "senior（65+）/学生（高中以上）",
+          "status": "official_confirmed"
+        },
+        {
+          "amount": 0,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "other（中学生以下）",
+          "status": "official_confirmed"
+        }
+      ],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "各入园门售票处（无预约体系）",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "official_confirmed"
+      },
+      "availability": {
+        "status": "available",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~04（10-05 休园）",
+        "source": {
+          "name": "国民公园协会 新宿御苑入园指南",
+          "url": "https://fng.or.jp/shinjuku/guide/",
+          "tier": "S"
+        }
+      },
+      "hard_constraints": [
+        {
+          "type": "closed",
+          "date": "2026-10-05",
+          "reason": "周一常规休园（官方入园指南）"
+        }
+      ],
+      "sources": [
+        {
+          "source": "国民公园协会 新宿御苑入园指南（本轮直接核验）",
+          "url": "https://fng.or.jp/shinjuku/guide/",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        },
+        {
+          "source": "环境省 新宿御苑官网",
+          "url": "https://policies.env.go.jp/national-garden/shinjukugyoen/",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        }
+      ]
+    },
+    {
+      "poi_name": "思出横丁（思い出横丁）",
+      "fact_status": "unverified",
+      "opening": {
+        "regular": "店铺各自营业，傍晚至夜间为主（B 层口径）",
+        "special_dates": [],
+        "last_entry": "不适用",
+        "status": "unverified"
+      },
+      "ticket": [],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "多数店为 walk-up",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05",
+        "source": {
+          "name": "未获统一官方来源",
+          "url": "",
+          "tier": null
+        }
+      },
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "思出横丁官网 + 攻略（candidates 阶段登记）",
+          "url": "https://cn.shinjuku-omoide.com/",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "single_source"
+        }
+      ]
+    },
+    {
+      "poi_name": "东京都厅展望室",
+      "fact_status": "official_confirmed",
+      "opening": {
+        "regular": "南展望室 9:30-22:00（入室至 21:30）；北展望室 9:30-17:30（入室至 17:00）；南休室时北开至 22:00",
+        "special_dates": [
+          {
+            "note": "休室日规则：南=第 1/第 3 周二；北=第 2/第 4 周一；逢祝日开室、翌平日休室（多源一致，官方日历需临近核对）"
+          },
+          {
+            "note": "窗口内逐日：10-01（四）~10-04（日）南北均常规开放；10-05（一）为第 1 个周一——非北休室日（第 2/4 周一），南北均开放"
+          },
+          {
+            "note": "设施点检日不定期（官方例：2026-05-09 终日不可用）——窗口内是否有点检日无法确认"
+          }
+        ],
+        "last_entry": "闭室前 30 分钟",
+        "status": "official_confirmed"
+      },
+      "ticket": [
+        {
+          "amount": 0,
+          "currency": "JPY",
+          "basis": "per_entry",
+          "category": "adult",
+          "status": "official_confirmed"
+        }
+      ],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "无预约体系（免费入室）",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "official_confirmed"
+      },
+      "availability": {
+        "status": "available",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05（除不定期点检日）",
+        "source": {
+          "name": "东京都财务局 都厅见学案内",
+          "url": "https://www.zaimu.metro.tokyo.lg.jp/tochousha/goannai",
+          "tier": "S"
+        }
+      },
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "东京都财务局 都厅见学案内（官方）",
+          "url": "https://www.zaimu.metro.tokyo.lg.jp/tochousha/goannai",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        },
+        {
+          "source": "GO TOKYO 都厅页 + 多旅游站聚合口径（南北时刻/休室日）",
+          "url": "https://www.gotokyo.org/tc/spot/74/index.html",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "multi_source_consistent"
+        }
+      ]
+    },
+    {
+      "poi_name": "银座中央通街区",
+      "fact_status": "unverified",
+      "opening": {
+        "regular": "街区常时；百货设施时间各异（preliminary）",
+        "special_dates": [],
+        "last_entry": "不适用",
+        "status": "unverified"
+      },
+      "ticket": [],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "无预约体系（街区）",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05",
+        "source": {
+          "name": "街区型，无统一官方来源",
+          "url": "",
+          "tier": null
+        }
+      },
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "bobbytravel/gltjp（银座攻略，candidates 阶段登记）",
+          "url": "https://bobbytravel.tw/ginza/",
+          "source_tier": "B",
+          "checked_at": "2026-08-30",
+          "confidence": "single_source"
+        }
+      ]
+    },
+    {
+      "poi_name": "明治神宫",
+      "fact_status": "official_confirmed",
+      "opening": {
+        "regular": "10 月：5:40-16:40（开闭门随日出日落逐月变动——官网规则 + 月别表多源确认）",
+        "special_dates": [],
+        "last_entry": "不适用（闭门前可参拜；御苑/宝物殿等付费设施另有时间）",
+        "status": "official_confirmed"
+      },
+      "ticket": [
+        {
+          "amount": 0,
+          "currency": "JPY",
+          "basis": "per_entry",
+          "category": "adult",
+          "status": "preliminary"
+        }
+      ],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "无预约体系（参拜）",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "official_confirmed"
+      },
+      "availability": {
+        "status": "available",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05 全窗口",
+        "source": {
+          "name": "明治神宫官网（开闭门规则）+ gltjp",
+          "url": "https://www.meijijingu.or.jp/",
+          "tier": "S"
+        }
+      },
+      "hard_constraints": [
+        {
+          "type": "time_restriction",
+          "target": "明治神宫",
+          "reason": "10 月闭门时间为 16:40——当日行程须在此前完成参拜（官方规则推断）"
+        }
+      ],
+      "sources": [
+        {
+          "source": "明治神宫官网（开闭门规则）",
+          "url": "https://www.meijijingu.or.jp/",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        },
+        {
+          "source": "WaTabi/gltjp（10 月 5:40-16:40 月别表转述）",
+          "url": "https://watabi.org/articles/meiji-jingu-guide",
+          "source_tier": "B",
+          "checked_at": "2026-08-30",
+          "confidence": "multi_source_consistent"
+        }
+      ]
+    },
+    {
+      "poi_name": "表参道·原宿街区",
+      "fact_status": "unverified",
+      "opening": {
+        "regular": "街区常时；店铺各异（preliminary）",
+        "special_dates": [],
+        "last_entry": "不适用",
+        "status": "unverified"
+      },
+      "ticket": [],
+      "reservation": {
+        "required": false,
+        "recommended": false,
+        "channel": "无预约体系（街区）",
+        "advance": null,
+        "booking_open_window": null,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05",
+        "source": {
+          "name": "街区型，无统一官方来源",
+          "url": "",
+          "tier": null
+        }
+      },
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "乐吃购/JEEPE（原宿攻略，candidates 阶段登记）",
+          "url": "https://tokyo.letsgojp.com/archives/491652/",
+          "source_tier": "B",
+          "checked_at": "2026-08-30",
+          "confidence": "single_source"
+        }
+      ]
+    },
+    {
+      "poi_name": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "fact_status": "official_confirmed",
+      "opening": {
+        "regular": "10:00-22:30（最后入场 21:20），全年无休（官方购票页）",
+        "special_dates": [
+          {
+            "note": "强风/恶劣天气时露天 SKY STAGE 关闭或受限（场馆结构规则）"
+          }
+        ],
+        "last_entry": "21:20",
+        "status": "official_confirmed"
+      },
+      "ticket": [
+        {
+          "amount": 2700,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "adult（在线购票，15:00 前入场）",
+          "status": "official_confirmed"
+        },
+        {
+          "amount": 3400,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "adult（在线购票，15:00 后入场）",
+          "status": "official_confirmed"
+        }
+      ],
+      "reservation": {
+        "required": true,
+        "recommended": true,
+        "channel": "官网在线购票（指定日期+入场时段，扫码入场）；Klook/KKday 等平台同步",
+        "advance": "可提前约 2 周购票（官方规则）",
+        "booking_open_window": {
+          "opens_at": "2026-09-17 前后（出行日 2 周前，按官方'提前 2 周'规则推算）",
+          "rule": "提前 2 周开放指定日期时段购票；日落黄金时段秒罄",
+          "timezone": "Asia/Tokyo",
+          "source": {
+            "url": "https://www.shibuya-scramble-square.com/sky/ticket/",
+            "tier": "S"
+          }
+        },
+        "status": "official_confirmed"
+      },
+      "availability": {
+        "status": "not_open_for_booking",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01 场次（约 2026-09-17 开放购票）",
+        "source": {
+          "name": "SHIBUYA SKY 官方购票页规则",
+          "url": "https://www.shibuya-scramble-square.com/sky/ticket/",
+          "tier": "S"
+        }
+      },
+      "hard_constraints": [
+        {
+          "type": "reservation_required",
+          "target": "Shibuya Sky",
+          "reason": "日时指定制，须提前在线购票指定日期与入场时段"
+        },
+        {
+          "type": "ticket_required",
+          "target": "Shibuya Sky",
+          "reason": "付费展望台（在线 2,700/3,400 日元按入场时段）"
+        },
+        {
+          "type": "booking_window",
+          "target": "Shibuya Sky",
+          "reason": "2026-10-01 场次约 2026-09-17 起开放购票——checked_at 时点尚未开放（not_open_for_booking）"
+        }
+      ],
+      "sources": [
+        {
+          "source": "SHIBUYA SKY 官方购票页",
+          "url": "https://www.shibuya-scramble-square.com/sky/ticket/",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        }
+      ]
+    },
+    {
+      "poi_name": "teamLab Borderless（麻布台之丘）",
+      "fact_status": "official_confirmed",
+      "opening": {
+        "regular": "基本 10:00-21:00（最终入场为闭馆前约 1 小时）",
+        "special_dates": [
+          {
+            "date": "2026-10-01 / 10-02 / 10-05",
+            "note": "官方 22 时闭馆日：10 月 1-2 日、5-9 日闭馆延长至 22:00（官方 JP 页载明）——窗口内 10-01/02/05 为 22:00 闭馆日"
+          }
+        ],
+        "last_entry": "闭馆前约 1 小时",
+        "status": "official_confirmed"
+      },
+      "ticket": [
+        {
+          "amount": 3800,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "adult（16 岁以上/高校生以上，起价，变动料金制）",
+          "status": "official_confirmed"
+        },
+        {
+          "amount": 1500,
+          "currency": "JPY",
+          "basis": "per_person",
+          "category": "child（子ども）",
+          "status": "official_confirmed"
+        }
+      ],
+      "reservation": {
+        "required": false,
+        "recommended": true,
+        "channel": "官网在线事前购买（QR 码入场；日时指定制、变动料金制）",
+        "advance": "unknown（官方未载明统一提前量；热门日售罄风险高——黄金周窗口叠加）",
+        "booking_open_window": null,
+        "status": "official_confirmed"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30",
+        "valid_for": "2026-10-01~05",
+        "source": {
+          "name": "官方系统未展示目标日期余票",
+          "url": "https://www.teamlab.art/jp/e/tokyo/",
+          "tier": "S"
+        }
+      },
+      "hard_constraints": [
+        {
+          "type": "ticket_required",
+          "target": "teamLab Borderless",
+          "reason": "日时指定制付费场馆（变动料金制），须购票入场"
+        },
+        {
+          "type": "time_restriction",
+          "target": "teamLab Borderless",
+          "reason": "10-01/02/05 为 22:00 闭馆日（其余 21:00），最终入场闭馆前约 1 小时"
+        }
+      ],
+      "sources": [
+        {
+          "source": "teamLab 官方（チームラボボーダレス 麻布台ヒルズ JP 页：营业/22 时闭馆日/票价/地址 港区麻布台1-2-4/神谷町站 5 番出口）",
+          "url": "https://www.teamlab.art/jp/e/tokyo/",
+          "source_tier": "S",
+          "checked_at": "2026-08-30",
+          "confidence": "verified_official"
+        }
+      ]
+    }
+  ],
+  "food_constraints": [
+    {
+      "name": "とん久（Masaru，浅草天妇罗老铺）",
+      "opening": {
+        "status": "unknown",
+        "note": "未核验"
+      },
+      "price": {
+        "status": "preliminary"
+      },
+      "reservation": {
+        "required": null,
+        "status": "unknown"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [],
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "LIVE JAPAN（B 层）",
+          "url": "https://livejapan.com/en/in-tokyo/in-pref-tokyo/in-tokyo_train_station/article-a0002059/",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "unverified"
+    },
+    {
+      "name": "梅园（浅草传统和菓子，1854 年创业）",
+      "opening": {
+        "status": "unknown",
+        "note": "创业年代有来源（1854），营业时间未核验"
+      },
+      "price": {
+        "status": "preliminary"
+      },
+      "reservation": {
+        "required": false,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [],
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "japan-guide（B 层）",
+          "url": "https://www.japan-guide.com/e/e3004.html",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "unverified"
+    },
+    {
+      "name": "中村屋 本店（新宿老铺洋食/印度咖喱）",
+      "opening": {
+        "status": "unknown"
+      },
+      "price": {
+        "status": "preliminary"
+      },
+      "reservation": {
+        "required": null,
+        "status": "unknown"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [],
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "社区帖（B 层）",
+          "url": "",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "unverified"
+    },
+    {
+      "name": "鸟辰（新宿烧鸟居酒屋，30 年老店）",
+      "opening": {
+        "status": "unknown",
+        "note": "居酒屋夜间营业为普遍口径，未核验"
+      },
+      "price": {
+        "status": "preliminary（per_dish 计价）"
+      },
+      "reservation": {
+        "required": null,
+        "status": "unknown"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [],
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "新宿居酒屋攻略（B 层）",
+          "url": "",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "unverified"
+    },
+    {
+      "name": "寿司 Takahiro（新宿）",
+      "opening": {
+        "status": "unknown"
+      },
+      "price": {
+        "status": "preliminary"
+      },
+      "reservation": {
+        "required": true,
+        "status": "preliminary",
+        "channel": "预约平台（OMAKASE JE/KKday 等，B 层口径）",
+        "advance": "热门店提前数周（B 层普遍口径）"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [],
+      "hard_constraints": [
+        {
+          "type": "reservation_recommended",
+          "target": "寿司 Takahiro",
+          "reason": "omakase 预约制为主（preliminary——需官方核验后升级）"
+        }
+      ],
+      "sources": [
+        {
+          "source": "KKday（B 层）",
+          "url": "https://kkday.com/zh-hk/blog/jp-restaurants/128899",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "preliminary"
+    },
+    {
+      "name": "东京拉面街（东京站一番街 B1，8 店集合）",
+      "opening": {
+        "status": "preliminary",
+        "note": "随东京站一番街设施时间；位置/构成已 official_confirmed（官方中文指南页）"
+      },
+      "price": {
+        "status": "preliminary"
+      },
+      "reservation": {
+        "required": false,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [
+        {
+          "note": "随东京站设施节假日安排（未逐店核验）"
+        }
+      ],
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "东京站一番街官方中文指南（S 层）",
+          "url": "https://www.tokyoeki-1bangai.co.jp/street/ramen/ch/",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "official_confirmed"
+    },
+    {
+      "name": "A Happy Pancake（The Shibuya）",
+      "opening": {
+        "status": "unknown"
+      },
+      "price": {
+        "status": "preliminary"
+      },
+      "reservation": {
+        "required": null,
+        "status": "unknown"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [],
+      "hard_constraints": [],
+      "sources": [
+        {
+          "source": "Tripadvisor（B 层）",
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1066456-d10479091-Reviews-A_Happy_Pancake_The_Shibuya-Shibuya_Tokyo_Tokyo_Prefecture_Kanto.html",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "unverified"
+    },
+    {
+      "name": "Sawada（东京高级寿司，午市样本）",
+      "opening": {
+        "status": "unknown"
+      },
+      "price": {
+        "amount": 20000,
+        "currency": "JPY",
+        "basis": "per_person",
+        "status": "preliminary（午市档，Tokyo Table Trip 口径）"
+      },
+      "reservation": {
+        "required": true,
+        "status": "preliminary"
+      },
+      "availability": {
+        "status": "unknown",
+        "checked_at": "2026-08-30"
+      },
+      "special_dates": [],
+      "hard_constraints": [
+        {
+          "type": "reservation_required",
+          "target": "Sawada",
+          "reason": "高级寿司预约制（preliminary——需官方核验后升级）"
+        }
+      ],
+      "sources": [
+        {
+          "source": "Tokyo Table Trip（B 层）",
+          "url": "",
+          "checked_at": "2026-08-30"
+        }
+      ],
+      "fact_status": "preliminary"
+    }
+  ],
+  "booking_windows": [
+    {
+      "target": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "booking_type": "ticket",
+      "opens_at": "2026-09-17 前后（官方规则：出行日前 2 周开放指定日期时段购票）",
+      "for_date": "2026-10-01（其余 10-02~05 依次类推）",
+      "source": "SHIBUYA SKY 官方购票页（S）",
+      "status": "not_open_for_booking"
+    },
+    {
+      "target": "teamLab Borderless（麻布台之丘）",
+      "booking_type": "ticket",
+      "opens_at": "已开放（官方在线售票中，日时指定制/变动料金制）",
+      "for_date": "2026-10-01~05",
+      "source": "teamLab 官方 JP 页（S）",
+      "status": "open"
+    },
+    {
+      "target": "东京国立博物馆",
+      "booking_type": "reservation",
+      "opens_at": "unknown（官方 FAQ 未载明预约开放窗口）",
+      "for_date": "2026-10-01~05",
+      "source": "tnm.jp 官方 FAQ（S）",
+      "status": "cannot_confirm"
+    },
+    {
+      "target": "寿司 Takahiro",
+      "booking_type": "reservation",
+      "opens_at": "unknown（预约平台口径：热门店需提前数周）",
+      "for_date": "2026-10-01~05",
+      "source": "KKday（B）",
+      "status": "cannot_confirm"
+    }
+  ],
+  "availability_summary": {
+    "fact_status_counts": {
+      "official_confirmed": 8,
+      "preliminary": 2,
+      "unverified": 10,
+      "expired": 0,
+      "conflict": 0,
+      "unavailable": 0
+    },
+    "availability_status_counts": {
+      "available": 4,
+      "limited": 0,
+      "sold_out": 0,
+      "unknown": 15,
+      "not_open_for_booking": 1
+    },
+    "note": "fact_status 与 availability.status 为两个维度：前者衡量事实核验状态，后者衡量库存/可用性。由条目实际统计，可重算。"
+  },
+  "conflicts": [
+    {
+      "target": "东京国立博物馆",
+      "topic": "预约要求与票价",
+      "positions": [
+        {
+          "source": "candidates.json（poi-attraction 阶段）",
+          "claim": "reservation.required=false（preliminary）；票价未核验"
+        },
+        {
+          "source": "review-analysis fact_claim_conflicts",
+          "claim": "官方 FAQ：成人 1,000 日元、所有参观者须事先网上预约"
+        },
+        {
+          "source": "tnm.jp 官方 FAQ（本轮直接核验）",
+          "claim": "成人 1,000 日元/大学生 500；入馆须提前网上预约（含免费者）；周一闭馆"
+        }
+      ],
+      "adopted": "官方结果（official_confirmed）：required=true、成人 1,000 日元、周一闭馆——candidates.json 未被修改，本文件为事实真相层",
+      "needs_recheck": false
+    },
+    {
+      "target": "东京都厅展望室",
+      "topic": "南北展望室夜间开放与休室安排",
+      "positions": [
+        {
+          "source": "candidates.json（GO TOKYO/都财务局口径）",
+          "claim": "南 9:30-22:00 / 北 9:30-17:30（南休时北至 22:00）；北休=第 2/4 周一、南休=第 1/3 周二"
+        },
+        {
+          "source": "游记（bobbytravel/窝日本等）",
+          "claim": "南展望室夜间开放（夜景热门）；部分早期摘要称北翼夜间开放"
+        }
+      ],
+      "adopted": "多源一致口径：南 22:00 止（夜间开放）/ 北 17:30 止（南休时北 22:00）——'北翼常规夜间开放'说法与官方结构不符，判定为对'南休时北代开'规则的误读；窗口内（10-01~05）无常规休室日；点检日不定期需以财务局开室日历临近复核",
+      "needs_recheck": true
+    },
+    {
+      "target": "新宿御苑",
+      "topic": "10 月开放档位",
+      "positions": [
+        {
+          "source": "candidates.json（poi-attraction 阶段）",
+          "claim": "10 月开放档位未确认（preliminary）"
+        },
+        {
+          "source": "国民公园协会入园指南（本轮直接核验）",
+          "claim": "10/1～3/14 期间 9:00-16:30（最后入园 16:00）"
+        }
+      ],
+      "adopted": "官方指南口径（official_confirmed）——上游 preliminary 疑问闭环",
+      "needs_recheck": false
+    }
+  ],
+  "warnings": [
+    {
+      "topic": "inventory_volatility",
+      "note": "availability/库存实时变化：Shibuya Sky 黄金周日落档秒罄风险高（多源），9-17 开票后须尽快购票；teamLab 周末节假日售罄风险（官方口径）——均需临近复查",
+      "checked_at": "2026-08-30"
+    },
+    {
+      "topic": "monday_closure",
+      "note": "2026-10-05 为周一：东京国立博物馆与新宿御苑均常规闭馆（官方）——Planner 排日硬约束",
+      "checked_at": "2026-08-30"
+    },
+    {
+      "topic": "not_open_yet",
+      "note": "Shibuya Sky 10-01~05 场次截至 checked_at 尚未开放购票（官方 2 周规则）——9-17 起按场次开票",
+      "checked_at": "2026-08-30"
+    },
+    {
+      "topic": "golden_week_context",
+      "note": "行程落在中国国庆黄金周（10-01~07）：客流/售罄风险上升为 warning/context，不构成硬约束（无官方闭馆依据）"
+    },
+    {
+      "topic": "source_access",
+      "note": "JMA/部分官方页此前抓取超时先例；本轮 tnm/fng/teamlab/zaimu 均直接核验成功；都厅开室日历需临近在财务局官网复核（点检日不定期）"
+    },
+    {
+      "topic": "trip_feasibility",
+      "note": "继承 research.json：外交部『避免前往日本』提醒（2026-03-26 更新）解除状态未确认——核验照常完成，是否出行属用户决策（主 Agent 闸门），本文件不含任何取消/改期决定",
+      "source": "plan/research.json#warnings"
+    }
+  ],
+  "provenance_meta": {
+    "checked_at": "2026-08-30",
+    "data_sources": [
+      {
+        "source": "东京国立博物馆官网 FAQ（中文）",
+        "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=156&lang=zh_cn",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "国民公园协会 新宿御苑入园指南",
+        "url": "https://fng.or.jp/shinjuku/guide/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "东京都财务局 都厅见学案内",
+        "url": "https://www.zaimu.metro.tokyo.lg.jp/tochousha/goannai",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "明治神宫官网（开闭门规则）",
+        "url": "https://www.meijijingu.or.jp/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "teamLab 官方 JP 页（麻布台之丘）",
+        "url": "https://www.teamlab.art/jp/e/tokyo/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "SHIBUYA SKY 官方购票页",
+        "url": "https://www.shibuya-scramble-square.com/sky/ticket/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "浅草寺官网（复用 candidates 阶段登记）",
+        "url": "https://www.senso-ji.jp/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "WaTabi/gltjp（明治神宫 10 月月别表转述）",
+        "url": "https://watabi.org/articles/meiji-jingu-guide",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      {
+        "source": "环境省 新宿御苑官网（复用）",
+        "url": "https://policies.env.go.jp/national-garden/shinjukugyoen/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      }
+    ],
+    "coverage": "POI 12/12；餐饮 8/8；两项已知冲突均处理（博物馆闭环 official_confirmed、都厅 adopted+needs_recheck）",
+    "degradation_notes": [
+      "东京国立博物馆/新宿御苑/明治神宫/teamLab/都厅 均获官方来源；浅草寺复用 candidates 阶段官方登记",
+      "根津神社/谷中银座/思出横丁/银座中央通/表参道/思出横丁 等街区或未检索 POI：unverified/unknown 如实标注（街区型无统一官方核验对象）",
+      "东京国立博物馆预约开放窗口未在官方 FAQ 载明 → booking_open_window=null + cannot_confirm",
+      "都厅展望室开室日历需临近在财务局官网复核（设施点检日不定期，官方明示）",
+      "无一家获得目标日期余票展示 → availability 全部不使用 available 之外的乐观值（免费/无预约体系 POI 除外）"
+    ]
+  }
+}

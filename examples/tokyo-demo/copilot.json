@@ -1,0 +1,238 @@
+{
+  "event": {
+    "type": "heavy_rain",
+    "severity": "high",
+    "detected_at": "2026-10-03 15:30",
+    "source": "simulated_user_event",
+    "confidence": "high",
+    "note": "测试输入：模拟 runtime 事件，非现实天气预报——不修改 weather.json，不生成任何逐时天气数据"
+  },
+  "current_state": {
+    "current_datetime": "2026-10-03 15:30",
+    "current_location": {
+      "place_name": "明治神宫附近",
+      "accuracy": "area",
+      "geo": null,
+      "note": "区域级定位，不伪造精确坐标"
+    },
+    "current_activity": "明治神宫（runtime 状态：用户正在此/附近）",
+    "completed_items": [
+      "新宿→原宿转移（09:00-09:20，JR 山手线）",
+      "明治神宫上午参拜（09:30-11:30，行程内正式项——已完成）",
+      "major rest（11:30-12:15）",
+      "午餐 free_time（12:15-13:30）"
+    ],
+    "remaining_items": [
+      "A Happy Pancake（15:00-16:15）——runtime 显示用户不在场，判定为错过",
+      "表参道/原宿→涩谷转移（16:30-17:00）",
+      "涩谷自由（17:00-18:15）",
+      "Shibuya Sky（18:30-20:00，已购票——固定锚点）",
+      "涩谷→新宿（20:15-20:25）",
+      "自由晚餐（20:30-21:15）",
+      "休整（21:15-21:30）"
+    ],
+    "state_discrepancy_note": "runtime 与 itinerary 存在偏差：itinerary 中明治神宫为上午已完成项（09:30-11:30），15:30 应位于 A Happy Pancake（涩谷）；以 runtime 为准（用户实际在明治神宫附近重访/延长停留），因此 A Happy Pancake 槽判定为错过而非进行中",
+    "user_message": "突然下暴雨了，我不想继续走了，但是今晚的 Shibuya Sky 门票已经买好了。"
+  },
+  "impact_analysis": {
+    "affected_date": "2026-10-03",
+    "affected_scope": "local",
+    "affected_items": [
+      "明治神宫（进行中）——暴雨 + cannot_walk_long：缩短并尽快撤离（10 月闭门 16:40 亦临近）",
+      "A Happy Pancake（15:00-16:15）——用户不在场，错过",
+      "表参道/原宿→涩谷转移（16:30-17:00）——雨天步行段（猫街 15-20 分钟）成本上升，改为 JR 1 站替代"
+    ],
+    "preserved_items": [
+      "Shibuya Sky（18:30-20:00，已购票固定锚点）",
+      "涩谷→新宿转移（20:15-20:25）",
+      "自由晚餐（20:30-21:15）",
+      "休整（21:15-21:30）",
+      "10-01/10-02/10-04/10-05 全部安排（非 multi_day 事件）"
+    ],
+    "reason": "暴雨（high）+ cannot_walk_long（雨天步行成本放大）+ 用户明确停止步行意愿 + Shibuya Sky 固定票务锚点需保护；事件为 day 内局部事件，不波及其他日期"
+  },
+  "proposed_changes": [
+    {
+      "action": "shorten",
+      "target": "明治神宫（当前进行中访问）",
+      "from": "继续户外参拜",
+      "to": "15:45 前从南参道出口撤离",
+      "reason": "暴雨 + cannot_walk_long：户外石板/砂砾路面湿滑；10 月闭门时间 16:40 临近，撤离窗口充足但不宜拖延",
+      "source_references": [
+        "plan/ticket-reservation.json#poi_constraints[明治神宫].opening（10 月 5:40-16:40）",
+        "event: heavy_rain"
+      ],
+      "risk_flags": [
+        "撤离途中石板路湿滑——缓步"
+      ]
+    },
+    {
+      "action": "shorten",
+      "target": "A Happy Pancake（The Shibuya）15:00-16:15",
+      "from": "咖啡甜品槽",
+      "to": "错过（用户实际位于明治神宫附近，未到店）",
+      "reason": "runtime 位置与该槽空间不符 + 用户要求停止步行；walk-in 咖啡馆无预约违约",
+      "source_references": [
+        "runtime.current_location",
+        "plan/food-restaurant.json#restaurants[A Happy Pancake]（walk-in，无预约约束）"
+      ],
+      "risk_flags": [
+        "missed_slot（体验损失，无票务损失）"
+      ]
+    },
+    {
+      "action": "move",
+      "target": "前往涩谷（Shibuya Sky 场馆方向）",
+      "from": "明治神宫附近（15:45 撤离后）",
+      "to": "涩谷站宫益坂口周边室内区域（Shibuya Sky 所在大楼与车站直通）",
+      "reason": "暴雨下以最短露天暴露、最少步行前往固定锚点周边；提前到达后室内等待 18:30 入场",
+      "source_references": [
+        "plan/map-route.json#travel_time_matrix[新宿→明治神宫]（反向对称：神宫南参道出口→原宿站步行 1-5 分钟）",
+        "plan/map-route.json#travel_time_matrix[表参道·原宿街区→Shibuya Sky]（'或 JR 山手线 原宿→涩谷约 2 分钟'）",
+        "plan/map-route.json#travel_time_matrix[新宿→Shibuya Sky]（涩谷站宫益坂口步行约 5 分钟段）"
+      ],
+      "risk_flags": [
+        "雨天步行段（共约 6-10 分钟露天）需伞具",
+        "原宿→涩谷 JR 车程约 2 分钟为反向对称口径",
+        "换乘站内步行距离未逐一核验——标 unverified 部分"
+      ]
+    },
+    {
+      "action": "rest",
+      "target": "涩谷站周边室内等待（Shibuya Sky 入场前 buffer）",
+      "from": "原计划 17:00-18:15 涩谷户外自由（十字路口/购物）",
+      "to": "16:10 前后抵达后室内休息/避雨等待至 18:30",
+      "reason": "暴雨 + slow + cannot_walk_long：不增加户外密度，提前抵达锚点附近室内等待",
+      "source_references": [
+        "event: heavy_rain",
+        "plan/review-analysis.json#crowd_patterns（雨天室外体验下降口径）"
+      ],
+      "risk_flags": [
+        "具体室内场所未调研——建议利用与车站直通的商业设施（结构事实：场馆所在大楼与涩谷站直通）"
+      ]
+    },
+    {
+      "action": "keep",
+      "target": "Shibuya Sky（18:30-20:00）",
+      "from": "18:30 入场（15:00 后时段票）",
+      "to": "不变",
+      "reason": "固定票务锚点（用户已购票并明确要求保护）；雨天以室内 SKY GALLERY 为主，露天 SKY STAGE 雨大风大时可能关闭或受限（场馆规则）",
+      "source_references": [
+        "plan/ticket-reservation.json#poi_constraints[Shibuya Sky].hard_constraints",
+        "plan/ticket-reservation.json#poi_constraints[Shibuya Sky].opening"
+      ],
+      "risk_flags": [
+        "降雨持续时露天层体验受损/关闭",
+        "是否退改属官方渠道与用户决策，Copilot 不执行"
+      ]
+    },
+    {
+      "action": "keep",
+      "target": "涩谷→新宿（20:15-20:25）+ 自由晚餐（20:30-21:15）+ 休整（21:15-21:30）",
+      "from": "不变",
+      "to": "不变",
+      "reason": "JR 转移与晚餐/休整均为室内或短暴露段，不受暴雨实质影响",
+      "source_references": [
+        "plan/map-route.json#travel_time_matrix[新宿→Shibuya Sky]（反向对称 6-7 分钟）"
+      ],
+      "risk_flags": [
+        "雨天站内人流可能增加"
+      ]
+    }
+  ],
+  "preserved_anchors": [
+    {
+      "type": "ticket",
+      "target": "Shibuya Sky（涩谷 Scramble Square 展望台，18:30 入场）",
+      "original_time": "2026-10-03 18:30-20:00",
+      "status": "protected（用户已购票并明确要求保留；雨天室内 GALLERY 兜底）"
+    },
+    {
+      "type": "hotel",
+      "target": "新宿（住宿区域锚点）",
+      "original_time": "当日返回",
+      "status": "protected（20:25 抵达涩谷站后 JR 返回，不受影响）"
+    }
+  ],
+  "new_risks": [
+    {
+      "risk": "雨天步行段（明治神宫出口→原宿站 1-5 分钟 + 涩谷站→Shibuya Sky 5 分钟）露天暴露",
+      "mitigation": "伞具 + 缩短户外段 + 其余全程室内/JR"
+    },
+    {
+      "risk": "Shibuya Sky 露天 SKY STAGE 在降雨/强风时关闭或受限——18:30 入场体验可能缩水",
+      "mitigation": "室内 SKY GALLERY 兜底；是否退改由用户经官方渠道决定，Copilot 不执行"
+    },
+    {
+      "risk": "A Happy Pancake 错过（体验损失）",
+      "mitigation": "无票务损失（walk-in）；如用户希望补偿，D5 午餐可选甜品类候选（池内暂无——如实说明）"
+    },
+    {
+      "risk": "雨天涩谷站人流增加",
+      "mitigation": "提前至 16:10 前后抵达，避免 18:00 后高峰挤压"
+    }
+  ],
+  "user_decision_required": [],
+  "next_steps": [
+    "15:45 前从明治神宫南参道出口撤离（出口→原宿站步行 1-5 分钟——map-route 反向对称口径；雨中缓步）",
+    "原宿站乘 JR 山手线 1 站至涩谷（约 2 分钟——map-route 表参道↔Shibuya 项口径）",
+    "涩谷站宫益坂口出站，步行约 5 分钟至 Shibuya Sky 所在大楼（map-route 新宿→Shibuya 项步行段口径）",
+    "16:10 前后进入楼内/车站直通商业区室内避雨等待（slow：不安排新增活动）",
+    "18:30 凭票入场 Shibuya Sky；若雨势未停，以室内 SKY GALLERY 为主（露天层视场馆规则）",
+    "20:00 结束 → 20:15 JR 返回新宿（6-7 分钟——map-route 反向对称口径）→ 20:30 晚餐（原计划不变）"
+  ],
+  "validation": {
+    "status": "safe",
+    "checked_rules": [
+      "time_no_overlap（15:30 后新序列无重叠：撤离→JR→等待→18:30 入场→20:15 返程→晚餐→休整）",
+      "no_closed_violation（明治神宫 15:45 撤离早于 16:40 闭门；Shibuya Sky 22:30 闭馆）",
+      "reservation_ok（当日无餐厅预约；Shibuya Sky 为已购票非预约制）",
+      "ticket_ok（Shibuya Sky 票保留；A Happy Pancake 为 walk-in 放弃无违约）",
+      "hotel_flight_untouched（返回新宿不变；无航班/酒店变更）",
+      "cannot_walk_long_minimized（露天步行合计约 6-10 分钟，其余 JR/室内）",
+      "unknown_not_available（东京国立博物馆未作为即时替代——reservation_required + availability unknown；拉面街等 walk-up 未被误标 available）",
+      "new_transfers_have_map_reference（3 段均引用 map-route 既有项/反向对称口径，未自估分钟数）"
+    ],
+    "issues": [
+      "雨天露天步行段仍存在（约 6-10 分钟）——已通过伞具+路线最短化缓解",
+      "明治神宫→涩谷无直连矩阵 OD——采用反向对称+既有分段，未伪造分钟数",
+      "A Happy Pancake 错过——体验损失已记录"
+    ]
+  },
+  "change_log": {
+    "changed": [
+      "明治神宫（进行中）：缩短，15:45 前撤离",
+      "A Happy Pancake（15:00-16:15）：错过（用户位置不符+停止步行意愿）",
+      "表参道/原宿→涩谷转移：由雨天步行 15-20 分钟改为 原宿站 JR 1 站（约 2 分钟）+ 最短露天步行",
+      "17:00-18:15 涩谷户外自由：改为涩谷站周边室内避雨等待"
+    ],
+    "unchanged": [
+      "Shibuya Sky 18:30-20:00（已购票固定锚点）",
+      "涩谷→新宿 20:15-20:25",
+      "自由晚餐 20:30-21:15 与 休整 21:15-21:30",
+      "10-01/10-02/10-04/10-05 全部安排",
+      "全部已预订/已购票资产"
+    ],
+    "reason": "暴雨（high）触发 Minimal Change：保护 Shibuya Sky 固定锚点，最小化雨天步行（cannot_walk_long），维持 slow 节奏（室内等待替代加塞活动）"
+  },
+  "provenance_meta": {
+    "checked_at": "2026-10-03 15:30（模拟 runtime）/ 资产 checked_at 2026-08-30",
+    "data_sources": [
+      "plan/itinerary.json（D3 剩余安排提取）",
+      "plan/ticket-reservation.json（Shibuya Sky 票务锚点 + 明治神宫 10 月闭门时间）",
+      "plan/map-route.json（明治神宫↔原宿/表参道↔涩谷/涩谷站步行段——含反向对称口径）",
+      "plan/profile.json（cannot_walk_long/slow/party）",
+      "event: simulated_user_event（暴雨）"
+    ],
+    "realtime_flags": [
+      "event 为 simulated_user_event（测试输入）",
+      "未使用任何真实实时天气/交通数据",
+      "转移耗时均为 map-route 结构性口径"
+    ],
+    "degradation_notes": [
+      "明治神宫→涩谷无直连矩阵 OD——采用 反向对称+既有分段 组合，未伪造分钟数",
+      "A Happy Pancake 错过——无票务损失，已如实记录",
+      "未调用 trip-validator（local scope，轻量八项自查 status=safe）"
+    ]
+  }
+}

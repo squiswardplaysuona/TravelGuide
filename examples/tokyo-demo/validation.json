@@ -1,0 +1,291 @@
+{
+  "status": "pass_with_warnings",
+  "round": 2,
+  "checked_at": "2026-08-30",
+  "issues": [
+    {
+      "severity": "warning",
+      "rule": "time_gap_unmapped",
+      "date": "2026-10-03",
+      "target": "未标注时段",
+      "message": "空档 13:30-15:00（90 分钟）未标注",
+      "evidence": [
+        "itinerary#days"
+      ],
+      "source_references": "标注 free_time/buffer",
+      "repair_hint": "无需额外修复动作——相应 booking_reminder/风险标注已就位，按 reminder 时间执行即可"
+    },
+    {
+      "severity": "warning",
+      "rule": "time_gap_unmapped",
+      "date": "2026-10-04",
+      "target": "未标注时段",
+      "message": "空档 17:00-18:00（60 分钟）未标注",
+      "evidence": [
+        "itinerary#days"
+      ],
+      "source_references": "标注 free_time/buffer",
+      "repair_hint": "无需额外修复动作——相应 booking_reminder/风险标注已就位，按 reminder 时间执行即可"
+    },
+    {
+      "severity": "warning",
+      "rule": "time_gap_unmapped",
+      "date": "2026-10-05",
+      "target": "未标注时段",
+      "message": "空档 10:30-12:15（105 分钟）未标注",
+      "evidence": [
+        "itinerary#days"
+      ],
+      "source_references": "标注 free_time/buffer",
+      "repair_hint": "无需额外修复动作——相应 booking_reminder/风险标注已就位，按 reminder 时间执行即可"
+    },
+    {
+      "severity": "warning",
+      "rule": "unverified_od",
+      "date": "2026-10-02",
+      "target": "东京国立博物馆（上野） → 新宿（住宿区域锚点）",
+      "message": "矩阵无该 OD，Planner 未给具体分钟数（相对顺序，诚实标注）",
+      "evidence": [
+        "map-route: 无该 OD"
+      ],
+      "source_references": [
+        "map-route#matrix"
+      ],
+      "repair_hint": "临近补查"
+    },
+    {
+      "severity": "warning",
+      "rule": "reverse_symmetric_reference",
+      "date": "2026-10-03",
+      "target": "Shibuya Sky（涩谷 Scramble Square 展望台） → 新宿（住宿区域锚点）",
+      "message": "Shibuya Sky→新宿 引用反向对称矩阵项——map-route coverage note 已声明\"返回方向视为结构性对称，未重复登记\"约定，非虚构引用",
+      "evidence": [
+        "map-route: 无该 OD",
+        "itinerary: JR 约 6-7 分钟"
+      ],
+      "source_references": [
+        "map-route#matrix"
+      ],
+      "repair_hint": "可选：在 map-route 补登反向矩阵项（与 round 1 处理一致）"
+    },
+    {
+      "severity": "warning",
+      "rule": "unverified_od_scheduled",
+      "date": "2026-10-04",
+      "target": "新宿（住宿区域锚点） → teamLab Borderless（麻布台之丘）",
+      "message": "引用 unverified 矩阵项（已标注）",
+      "evidence": [
+        "map-route confidence=unverified"
+      ],
+      "source_references": [
+        "map-route#matrix"
+      ],
+      "repair_hint": "临近补查"
+    },
+    {
+      "severity": "warning",
+      "rule": "unverified_od",
+      "date": "2026-10-05",
+      "target": "东京都厅展望室 → 根津神社",
+      "message": "矩阵无该 OD，Planner 未给具体分钟数（相对顺序，诚实标注）",
+      "evidence": [
+        "map-route: 无该 OD"
+      ],
+      "source_references": [
+        "map-route#matrix"
+      ],
+      "repair_hint": "临近补查"
+    },
+    {
+      "severity": "warning",
+      "rule": "unverified_od",
+      "date": "2026-10-05",
+      "target": "根津神社 → 东京拉面街（东京站一番街 B1，8 店集合）",
+      "message": "矩阵无该 OD，Planner 未给具体分钟数（相对顺序，诚实标注）",
+      "evidence": [
+        "map-route: 无该 OD"
+      ],
+      "source_references": [
+        "map-route#matrix"
+      ],
+      "repair_hint": "临近补查"
+    },
+    {
+      "severity": "warning",
+      "rule": "reservation_unknown_scheduled",
+      "date": "13:35",
+      "target": "东京国立博物馆",
+      "message": "须预约但 availability unknown——已排入 draft（已标风险）",
+      "evidence": [
+        "ticket-reservation: unknown"
+      ],
+      "source_references": [
+        "ticket-reservation#poi_constraints"
+      ],
+      "repair_hint": "开放后立即确认；无法预约则启用替代"
+    },
+    {
+      "severity": "warning",
+      "rule": "not_open_for_booking_scheduled",
+      "date": "18:30",
+      "target": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "message": "已排入行程但未开放购票（2026-09-17 前后（出行日 2 周前，按官方'提前 2 周'规则推算） 开票）——Planner 已设 reminder",
+      "evidence": [
+        "reminder@2026-09-19（官方 2 周规则推算）"
+      ],
+      "source_references": [
+        "ticket-reservation#booking_windows"
+      ],
+      "repair_hint": "无需额外修复动作——相应 booking_reminder/风险标注已就位，按 reminder 时间执行即可"
+    },
+    {
+      "severity": "warning",
+      "rule": "opening_unverified",
+      "date": "undetermined（前序 transfer unverified）",
+      "target": "根津神社",
+      "message": "已排入行程但 opening unverified——时段可能与真实开放时间冲突",
+      "evidence": [
+        "ticket-reservation: unverified"
+      ],
+      "source_references": [
+        "ticket-reservation#poi_constraints"
+      ],
+      "repair_hint": "临近核验官方开放时间"
+    },
+    {
+      "severity": "warning",
+      "rule": "meal_opening_unverified",
+      "date": "2026-10-02",
+      "target": "とん久（Masaru，浅草天妇罗老铺）",
+      "message": "已排餐槽 opening_hours unknown",
+      "evidence": [
+        "food-restaurant: unknown"
+      ],
+      "source_references": [
+        "food-restaurant#restaurants"
+      ],
+      "repair_hint": "临近核验营业时间"
+    },
+    {
+      "severity": "warning",
+      "rule": "meal_opening_unverified",
+      "date": "2026-10-03",
+      "target": "A Happy Pancake（The Shibuya）",
+      "message": "已排餐槽 opening_hours unknown",
+      "evidence": [
+        "food-restaurant: unknown"
+      ],
+      "source_references": [
+        "food-restaurant#restaurants"
+      ],
+      "repair_hint": "临近核验营业时间"
+    },
+    {
+      "severity": "warning",
+      "rule": "meal_opening_unverified",
+      "date": "2026-10-04",
+      "target": "中村屋 本店（新宿老铺洋食/印度咖喱）",
+      "message": "已排餐槽 opening_hours unknown",
+      "evidence": [
+        "food-restaurant: unknown"
+      ],
+      "source_references": [
+        "food-restaurant#restaurants"
+      ],
+      "repair_hint": "临近核验营业时间"
+    },
+    {
+      "severity": "warning",
+      "rule": "day_end_exceeded",
+      "date": "2026-10-03",
+      "target": "D3 晚餐+休整",
+      "message": "超出 day_end 21:00 偏好 30 分钟——保留日落展望 slots 的 trade-off（Planner 已标 risk_flag）",
+      "evidence": [
+        "planner_preferences.day_end_time"
+      ],
+      "source_references": [
+        "itinerary#days"
+      ],
+      "repair_hint": "维持（L3 偏好）或压缩涩谷自由段"
+    },
+    {
+      "severity": "warning",
+      "rule": "d5_timeline_undetermined",
+      "date": "2026-10-05",
+      "target": "D5 时间轴",
+      "message": "都厅→根津→拉面街 2 段 transfer unverified，时刻为相对顺序——临近补查后回填",
+      "evidence": [
+        "map-route: 无该 OD"
+      ],
+      "source_references": [
+        "map-route#matrix"
+      ],
+      "repair_hint": "临近补查 map-route"
+    },
+    {
+      "severity": "warning",
+      "rule": "daily_load_high",
+      "date": "2026-10-03",
+      "target": "明治神宫参道",
+      "message": "D3 overall_load=high（slow+cannot_walk_long）——Planner 已暴露 trade-off 并设 major rest，未隐藏",
+      "evidence": [
+        "review-analysis: 步行 EXPERIENCE"
+      ],
+      "source_references": [
+        "review-analysis#pois"
+      ],
+      "repair_hint": "维持用户选择优先；如需减压回程改 JR/打车"
+    },
+    {
+      "severity": "warning",
+      "rule": "budget_currency_mismatch",
+      "date": "",
+      "target": "全部费用",
+      "message": "预算 CNY vs JPY：无汇率来源未换算（Planner 已如实声明）",
+      "evidence": [
+        "profile.budget"
+      ],
+      "source_references": [
+        "profile#budget"
+      ],
+      "repair_hint": "获取汇率来源后完成匹配"
+    }
+  ],
+  "constraint_coverage": {
+    "hard_constraints_checked": 4,
+    "time_constraints_checked": 44,
+    "opening_constraints_checked": 12,
+    "reservation_constraints_checked": 8,
+    "ticket_constraints_checked": 3,
+    "transport_constraints_checked": 13,
+    "user_constraints_checked": 1
+  },
+  "error_count": 0,
+  "warning_count": 18,
+  "quality_summary": {
+    "time_feasibility": "low",
+    "transport_feasibility": "medium",
+    "reservation_feasibility": "medium",
+    "walking_fit": "medium",
+    "pace_fit": "medium",
+    "weather_resilience": "medium",
+    "overall": "low"
+  },
+  "provenance_meta": {
+    "checked_at": "2026-08-30",
+    "data_sources": [
+      "itinerary(rev2)",
+      "profile",
+      "candidates",
+      "review-analysis",
+      "weather",
+      "map-route",
+      "food-restaurant",
+      "ticket-reservation"
+    ],
+    "coverage_note": "基于 round 2 修订版 itinerary，全部磁盘资产，未联网未搜索",
+    "degradation_notes": [
+      "round 1 的 5 项 error 全部修复（收敛 5→1）；D3 day_end 超出 30 分钟与 D5 时间轴 undetermined 为修复引入的新 trade-off，以 warning 呈现"
+    ]
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "destination": { "country": "日本", "region": null, "city": "东京" },
+  "candidate_meta": {
+    "profile_reference": "plan/profile.json",
+    "research_reference": "plan/research.json",
+    "candidate_target": "约 15-20（slow × 5 天 × 2 公式）；本次以来源质量优先，实际 12 个",
+    "generated_at": "2026-08-30",
+    "pool_size": 12
+  },
+  "pois": [
+    {
+      "name": "浅草寺（含仲见世通）",
+      "type": "religious",
+      "tags": ["history", "culture", "photo_spot", "food"],
+      "region": "浅草·上野（台东区）",
+      "address": "东京都台东区浅草2-3-1（official_confirmed，浅草寺官网）",
+      "geo": null,
+      "suggested_duration": "1-1.5 小时",
+      "open_hours": "境内 24 小时开放；本堂 10 月～3 月 6:30-17:00（official_confirmed，浅草寺官网）",
+      "ticket": "免费参观（official_confirmed，浅草寺官网）",
+      "reservation": { "required": false, "status": "official_confirmed" },
+      "profile": {
+        "culture_history": "高（628 年创建，东京都内最古老寺院——B 层口径）",
+        "photo_value": "高（雷门大灯笼、五重塔、仲见世通街景）",
+        "internet_fame": "高",
+        "crowd": "全天偏旺；攻略普遍提示清晨与傍晚相对缓和（B 层口径）",
+        "walking_intensity": "medium（雷门—仲见世通—本堂为连续步行段，人流密集处行走速度慢）",
+        "rain_suitability": "中（户外为主，雨天体验下降；仲见世通有部分遮蔽）",
+        "suitable_for": ["history/culture 兴趣者", "首次到访者", "美食街区顺访者"],
+        "not_suitable_for": [],
+        "food_value": "仲见世通传统小吃街（人形烧、浅草饼等，B 层口径）",
+        "constraint_risk": "low-medium（步行量中等且路线固定，可按体力截段）"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "与 history/culture/photography 直接匹配，位于 research 确认的历史文化密集区核心；免费且时长可控，适配 slow 节奏",
+        "against": "人流大；仲见世通段步行量中等，cannot_walk_long 用户建议控制在雷门—本堂主线，避免扩展到周边街区",
+        "overall": "high"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "浅草寺官网", "url": "https://www.senso-ji.jp/", "date": "2026-08-30" },
+          { "tier": "B", "site": "JEEP 攻略（参拜指南）", "url": "https://www.jeepe.jp/zh/articles/senso-ji-tokyo-temple-culture-1051", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "multi_source_consistent（核心事实为 official_confirmed）"
+      },
+      "candidate_category": ["classic", "interest_match", "photo"],
+      "priority": "high",
+      "fit": { "interests_matched": ["history", "culture", "photography", "food"], "pace_fit": "good", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "东京国立博物馆",
+      "type": "museum",
+      "tags": ["history", "culture", "museum"],
+      "region": "浅草·上野（台东区）",
+      "address": "东京都台东区上野公园13-9（official_confirmed，博物馆官网）",
+      "geo": null,
+      "suggested_duration": "1.5-3 小时（全馆半天级）",
+      "open_hours": "9:30-17:00（16:30 停止入馆），部分日期夜间开馆至 20:00（official_confirmed，博物馆官网）；常规休馆日官网首页未载明（preliminary，需临近核验）",
+      "ticket": "本馆常规展票价未在首页载明（preliminary，官网设'料金・チケット'专页，待 ticket-reservation 核验）；特别展另行收费（preliminary）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "高",
+        "photo_value": "中（馆内展品拍摄限制多，建筑本体有看点）",
+        "internet_fame": "中",
+        "crowd": "未核验；特别展期间可能拥挤",
+        "walking_intensity": "low-medium（室内动线，展馆间有连接通道）",
+        "rain_suitability": "高（全室内）",
+        "suitable_for": ["history/culture 深度兴趣者", "雨天备选"],
+        "not_suitable_for": ["想快速打卡者（馆藏量大）"],
+        "accessibility": "未核验",
+        "constraint_risk": "low（室内为主，可控制参观范围）"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "history/culture 强匹配的室内场馆，是候选池中确定性最高的雨天备选；位于上野公园内，可与浅草·上野区域同日组合",
+        "against": "全馆走完耗时长，与 slow 节奏冲突——建议只选 1-2 个展馆；常规休馆日未核验（若为周一则 10-05 闭馆）；票价待核验",
+        "overall": "high"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "东京国立博物馆官网", "url": "https://www.tnm.jp/", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "verified_official（开放时间）；票务/休馆日字段为 preliminary"
+      },
+      "candidate_category": ["interest_match", "rain_backup", "low_walk"],
+      "priority": "high",
+      "fit": { "interests_matched": ["history", "culture"], "pace_fit": "ok", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "谷中银座·谷根千街区",
+      "type": "neighborhood",
+      "tags": ["history", "culture", "photo_spot", "food"],
+      "region": "谷根千（谷中·根津·千驮木）",
+      "address": "东京都台东区谷中周边（preliminary，区域级）",
+      "geo": null,
+      "suggested_duration": "1.5-2.5 小时（全程散步口径 2-3 公里）",
+      "open_hours": "开放式街区常时可逛；店铺各有营业时间（preliminary）",
+      "ticket": "免费（preliminary，街区型）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "中高（下町老街风貌、昭和感商店街——B 层口径）",
+        "photo_value": "高（夕阳阶梯、猫街、低层老街巷弄——B 层口径）",
+        "internet_fame": "中",
+        "crowd": "B 层口径：氛围安静，周末午后游客增多",
+        "walking_intensity": "high（区域全程约 2-3 公里，含坡道与小巷）",
+        "rain_suitability": "低（户外街区型）",
+        "suitable_for": ["photography 兴趣者", "喜欢慢逛老街者"],
+        "not_suitable_for": ["无法截段步行者（全程量大）"],
+        "food_value": "谷中银座小吃街（现烤丸子、炸肉饼、铁板小食——B 层口径）",
+        "constraint_risk": "medium（全区步行 2-3 公里；但可截段——仅谷中银座商店街一段步行量小）"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "photography 强匹配的小众下町区域，美食小店密集；与 research 中该区域'photography+history+culture'判定一致",
+        "against": "对 cannot_walk_long 用户全程不友好——必须截段（仅谷中银座主街）或放弃；区域位置与 research 区域结构中偏冷门，官方页面覆盖少（事实多为 B 层）",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "B", "site": "KKday 谷根千散步攻略", "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi", "date": "2026-08-30" },
+          { "tier": "B", "site": "乐吃购！日本（谷根千相关攻略）", "url": "https://tokyo.letsgojp.com/", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "multi_source_consistent（体验口径，B 层；事实字段全部 preliminary）"
+      },
+      "candidate_category": ["hidden_gem", "photo", "interest_match"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["photography", "food", "history"], "pace_fit": "ok", "constraint_fit": "risk" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "根津神社",
+      "type": "religious",
+      "tags": ["history", "culture", "photo_spot"],
+      "region": "谷根千（谷中·根津·千驮木）",
+      "address": null,
+      "geo": null,
+      "suggested_duration": "0.5-1 小时",
+      "open_hours": "preliminary（未获官方来源，需临近核验）",
+      "ticket": "境内免费（preliminary，B 层口径）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "中高（攻略称东京少数保存完好的江户时代神社）",
+        "photo_value": "高（千本鸟居隧道——B 层口径）",
+        "internet_fame": "中",
+        "crowd": "B 层口径：比主流景点人少",
+        "walking_intensity": "low-medium（社内范围有限，千本鸟居步道为往返段）",
+        "rain_suitability": "中（鸟居步道为户外）",
+        "suitable_for": ["photography 兴趣者", "小众偏好者"],
+        "not_suitable_for": [],
+        "constraint_risk": "low-medium"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "photography 强匹配的小众神社，与谷中银座同区域可组合；步行量可控",
+        "against": "仅 B 层来源支撑，官方信息未核验（开放时间/免费口径均为 preliminary）",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "B", "site": "KKday 谷根千散步攻略（含根津神社段）", "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "single_source（B 层；事实字段全部 preliminary）"
+      },
+      "candidate_category": ["hidden_gem", "photo"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["photography", "history"], "pace_fit": "good", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "新宿御苑",
+      "type": "park",
+      "tags": ["nature", "photo_spot", "culture"],
+      "region": "新宿",
+      "address": "东京都新宿区内藤町11（official_confirmed，环境省官网）",
+      "geo": null,
+      "suggested_duration": "1.5-2.5 小时",
+      "open_hours": "随季节变动；10 月上旬具体档位未在本次检索中确认（preliminary，需临近核验）；每周一休园、逢日本国定假日顺延（official_confirmed，国民公园协会入园指南口径）——2026-10-05 为周一，行程最后一天闭园",
+      "ticket": "成人 500 日元、65 岁以上 250 日元、中学生以下免费（preliminary，多来源一致含官方协会口径，待 ticket-reservation 核验）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "中（近代庭园）",
+        "photo_value": "中高（庭园景观、季节植被；10 月上旬非樱花/红叶峰值）",
+        "internet_fame": "中",
+        "crowd": "未核验",
+        "walking_intensity": "high（大型庭园，园内环路长；温室仅周末开放且禁止摄影）",
+        "rain_suitability": "低（户外庭园为主）",
+        "suitable_for": ["nature 偏好者", "想在城市中获得开阔感者"],
+        "not_suitable_for": ["雨天", "cannot_walk_long 者走全园"],
+        "seasonality": "10 月上旬处夏季档与秋季档之间，本次来源未确认当期开放时间",
+        "constraint_risk": "medium-high（园大且步行为主；可浅游但收益下降）"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "新宿区域内少见的开阔自然空间，与住宿带空间衔接好；门票低，浅游可控",
+        "against": "对 cannot_walk_long 用户全园不友好（步行 intensity 高）；10-05（周一）闭园，若排入行程只能用 10-02~04；10 月开放档位未核验；与 history/food 兴趣匹配度一般",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "环境省 新宿御苑官网", "url": "https://policies.env.go.jp/national-garden/shinjukugyoen/", "date": "2026-08-30" },
+          { "tier": "S", "site": "国民公园协会 新宿御苑入园指南", "url": "https://fng.or.jp/shinjuku/guide/", "date": "2026-08-30" },
+          { "tier": "S", "site": "GO TOKYO 新宿御苑介绍页", "url": "https://www.gotokyo.org/cn/spot/75/index.html", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "multi_source_consistent（官方多源；10 月开放档位与票价细节为 preliminary）"
+      },
+      "candidate_category": ["interest_match", "photo"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["photography"], "pace_fit": "ok", "constraint_fit": "risk" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "思出横丁（思い出横丁）",
+      "type": "neighborhood",
+      "tags": ["food", "photo_spot"],
+      "region": "新宿",
+      "address": "新宿站西口周边（preliminary，B 层口径：西口步行约 2-5 分钟）",
+      "geo": null,
+      "suggested_duration": "1-1.5 小时",
+      "open_hours": "傍晚至夜间最有氛围，白天部分店休（preliminary，B 层口径）",
+      "ticket": "免费进入；店内消费另计，多为小额现金消费（preliminary，B 层口径）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "中（昭和风貌的居酒屋巷——B 层口径）",
+        "photo_value": "中高（窄巷灯笼夜景）",
+        "internet_fame": "高（外国游客热门——B 层口径）",
+        "crowd": "B 层口径：晚间拥挤，热门店需等位",
+        "walking_intensity": "low（距新宿站西口近，巷内即走即停）",
+        "rain_suitability": "中（窄巷半露天，雨棚有限）",
+        "suitable_for": ["food 兴趣者", "夜景摄影者"],
+        "not_suitable_for": ["期望安静用餐者"],
+        "food_value": "烧鸟、烤杂碎等居酒屋小店聚集（约 80 家店铺——B 层口径）；具体餐厅属 food-restaurant 职责",
+        "constraint_risk": "low"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "food 兴趣的最小步行成本落点（住宿带新宿内、距站近）；夜景与市井氛围契合 photography；不用排大段时间，适配 slow",
+        "against": "晚间拥挤；B 层口径提示部分小店只收现金；半露天巷弄雨天体验一般",
+        "overall": "high"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "新宿西口思出横丁官网（中文页）", "url": "https://cn.shinjuku-omoide.com/", "date": "2026-08-30" },
+          { "tier": "B", "site": "乐吃购！日本 歌舞伎町 2026 攻略", "url": "https://tokyo.letsgojp.com/archives/821187/", "date": "2026-08-30" },
+          { "tier": "B", "site": "好运日本行 思出横丁指南", "url": "https://www.gltjp.com/zh-hant/directory/item/11194/", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "multi_source_consistent（官方站确认存在；细节为 B 层体验口径）"
+      },
+      "candidate_category": ["interest_match", "low_walk", "photo"],
+      "priority": "high",
+      "fit": { "interests_matched": ["food", "photography"], "pace_fit": "good", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "东京都厅展望室",
+      "type": "viewpoint",
+      "tags": ["photo_spot", "architecture"],
+      "region": "新宿",
+      "address": "东京都第一本厅舍 45 楼（preliminary，GO TOKYO 口径）",
+      "geo": null,
+      "suggested_duration": "0.5-1 小时",
+      "open_hours": "9:30-22:00（闭室前 30 分钟停止入室）；北展望室开放至 17:30（南休室时至 22:00）；南北轮休：北=第 2/4 周一、南=第 1/3 周二（official_confirmed，GO TOKYO/东京都财务局口径）——2026-10-05 为第 1 个周一：北休、南开放",
+      "ticket": "免费（official_confirmed，GO TOKYO 口径）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "低",
+        "photo_value": "高（202 米高空全景，晴日可远眺富士山——来源口径）",
+        "internet_fame": "中",
+        "crowd": "热门时段安检排队 20-30 分钟（来源口径）",
+        "walking_intensity": "low（电梯直达 45 楼）",
+        "rain_suitability": "高（室内展望；雨天视野下降）",
+        "suitable_for": ["photography 兴趣者", "少步行用户", "预算敏感者"],
+        "not_suitable_for": [],
+        "constraint_risk": "low"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "免费+电梯直达+室内，是对 cannot_walk_long 与预算同时最友好的摄影点；位于住宿带新宿内，衔接成本最低",
+        "against": "文化/历史价值低；南北轮休需对表（10-05 北休仅南开）；晴天夜景最佳，雨天视野受限",
+        "overall": "high"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "GO TOKYO·东京都厅第一本厅舍介绍页", "url": "https://www.gotokyo.org/tc/spot/74/index.html", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "verified_official（免费/位置/时间主体）；南北轮休细则为检索聚合口径，临近核验"
+      },
+      "candidate_category": ["photo", "low_walk", "rain_backup"],
+      "priority": "high",
+      "fit": { "interests_matched": ["photography"], "pace_fit": "good", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "银座中央通街区",
+      "type": "neighborhood",
+      "tags": ["shopping", "food", "architecture", "photo_spot"],
+      "region": "银座·东京站周边",
+      "address": null,
+      "geo": null,
+      "suggested_duration": "1.5-2.5 小时",
+      "open_hours": "街区常时；百货店通常 10:00-20:00 左右（preliminary，未逐店核验）",
+      "ticket": "免费（preliminary，街区型）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "中（高端商业街区风貌）",
+        "photo_value": "中高（旗舰店建筑设计与街景——B 层口径）",
+        "internet_fame": "高",
+        "crowd": "未核验",
+        "walking_intensity": "medium（中央通沿线较长；百货店内可休整）",
+        "rain_suitability": "中高（百货与商场室内段多，可作为街区级雨天去处）",
+        "suitable_for": ["food 兴趣者（餐饮密度高——research 官方口径）", "建筑与街景摄影者"],
+        "not_suitable_for": ["对购物街区无兴趣者"],
+        "food_value": "餐饮密度高（research.json 中 JNTO 口径：该区域 fits food）；具体餐厅属 food-restaurant 职责",
+        "constraint_risk": "medium（沿线长但室内休整点多，可截段）"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "research 确认的 food 匹配区域；百货室内段使其具备街区级雨天容错；与东京站方向可组合",
+        "against": "消费环境溢价高，与人均 8000 元预算需谨慎搭配；文化历史密度低于浅草·上野；步行沿线长，需截段",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "日本国家旅游局 JNTO·东京目的地页（区域定位）", "url": "https://www.japan-travel.cn/destinations/kanto/tokyo/", "date": "2026-08-30" },
+          { "tier": "S", "site": "GO TOKYO·各地区 SPOT 导览", "url": "https://www.gotokyo.org/tc/spot/index.html", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "verified_official（区域定位）；街区细节为 preliminary"
+      },
+      "candidate_category": ["interest_match", "rain_backup"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["food", "photography"], "pace_fit": "ok", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "明治神宫",
+      "type": "religious",
+      "tags": ["history", "culture", "photo_spot", "nature"],
+      "region": "涩谷·原宿",
+      "address": "东京都涩谷区代代木神园町1-1（official_confirmed，神社官网）",
+      "geo": null,
+      "suggested_duration": "1.5-2 小时",
+      "open_hours": "随日出日落逐月变动（official_confirmed 机制，官网载 8 月/9 月时刻；10 月具体时刻未列——preliminary，需临近核验）",
+      "ticket": "参拜免费（preliminary——官网本次抓取内容未载明，B 层普遍口径，待核验）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "高",
+        "photo_value": "中高（大鸟居、参道树林）",
+        "internet_fame": "高",
+        "crowd": "未核验",
+        "walking_intensity": "high（大型杜内林地，入口至本堂为长距离参道步行）",
+        "rain_suitability": "中（树林遮蔽部分步道，雨天泥泞风险）",
+        "suitable_for": ["history/culture 兴趣者", "喜欢林地氛围者"],
+        "not_suitable_for": ["cannot_walk_long 者走全程参道"],
+        "constraint_risk": "medium-high（参道长且为必经段；无内部接驳——B 层/结构判断，官网未载明无障碍细节）"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "东京最具代表性的神社之一，classic + history/culture 匹配；10 月上旬清晨时段凉爽安静",
+        "against": "步行量是候选池中最高之一：入口—本堂往返为长距离必经步行，cannot_walk_long 用户需认真权衡或只到外圏；10 月开放时刻与免费口径待核验",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "明治神宫官网", "url": "https://www.meijijingu.or.jp/", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "verified_official（地址/开放机制）；免费口径与步行评估为 preliminary（B 层+结构判断）"
+      },
+      "candidate_category": ["classic", "interest_match", "photo"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["history", "culture", "photography"], "pace_fit": "ok", "constraint_fit": "risk" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "表参道·原宿街区",
+      "type": "neighborhood",
+      "tags": ["architecture", "photo_spot", "shopping"],
+      "region": "涩谷·原宿",
+      "address": null,
+      "geo": null,
+      "suggested_duration": "1-2 小时",
+      "open_hours": "街区常时；店铺各有营业时间（preliminary）",
+      "ticket": "免费（preliminary，街区型）",
+      "reservation": { "required": false, "status": "preliminary" },
+      "profile": {
+        "culture_history": "低-中（现代建筑与青年文化）",
+        "photo_value": "中高（表参道名店建筑、街景——B 层口径）",
+        "internet_fame": "高",
+        "crowd": "未核验",
+        "walking_intensity": "medium（沿表参道椴树大道线性步行）",
+        "rain_suitability": "中（沿街店铺可入内）",
+        "suitable_for": ["建筑摄影者"],
+        "not_suitable_for": ["对时尚购物无兴趣者"],
+        "constraint_risk": "medium"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "photography（建筑向）匹配；与明治神宫同区域，动线上可接续（不构成路线规划，仅为区域组合提示）",
+        "against": "与 history/culture 匹配弱；消费导向强；步行沿线较长",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "日本国家旅游局 JNTO（原宿/涩谷为时尚购物区的官方定位）", "url": "https://www.japan-travel.cn/destinations/kanto/tokyo/", "date": "2026-08-30" },
+          { "tier": "S", "site": "GO TOKYO·各地区 SPOT 导览", "url": "https://www.gotokyo.org/tc/spot/index.html", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "verified_official（区域定位）；街区细节 preliminary"
+      },
+      "candidate_category": ["photo"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["photography"], "pace_fit": "ok", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "type": "viewpoint",
+      "tags": ["photo_spot", "entertainment"],
+      "region": "涩谷·原宿",
+      "address": "涩谷 Scramble Square 屋顶（preliminary，官网口径）",
+      "geo": null,
+      "suggested_duration": "1-1.5 小时",
+      "open_hours": "10:00-22:30（最晚入场 21:20）（official_confirmed，官网购票页）",
+      "ticket": "在线购票：成人 15:00 前入场 2,700 日元 / 15:00 后 3,400 日元；窗口购票贵 300 日元（official_confirmed，官网购票页）",
+      "reservation": { "required": true, "channel": "官网在线预约（可提前约 2 周，需指定日期与入场时段）", "status": "official_confirmed" },
+      "profile": {
+        "culture_history": "低",
+        "photo_value": "高（229 米露天 SKY STAGE 360 度视野，含涩谷十字路口俯瞰）",
+        "internet_fame": "高",
+        "crowd": "热门时段（尤其日落前后）经常售罄（官网口径）",
+        "walking_intensity": "low（电梯直达展望层，SKY STAGE 为平层环游）",
+        "rain_suitability": "中（SKY STAGE 为屋顶露天，雨天关闭或视野受限；室内 SKY GALLERY 兜底）",
+        "suitable_for": ["photography 兴趣者", "少步行用户"],
+        "not_suitable_for": ["预算敏感场景（两人 5,400-6,800 日元）"],
+        "constraint_risk": "low"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "photography 强匹配的城市观景地标，电梯直达对 cannot_walk_long 最友好；票务信息已 official_confirmed，是候选池中事实确定度最高的 POI",
+        "against": "票价为池内最高；露天层雨天受限；热门时段需抢约——黄金周窗口内售罄风险更高；文化/历史价值低",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "SHIBUYA SKY 官网·购票页", "url": "https://www.shibuya-scramble-square.com/sky/ticket/", "date": "2026-08-30" },
+          { "tier": "S", "site": "SHIBUYA SKY 官网", "url": "https://www.shibuya-scramble-square.com/sky/", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "verified_official（票价/预约/时间均为官方购票页直接载明）"
+      },
+      "candidate_category": ["photo", "low_walk"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["photography"], "pace_fit": "good", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    },
+    {
+      "name": "teamLab Borderless（麻布台之丘）",
+      "type": "entertainment",
+      "tags": ["culture", "photo_spot"],
+      "region": "麻布台之丘（港区）※research 未覆盖，凭官方来源新增",
+      "address": "MORI Building DIGITAL ART MUSEUM, Azabudai Hills（official_confirmed，teamLab 官网）",
+      "geo": null,
+      "suggested_duration": "1.5-2 小时",
+      "open_hours": "常设展（2024-02 起长期展出，官网 ON VIEW）；具体开馆时刻未在本次抓取页载明（preliminary）",
+      "ticket": "付费场馆，票价未在本次抓取页载明（preliminary，待 ticket-reservation 核验）",
+      "reservation": { "required": true, "channel": "官网/官方渠道购票预约（普遍口径）", "status": "preliminary" },
+      "profile": {
+        "culture_history": "中（数字艺术，非传统历史文化）",
+        "photo_value": "高（沉浸式光影空间，允许拍摄——B 层普遍口径）",
+        "internet_fame": "高",
+        "crowd": "未核验；热门时段需预约为普遍口径",
+        "walking_intensity": "medium（馆内为漫游式动线，可随时停留——B 层口径）",
+        "rain_suitability": "高（全室内）",
+        "suitable_for": ["photography 兴趣者", "雨天备选", "文化体验补充"],
+        "not_suitable_for": ["预算敏感场景（票价中高，待核验）"],
+        "constraint_risk": "low-medium（馆内无强制长距离动线）"
+      },
+      "reviews": { "keywords": [], "positive_themes": [], "negative_themes": [], "regret_notes": null },
+      "verdict": {
+        "recommend": "候选池中确定性最高的雨天备选（全室内），photography 强匹配；与 history/culture 主线形成节奏调剂",
+        "against": "票价中高（未核验）拉低预算余量；需预约（preliminary），黄金周窗口售罄风险；对 cannot_walk_long 为中低风险但馆内久站可疲劳",
+        "overall": "medium"
+      },
+      "provenance": {
+        "sources": [
+          { "tier": "S", "site": "teamLab 官网", "url": "https://www.teamlab.art/", "date": "2026-08-30" }
+        ],
+        "updated": "2026-08-30",
+        "credibility": "verified_official（场馆存在/地点/常设状态）；票务与预约细则为 preliminary"
+      },
+      "candidate_category": ["interest_match", "photo", "rain_backup"],
+      "priority": "medium",
+      "fit": { "interests_matched": ["photography", "culture"], "pace_fit": "good", "constraint_fit": "ok" },
+      "review_status": "pending_review_analysis"
+    }
+  ],
+  "regions_covered": [
+    "浅草·上野（台东区）",
+    "谷根千（谷中·根津·千驮木）",
+    "新宿",
+    "银座·东京站周边",
+    "涩谷·原宿",
+    "麻布台之丘（港区）※research 未覆盖，凭 teamLab 官网来源新增"
+  ],
+  "selection_summary": {
+    "classic_count": 2,
+    "interest_match_count": 8,
+    "hidden_gem_count": 2,
+    "photo_count": 10,
+    "low_walk_count": 4,
+    "rain_backup_count": 4
+  },
+  "warnings": [
+    { "topic": "trip_feasibility", "note": "继承 research.json：外交部『避免前往日本』提醒（2026-03-26 更新）解除状态未确认——候选池按常规构建，是否出行属用户决策（主 Agent 闸门），本池不含任何替代目的地方案", "source": "plan/research.json#warnings" },
+    { "topic": "visa", "note": "继承 research.json：签证政策处变动窗口（官方现行规程 vs 媒体拟放宽），POI 候选不受影响但行程可行性联动", "source": "plan/research.json#conflicts" },
+    { "topic": "crowd", "note": "继承 research.json：行程完全落在中国国庆黄金周（10-01~07）内——Shibuya Sky/teamLab 等需预约场馆售罄风险升高，热门街区人流加大", "source": "plan/research.json#current_events" },
+    { "topic": "calendar", "note": "继承 research.json：窗口内东京大型活动未确认，临近需复查活动日历", "source": "plan/research.json#current_events" },
+    { "topic": "date_specific", "note": "本 Skill 新增：10-05 为周一——新宿御苑常规周一休园；东京都厅北展望室第 2/4 周一休室（10-05 为第 1 个周一，北休、南开放）；东京国立博物馆常规休馆日未核验（若为周一则 10-05 闭馆）——均需 ticket-reservation/临近核验", "source": "本次检索（环境省/国民公园协会、GO TOKYO、博物馆官网口径）" },
+    { "topic": "hours_conflict", "note": "都厅南展望室闭室时刻存在口径差异（21:30 退场 vs 22:00 vs 23:00）——采用更保守口径（按当日官方页面为准，保守按 21:30 预留），needs_recheck", "source": "本次检索（GO TOKYO 与都财务局口径差异）" }
+  ],
+  "provenance_meta": {
+    "checked_at": "2026-08-30",
+    "search_scope": "区域优先：浅草·上野 → 谷根千 → 新宿 → 银座·东京站 → 涩谷·原宿（对齐 research travel_regions）；新增麻布台之丘（teamLab 官网来源）。搜索语言以中文为主，辅以日文关键词；官网信息经搜索摘要与直接抓取两种方式获得",
+    "source_registry_ref": "plan/research.json#source_registry（S/A/B 体系沿用）",
+    "degradation_notes": [
+      "筑地场外市场：官网域名解析失败（ENOTFOUND），放弃收录而非以无来源状态入池",
+      "皇居东御苑：宫内厅观览站首页未载东御苑信息，未继续深挖子页，放弃收录",
+      "东京都厅展望室/新宿御苑/明治神宫部分官方事实经由搜索摘要获得，未逐页抓取复核——票务与开放细节统一留给 ticket-reservation 核验",
+      "搜索服务本次共 5 次超时、1 次 captcha 失败、1 次请求失败，均换措辞重试后补齐关键来源",
+      "上野公园未单列为 POI（避免无来源的步行量断言），其区域属性由东京国立博物馆地址（上野公园13-9）承载"
+    ]
+  }
+}

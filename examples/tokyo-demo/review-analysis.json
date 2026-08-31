@@ -1,0 +1,563 @@
+{
+  "analysis_meta": {
+    "profile_reference": "plan/profile.json",
+    "candidates_reference": "plan/candidates.json",
+    "research_reference": "plan/research.json",
+    "generated_at": "2026-08-30",
+    "analyzed_count": 11,
+    "partial_count": 1,
+    "insufficient_count": 0
+  },
+  "pois": [
+    {
+      "poi_name": "浅草寺（含仲见世通）",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 8, "platforms": ["Tripadvisor", "Reddit", "Instagram", "攻略站(gltjp/jeepe/搜狐时间线/TanukiTabi)"], "confidence": "high" },
+      "keywords": [
+        { "term": "人挤人", "weight": 0.95, "sentiment": "negative" },
+        { "term": "雷门", "weight": 0.9, "sentiment": "positive" },
+        { "term": "仲见世通", "weight": 0.85, "sentiment": "mixed" },
+        { "term": "清晨去", "weight": 0.75, "sentiment": "positive" },
+        { "term": "和服租赁", "weight": 0.6, "sentiment": "mixed" }
+      ],
+      "positive_themes": [
+        { "theme": "历史氛围与标志景观", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 5, "representative_notes": "雷门/仲见世/古寺底蕴是'东京经典体验'的多平台共识（攻略与 Reddit 均认可）" },
+        { "theme": "免费且易达", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "参拜免费、交通方便被反复提及" },
+        { "theme": "边走边吃", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "人形烧、炸肉饼等小吃与参拜一次完成（paraphrase）" }
+      ],
+      "negative_themes": [
+        { "theme": "拥挤", "frequency": "frequent", "sentiment": "negative", "evidence_strength": "high", "examples_count": 5, "representative_notes": "Tripadvisor '人流量非常大'；Reddit 称其为黄金周最挤点（仲见世窄巷布局）；年客流量数千万级说法多源出现" },
+        { "theme": "周边店铺排队", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "热门店铺排队现象严重（paraphrase 自中文报道）" },
+        { "theme": "商业化", "frequency": "common", "sentiment": "mixed", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "商业街既是亮点也是干扰项，正负并存" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为白天随时清净", "actual_experience": "白天人挤人，仲见世窄巷尤甚，黄金周为最挤档期", "affected_group": "怕人群者/photography", "evidence_strength": "high" },
+        { "trigger": "以为核心区很大", "actual_experience": "景点不大、游览耗时短，深度爱好者可能意犹未尽", "affected_group": "history_culture 深度游客", "evidence_strength": "medium" },
+        { "trigger": "随机选和服租赁店", "actual_experience": "有游客遇到店铺远/隐形加价/提前催还等套路", "affected_group": "和服体验者", "evidence_strength": "single_source" }
+      ],
+      "audience_segments": [
+        { "segment": "history_culture", "positive": ["东京最古老寺庙的历史底蕴"], "negative": ["人挤人削弱参拜体验"] },
+        { "segment": "photography", "positive": ["雷门/五重塔/仲见世街景出片"], "negative": ["白天难拍空景"] },
+        { "segment": "cannot_walk_long", "positive": ["核心区不大、路线固定、平地为主"], "negative": ["人流密集处行走速度极慢、站立等待多"] },
+        { "segment": "first_time_visitor", "positive": ["东京必去经典，符合预期"], "negative": [] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "白天与节庆高峰最挤，黄金周被英文社区点名为最挤景点（EXPERIENCE，多源）" },
+        { "type": "recommended_time_windows", "note": "清晨或傍晚避峰（EXPERIENCE，多平台一致）" },
+        { "type": "queue_experience", "note": "仲见世通及周边热门店铺存在长队（EXPERIENCE）" }
+      ],
+      "review_adjustment_signal": "neutral",
+      "evidence_summary": { "consensus_level": "high", "top_positive": "历史氛围与标志景观", "top_negative": "拥挤（高共识）", "notes": "评论充分印证 verdict 中'人流大'的 against；年客流量超 3000 万为 B 层说法，供参考非官方统计" },
+      "sources": [
+        { "platform": "Tripadvisor", "url": "https://cn.tripadvisor.com/ShowUserReviews-g14134311-d320447-r756333133-Senso_ji_Temple-Asakusa_Taito_Tokyo_Tokyo_Prefecture_Kanto.html", "checked_at": "2026-08-30" },
+        { "platform": "Reddit r/TokyoTravel", "url": "https://www.reddit.com/r/TokyoTravel/comments/1s16zmp/tokyo_sensoji/", "checked_at": "2026-08-30" },
+        { "platform": "攻略站 gltjp", "url": "https://www.gltjp.com/zh-hans/article/item/10068/", "checked_at": "2026-08-30" },
+        { "platform": "Instagram（和服踩雷帖）", "url": "https://www.instagram.com/p/DX0-j6hxxa5/", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "东京国立博物馆",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 7, "platforms": ["Klook", "Tripadvisor(中/英)", "Reddit", "Quora", "Facebook 旅行社群", "官方FAQ(tnm.jp)"], "confidence": "high" },
+      "keywords": [
+        { "term": "一天看不完", "weight": 0.9, "sentiment": "mixed" },
+        { "term": "日本历史文化", "weight": 0.9, "sentiment": "positive" },
+        { "term": "主馆二楼", "weight": 0.8, "sentiment": "positive" },
+        { "term": "宏大震撼", "weight": 0.8, "sentiment": "positive" },
+        { "term": "走累", "weight": 0.7, "sentiment": "negative" }
+      ],
+      "positive_themes": [
+        { "theme": "藏品顶级", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "Klook 4.9 分、Reddit 称 MUST do、Tripadvisor 中英文评价均盛赞日本历史文物收藏" },
+        { "theme": "官方参观策略清晰", "frequency": "common", "sentiment": "positive", "evidence_strength": "high", "examples_count": 2, "representative_notes": "官方 FAQ 建议带目的参观、首访直奔主馆二楼按时代顺序看" }
+      ],
+      "negative_themes": [
+        { "theme": "规模大易疲劳", "frequency": "frequent", "sentiment": "negative", "evidence_strength": "high", "examples_count": 4, "representative_notes": "官方 FAQ 称仔细看一天也看不完；Quora 提醒先吃饭并预留 3-4 小时；Tripadvisor 英文评价用 overwhelmed" },
+        { "theme": "部分展陈体验一般", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "low", "examples_count": 1, "representative_notes": "少数评价认为展陈设计有提升空间" }
+      ],
+      "regret_notes": [
+        { "trigger": "想一次逛完全部 6 馆", "actual_experience": "全馆需 5-6 小时且非常累，与 slow 节奏冲突", "affected_group": "slow_pace / cannot_walk_long", "evidence_strength": "high" },
+        { "trigger": "没做功课直接进馆", "actual_experience": "不知道看什么，容易走马观花", "affected_group": "first_time_visitor", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "history_culture", "positive": ["日本历史与文物理解大幅加深", "89 件国宝级藏品（B 层说法）"], "negative": [] },
+        { "segment": "cannot_walk_long", "positive": ["室内为主、有餐厅咖啡厅歇脚", "可只看主馆二楼精华"], "negative": ["全馆走完步行量大", "需按体力果断取舍展馆"] },
+        { "segment": "slow_pace", "positive": ["半天慢逛 1-2 馆节奏舒适"], "negative": ["全馆耗时会挤占全天"] }
+      ],
+      "crowd_patterns": [
+        { "type": "recommended_time_windows", "note": "官方与攻略均建议工作日或早晨前往（EXPERIENCE+官方建议）" }
+      ],
+      "review_adjustment_signal": "positive",
+      "fact_claim_conflicts": [
+        { "poi": "东京国立博物馆", "claim": "所有参观者须事先在网上预约（官方 FAQ 口径）", "candidates_current": "reservation.required=false（preliminary）", "source": "tnm.jp 官方 FAQ（经搜索获得）", "action": "移交 ticket-reservation 核验，candidates.json 未被修改" },
+        { "poi": "东京国立博物馆", "claim": "本馆常规展成人 1,000 日元（官方 FAQ 口径）", "candidates_current": "ticket 为 preliminary 未载明具体金额", "source": "tnm.jp 官方 FAQ", "action": "非冲突，作为核验线索供 ticket-reservation 使用" }
+      ],
+      "evidence_summary": { "consensus_level": "high", "top_positive": "藏品顶级（历史爱好者 MUST do）", "top_negative": "规模大易疲劳", "notes": "官方 FAQ 的票价与预约要求见 fact_claim_conflicts——本 Skill 不裁决，不修改 candidates.json" },
+      "sources": [
+        { "platform": "官方FAQ tnm.jp", "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=156&lang=zh_cn", "checked_at": "2026-08-30" },
+        { "platform": "Reddit r/JapanTravelTips", "url": "https://www.reddit.com/r/JapanTravelTips/comments/1r49wyp/tokyo_national_museum_worth_it/", "checked_at": "2026-08-30" },
+        { "platform": "Klook", "url": "https://www.klook.com/zh-CN/destination/p60271186-tokyo-national-museum/", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "谷中银座·谷根千街区",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 6, "platforms": ["Klook", "Tabirai Japan", "Snow Monkey Resorts", "GetYourGuide", "JNTO", "KKday"], "confidence": "medium" },
+      "keywords": [
+        { "term": "下町风情", "weight": 0.92, "sentiment": "positive" },
+        { "term": "安静", "weight": 0.85, "sentiment": "positive" },
+        { "term": "猫街", "weight": 0.8, "sentiment": "positive" },
+        { "term": "昭和风貌", "weight": 0.78, "sentiment": "positive" },
+        { "term": "美食小店", "weight": 0.75, "sentiment": "positive" }
+      ],
+      "positive_themes": [
+        { "theme": "怀旧下町氛围", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "'回到过去'的昭和老街体验在多平台重复出现" },
+        { "theme": "避开人潮", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "多条评价称游客少、气氛宁静祥和" },
+        { "theme": "美食小店密集", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "被称为美食爱好者天堂；小吃与咖啡店丰富" }
+      ],
+      "negative_themes": [
+        { "theme": "知名度上升游客增多", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "low", "examples_count": 1, "representative_notes": "有说法指出它'现在已很热门'，与'秘境'标签并存" },
+        { "theme": "全区步行量大", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "区域全程约 2-3 公里（B 层攻略口径）" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为是无人小众秘境", "actual_experience": "知名度上升，热门时段游客不少", "affected_group": "hidden_gem 偏好者", "evidence_strength": "medium" },
+        { "trigger": "想走完谷根千全程", "actual_experience": "全程 2-3 公里，对不能长走者不友好；但仅谷中银座商店街段（约 175 公尺、约 70 家店）步行量很小", "affected_group": "cannot_walk_long", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "photography", "positive": ["昭和街景/夕阳阶梯/猫元素出片"], "negative": [] },
+        { "segment": "food", "positive": ["小吃与老铺密集"], "negative": [] },
+        { "segment": "cannot_walk_long", "positive": ["商店街主街仅约 175 公尺，可短段体验"], "negative": ["全区步行量大，需果断截段"] },
+        { "segment": "slow_pace", "positive": ["惬意步调体验当地生活，契合 slow"], "negative": [] }
+      ],
+      "crowd_patterns": [
+        { "type": "recommended_time_windows", "note": "攻略推荐下午悠闲造访、可安排半天（EXPERIENCE）" }
+      ],
+      "review_adjustment_signal": "positive",
+      "evidence_summary": { "consensus_level": "medium", "top_positive": "怀旧下町氛围", "top_negative": "全区步行量大（可截段化解）", "notes": "商店街 175 公尺/约 70 店为攻略结构数据（A/B 层）；与 cannot_walk_long 的适配结论是'截段友好、全程不友好'" },
+      "sources": [
+        { "platform": "Klook（谷根千半日游评价）", "url": "https://www.klook.com/zh-CN/activity/91354-yanaka-ginza-nezu-shrine-zenshoan-temple-private-half-day-walking-tour/", "checked_at": "2026-08-30" },
+        { "platform": "KKday（谷根千散步攻略）", "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi", "checked_at": "2026-08-30" },
+        { "platform": "Snow Monkey Resorts 等攻略", "url": "https://www.japan-travel.cn/destinations/kanto/tokyo/", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "根津神社",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 6, "platforms": ["GO TOKYO(官方)", "Tripadvisor", "携程", "Trip Moments", "japan-food.guide", "GetYourGuide/Klook"], "confidence": "medium" },
+      "keywords": [
+        { "term": "千本鸟居", "weight": 0.92, "sentiment": "positive" },
+        { "term": "出片", "weight": 0.9, "sentiment": "positive" },
+        { "term": "人少安静", "weight": 0.85, "sentiment": "positive" },
+        { "term": "杜鹃花", "weight": 0.7, "sentiment": "positive" },
+        { "term": "抢拍排队", "weight": 0.6, "sentiment": "negative" }
+      ],
+      "positive_themes": [
+        { "theme": "拍照出片", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "GO TOKYO 官方称其为'东京最适合拍照的神社'；携程/Trip Moments 称迷你千本鸟居漂亮易取景，比伏见稻荷好拍" },
+        { "theme": "人少宁静", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "被塞进安静社区、适合拿着相机慢慢逛（paraphrase）" }
+      ],
+      "negative_themes": [
+        { "theme": "鸟居隧道抢拍排队", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 1, "representative_notes": "热门角度需游客依次排队拍照（Tripadvisor 口径）" },
+        { "theme": "亮点高度绑定春季杜鹃", "frequency": "common", "sentiment": "mixed", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "多来源把'杜鹃花苑+鸟居'列为最值得场景——10 月上旬无此叠加" }
+      ],
+      "regret_notes": [
+        { "trigger": "被春季杜鹃配鸟居的照片吸引", "actual_experience": "10 月上旬无杜鹃花苑景观，只剩鸟居本体", "affected_group": "photography", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "photography", "positive": ["千本鸟居/乙女稻荷高处俯瞰", "比伏见稻荷易取景"], "negative": ["热门机位需排队抢拍"] },
+        { "segment": "history_culture", "positive": ["江户时代神社、文豪之石等掌故"], "negative": [] },
+        { "segment": "cannot_walk_long", "positive": ["社内范围有限、步行量小"], "negative": [] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "春季杜鹃花期人流上升（EXPERIENCE）；10 月无此峰值" },
+        { "type": "queue_experience", "note": "鸟居隧道机位存在拍照排队（EXPERIENCE）" }
+      ],
+      "review_adjustment_signal": "positive",
+      "evidence_summary": { "consensus_level": "medium", "top_positive": "拍照出片（官方认证+多平台）", "top_negative": "亮点绑定春季杜鹃", "notes": "candidates 中全部事实字段为 preliminary 的状况未改变；开放时间/免费口径仍需 ticket-reservation 核验" },
+      "sources": [
+        { "platform": "GO TOKYO（官方）", "url": "https://www.gotokyo.org/tc/spot/index.html", "checked_at": "2026-08-30" },
+        { "platform": "Tripadvisor", "url": "https://cn.tripadvisor.com/", "checked_at": "2026-08-30" },
+        { "platform": "携程点评/Trip Moments/japan-food.guide", "url": "", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "新宿御苑",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 5, "platforms": ["Klook", "Tripadvisor", "攻略站(gltjp/乐吃购)", "Trip.com"], "confidence": "medium" },
+      "keywords": [
+        { "term": "庭园", "weight": 0.88, "sentiment": "positive" },
+        { "term": "樱花季", "weight": 0.85, "sentiment": "positive" },
+        { "term": "安静绿洲", "weight": 0.8, "sentiment": "positive" },
+        { "term": "500日元", "weight": 0.75, "sentiment": "positive" },
+        { "term": "季节限定", "weight": 0.7, "sentiment": "mixed" }
+      ],
+      "positive_themes": [
+        { "theme": "景观如明信片", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 3, "representative_notes": "Tripadvisor：宽阔草坪/日式庭园/宁静池塘'每个角落都像明信片'；Klook 4.9 分" },
+        { "theme": "性价比高", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "成人 500 日元被评'性价比很高'；当天可重新入园" },
+        { "theme": "市区绿洲", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "大草坪野餐、宁静环境与新宿商圈形成反差" }
+      ],
+      "negative_themes": [
+        { "theme": "体验高度绑定季节", "frequency": "frequent", "sentiment": "mixed", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "攻略普遍强调春秋两季最值得（樱花/红叶）；10 月上旬处过渡档" },
+        { "theme": "开放规则易踩坑", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "每月开放时间不同'别扑空'；周一休园；赏樱季限流需官网预约且现场排队可超 1 小时（3-4 月）" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为四季体验一致", "actual_experience": "攻略口碑集中在樱花/红叶峰值，10 月上旬为过渡档、景观折扣", "affected_group": "photography", "evidence_strength": "medium" },
+        { "trigger": "以为随到随进", "actual_experience": "每月开放时间变动+周一休园（10-05 恰为周一）", "affected_group": "所有游客", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "photography", "positive": ["池塘倒影等经典机位"], "negative": ["10 月上旬非峰值景观"] },
+        { "segment": "cannot_walk_long", "positive": ["大草坪可坐下休憩，契合'少走多停'"], "negative": ["全园规模大，环路步行量大"] },
+        { "segment": "slow_pace", "positive": ["野餐式慢节奏与 slow 契合"], "negative": ["需留意闭园时间避免被赶"] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "樱花季限流+现场排队超 1 小时（EXPERIENCE，3-4 月季象，不在本次窗口）" }
+      ],
+      "review_adjustment_signal": "neutral",
+      "evidence_summary": { "consensus_level": "medium", "top_positive": "景观如明信片", "top_negative": "体验绑定季节", "notes": "门票 500 円的多源说法与 candidates.json preliminary 值一致（非冲突）；'当天可重新入园'为新细节线索，供 ticket-reservation 核验" },
+      "sources": [
+        { "platform": "Klook（新宿御苑行前须知）", "url": "https://www.klook.com/zh-CN/destination/p50050807-greenhouse-shinjuku-gyoen-national-garden/", "checked_at": "2026-08-30" },
+        { "platform": "攻略站 gltjp", "url": "https://www.gltjp.com/zh-hans/article/item/20552/", "checked_at": "2026-08-30" },
+        { "platform": "乐吃购！日本", "url": "https://tokyo.letsgojp.cn/", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "思出横丁（思い出横丁）",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 7, "platforms": ["Tripadvisor", "Klook", "GetYourGuide", "byFood", "ExcursionMania", "MarkTrip", "官网(shinjuku-omoide)"], "confidence": "high" },
+      "keywords": [
+        { "term": "昭和氛围", "weight": 0.92, "sentiment": "positive" },
+        { "term": "烟熏味", "weight": 0.85, "sentiment": "negative" },
+        { "term": "只收现金", "weight": 0.82, "sentiment": "negative" },
+        { "term": "烧鸟", "weight": 0.85, "sentiment": "positive" },
+        { "term": "窄巷", "weight": 0.8, "sentiment": "mixed" }
+      ],
+      "positive_themes": [
+        { "theme": "昭和复古氛围", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "战后原始居酒屋巷风貌/深夜食堂感被多平台反复称赞；GYG 相关导览 4.8 分" },
+        { "theme": "每店个性鲜明", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "约 80 家小店风格各异，与当地人近距离接触" }
+      ],
+      "negative_themes": [
+        { "theme": "烟熏味重", "frequency": "frequent", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "烤串烟+部分店铺允许吸烟，敏感者需有心理准备" },
+        { "theme": "只收现金", "frequency": "frequent", "sentiment": "negative", "evidence_strength": "high", "examples_count": 2, "representative_notes": "多数店铺不收卡，进店前先取日元" },
+        { "theme": "巷窄且多数店无厕所", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "带大件行李不便；需走至车站附近公共设施" },
+        { "theme": "高峰排队与最低点单", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "座位有限、部分店有最低消费要求" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为只是随手打卡的小巷", "actual_experience": "烟熏环境+狭窄通道+吧台站立式用餐，舒适度低", "affected_group": "cannot_walk_long / 介意烟味者", "evidence_strength": "medium" },
+        { "trigger": "以为可以刷卡", "actual_experience": "多数店只收现金", "affected_group": "所有游客", "evidence_strength": "high" }
+      ],
+      "audience_segments": [
+        { "segment": "food", "positive": ["地道居酒屋体验/烧鸟烤杂碎", "轻食约 1,000-2,000 日元/人（B 层参考）"], "negative": ["不接受烟味则体验崩"] },
+        { "segment": "cannot_walk_long", "positive": ["距新宿站西口约 2 分钟，抵达成本极低"], "negative": ["巷内狭窄拥挤、站立式为主、无厕所"] },
+        { "segment": "photography", "positive": ["灯笼窄巷夜景出片"], "negative": ["夜间拥挤难拍空景"] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "白天冷清、晚间最有氛围且拥挤（EXPERIENCE，多源）" },
+        { "type": "queue_experience", "note": "高峰期热门店需排队等位（EXPERIENCE）" }
+      ],
+      "review_adjustment_signal": "neutral",
+      "evidence_summary": { "consensus_level": "high", "top_positive": "昭和复古氛围", "top_negative": "烟熏+现金-only+无厕所三连", "notes": "评论补充了 verdict 未覆盖的摩擦点（烟味/无厕所），但价值面成立；具体餐厅选择属 food-restaurant 职责" },
+      "sources": [
+        { "platform": "Klook（回忆小牧行前须知）", "url": "https://www.klook.com/zh-CN/destination/p50311810-omoide-yokocho/", "checked_at": "2026-08-30" },
+        { "platform": "新宿西口思出横丁官网", "url": "https://cn.shinjuku-omoide.com/", "checked_at": "2026-08-30" },
+        { "platform": "byFood/ExcursionMania/MarkTrip（现金与店铺口径）", "url": "https://www.byfood.com/zh/blog/shinjuku-omoide-yokocho-p-832", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "东京都厅展望室",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 7, "platforms": ["Trip.com", "爱旅志", "乐吃购", "bobbytravel", "gltjp", "窝日本", "易游网"], "confidence": "medium" },
+      "keywords": [
+        { "term": "免费", "weight": 0.95, "sentiment": "positive" },
+        { "term": "夜景", "weight": 0.9, "sentiment": "positive" },
+        { "term": "排队", "weight": 0.7, "sentiment": "negative" },
+        { "term": "富士山", "weight": 0.75, "sentiment": "positive" },
+        { "term": "有座位", "weight": 0.65, "sentiment": "positive" }
+      ],
+      "positive_themes": [
+        { "theme": "免费高性价比", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "'免费入场佛心'、对比 Shibuya Sky 省约 2,000 日元、'新宿夜景性价比之王'（多源）" },
+        { "theme": "室内舒适", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "室内赏景有座位、不受天气影响——对 cannot_walk_long 友好" },
+        { "theme": "交通便利", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "都厅前站直达/新宿步行圈" }
+      ],
+      "negative_themes": [
+        { "theme": "晚间排队", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "免费热门景点晚上排队明显，需预留等候时间" },
+        { "theme": "天气依赖", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "天气不佳时看不到富士山、夜景打折" },
+        { "theme": "南北翼开放规则混乱", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "哪家开到晚上、哪天休室，各来源口径不一致" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为随时上去不用等", "actual_experience": "晚间热门时段需排队，且南北翼轮休需提前对表", "affected_group": "所有游客", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "cannot_walk_long", "positive": ["电梯直达 45 楼、室内有座位——候选池中对少步行用户最友好"], "negative": [] },
+        { "segment": "budget_sensitive", "positive": ["免费，替代收费展望台"], "negative": [] },
+        { "segment": "photography", "positive": ["360 度夜景/晴日富士山/楼下灯光秀"], "negative": ["雨天视野受限"] }
+      ],
+      "crowd_patterns": [
+        { "type": "queue_experience", "note": "晚间排队常见，热门时段建议预留 20-30 分钟（EXPERIENCE）" },
+        { "type": "recommended_time_windows", "note": "日落前后夜景最佳；南展望室夜间更热门（EXPERIENCE，口径待核验）" }
+      ],
+      "review_adjustment_signal": "positive",
+      "fact_claim_conflicts": [
+        { "poi": "东京都厅展望室", "claim": "南北翼夜间开放与休室安排口径不一（部分来源称夜间开放北翼/南翼为夜景热门；candidates.json 记北翼至 17:30）", "candidates_current": "open_hours=北 17:30 / 南至 22:00，南北轮休（official_confirmed 来源口径）", "source": "bobbytravel、窝日本等游记与 GO TOKYO/都财务局口径存在差异", "action": "移交 ticket-reservation 核验，candidates.json 未被修改" }
+      ],
+      "evidence_summary": { "consensus_level": "high", "top_positive": "免费+室内座位", "top_negative": "晚间排队", "notes": "南北翼开放安排的来源口径差异见 fact_claim_conflicts" },
+      "sources": [
+        { "platform": "GO TOKYO（官方，已在 candidates 登记）", "url": "https://www.gotokyo.org/tc/spot/74/index.html", "checked_at": "2026-08-30" },
+        { "platform": "bobbytravel（都厅展望台游记）", "url": "https://bobbytravel.tw/tokyo-metropolitan/", "checked_at": "2026-08-30" },
+        { "platform": "易游网/窝日本/爱旅志/乐吃购/Trip.com（排队与夜景口径）", "url": "", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "银座中央通街区",
+      "review_status": "partial",
+      "review_volume": { "usable_reviews": 4, "platforms": ["Tripadvisor(银座三越)", "攻略站(bobbytravel/gltjp)"], "confidence": "low" },
+      "keywords": [
+        { "term": "高级购物区", "weight": 0.9, "sentiment": "mixed" },
+        { "term": "百货", "weight": 0.85, "sentiment": "positive" },
+        { "term": "步行者天国", "weight": 0.78, "sentiment": "positive" },
+        { "term": "平价选项", "weight": 0.7, "sentiment": "positive" }
+      ],
+      "positive_themes": [
+        { "theme": "百货密度与服务", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "Tripadvisor 三越评价'顶级品牌齐全、员工友善'；GINZA SIX 设计感强、逛街舒适" },
+        { "theme": "周末步行者天国", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "周六日 12:00-17:00 中央通禁车（4-9 月延至 18:00；10 月起 17:00）" },
+        { "theme": "平价可玩", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "无印良品/UNIQLO/有乐町 BicCamera 覆盖预算有限游客" }
+      ],
+      "negative_themes": [
+        { "theme": "消费溢价", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "高端定位对预算有限游客不友好；餐饮价位高" },
+        { "theme": "对非购物者吸引力有限", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "low", "examples_count": 1, "representative_notes": "以购物为导向的街区，观光内容密度低" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为必须消费才能逛", "actual_experience": "步行者天国+平价店铺可零消费体验街景", "affected_group": "budget_sensitive", "evidence_strength": "medium" },
+        { "trigger": "照搬博主 3-4 公里路线", "actual_experience": "全程步行量大，对不能长走者应截段", "affected_group": "cannot_walk_long", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "food", "positive": ["百货地下美食街（松屋等）"], "negative": ["价位偏高"] },
+        { "segment": "cannot_walk_long", "positive": ["百货室内可休整、雨天容错"], "negative": ["沿街路线长，需截段"] },
+        { "segment": "budget_sensitive", "positive": ["平价店铺可逛"], "negative": ["整体消费环境溢价"] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "周末步行者天国时段热闹（EXPERIENCE）" }
+      ],
+      "review_adjustment_signal": "neutral",
+      "evidence_summary": { "consensus_level": "medium", "top_positive": "百货与步行者天国", "top_negative": "消费溢价", "notes": "review_status=partial：垂直游客点评较少，证据以购物攻略为主；区域定位与 research/JNTO 口径一致" },
+      "sources": [
+        { "platform": "bobbytravel（2026 银座攻略）", "url": "https://bobbytravel.tw/ginza/", "checked_at": "2026-08-30" },
+        { "platform": "gltjp（银座购物指南）", "url": "https://www.gltjp.com/", "checked_at": "2026-08-30" },
+        { "platform": "Tripadvisor（银座三越评价）", "url": "", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "明治神宫",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 8, "platforms": ["知乎", "Klook", "KKday", "Tripadvisor", "Trip.com", "JNTO", "gltjp", "Reddit/Facebook"], "confidence": "high" },
+      "keywords": [
+        { "term": "森林宁静", "weight": 0.92, "sentiment": "positive" },
+        { "term": "参道长", "weight": 0.88, "sentiment": "negative" },
+        { "term": "免费", "weight": 0.8, "sentiment": "positive" },
+        { "term": "原宿站1分钟", "weight": 0.75, "sentiment": "positive" },
+        { "term": "平淡", "weight": 0.5, "sentiment": "negative" }
+      ],
+      "positive_themes": [
+        { "theme": "市区森林的宁静", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "'宁静雄伟的静修地''静谧庄严彷彿不在市中心'——中英文评价一致" },
+        { "theme": "免费且交通便利", "frequency": "common", "sentiment": "positive", "evidence_strength": "high", "examples_count": 3, "representative_notes": "参拜免费（御苑/博物馆/宝物殿付费）；原宿站步行 1 分钟" },
+        { "theme": "动静对比", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "从幽静步道出来就是热闹原宿/涩谷，反差被视为独特体验" }
+      ],
+      "negative_themes": [
+        { "theme": "参道步行量大", "frequency": "frequent", "sentiment": "negative", "evidence_strength": "high", "examples_count": 3, "representative_notes": "知乎：入口到正殿来回约五六千步；Klook：步行距离相当长；KKday：全程 1-2 小时" },
+        { "theme": "对非历史爱好者平淡", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "Reddit 有' boring / underwhelming '的少数派声音——人群差异显著" },
+        { "theme": "设施细节", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "low", "examples_count": 1, "representative_notes": "沿途垃圾桶少（Klook 徒步评价）" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为在原宿站旁随便逛逛", "actual_experience": "入口—本堂参道来回约五六千步，且为必经段", "affected_group": "cannot_walk_long", "evidence_strength": "high" },
+        { "trigger": "期待震撼的视觉奇观", "actual_experience": "氛围型景点，部分游客觉得平淡", "affected_group": "first_time_visitor", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "history_culture", "positive": ["神社文化/庄严氛围/御园景观"], "negative": [] },
+        { "segment": "cannot_walk_long", "positive": ["地面平坦（Klook 口径）", "有洗手间"], "negative": ["往返五六千步的必经参道", "垃圾桶少影响途中休整"] },
+        { "segment": "slow_pace", "positive": ["森林漫步契合慢节奏"], "negative": ["1-2 小时耗时需预留"] },
+        { "segment": "photography", "positive": ["大鸟居/参道绿意"], "negative": ["缺少单点'标志机位'"] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "下午人流正常偏高，周末午后更明显（EXPERIENCE）" },
+        { "type": "recommended_time_windows", "note": "多个来源建议 9:30 前到达（EXPERIENCE：Facebook 提示+攻略）" },
+        { "type": "queue_experience", "note": "无严格排队；黄金周因森林分散人流、相对可控（EXPERIENCE，Reddit 黄金周报告）" }
+      ],
+      "review_adjustment_signal": "neutral",
+      "evidence_summary": { "consensus_level": "high", "top_positive": "市区森林宁静", "top_negative": "参道步行量大（cannot_walk_long 核心风险，high 证据）", "notes": "参拜免费的 B 层说法与 candidates preliminary 一致；'御苑/博物馆/宝物殿付费'为新细节线索供核验" },
+      "sources": [
+        { "platform": "知乎（参道步数）", "url": "", "checked_at": "2026-08-30" },
+        { "platform": "gltjp（明治神宫完整指南）", "url": "https://www.gltjp.com/zh-hans/article/item/10443/", "checked_at": "2026-08-30" },
+        { "platform": "Reddit r/TokyoTravel", "url": "https://www.reddit.com/r/TokyoTravel/comments/1t2wzqd/sunday_meiji_shrine_or_sensoji_temple/", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "表参道·原宿街区",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 6, "platforms": ["乐吃购", "JEEPE", "Tripmoo", "bobbytravel", "MATCHA", "Threads/Instagram"], "confidence": "medium" },
+      "keywords": [
+        { "term": "竹下通拥挤", "weight": 0.88, "sentiment": "negative" },
+        { "term": "表参道好逛", "weight": 0.85, "sentiment": "positive" },
+        { "term": "街景出片", "weight": 0.82, "sentiment": "positive" },
+        { "term": "屋顶观景台", "weight": 0.7, "sentiment": "positive" },
+        { "term": "周末下午人潮", "weight": 0.75, "sentiment": "negative" }
+      ],
+      "positive_themes": [
+        { "theme": "区域风格分层", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "竹下通热闹/表参道精致/明治神宫宁静的三段式体验被多篇攻略采用" },
+        { "theme": "街景与建筑出片", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "表参道街景、东急 Plaza 屋顶免费观景台被点名最出片" },
+        { "theme": "动线灵活", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "神宫(早)→竹下通→猫街→表参道的组合动线多源出现（组合建议非路线规划）" }
+      ],
+      "negative_themes": [
+        { "theme": "竹下通拥挤疲劳", "frequency": "frequent", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "Tripmoo 明确避坑：只挤竹下通会很快疲劳" },
+        { "theme": "周末下午人潮爆炸", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "周末下午到达体验容易'崩'（Tripmoo 口径）" }
+      ],
+      "regret_notes": [
+        { "trigger": "把时间全花在竹下通", "actual_experience": "拥挤且同质化，表参道部分更舒适好逛", "affected_group": "所有游客", "evidence_strength": "medium" },
+        { "trigger": "周末下午前往", "actual_experience": "人潮密度峰值，拍照与移动都困难", "affected_group": "photography / cannot_walk_long", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "photography", "positive": ["表参道街景/东急 Plaza 屋顶"], "negative": ["竹下通难拍"] },
+        { "segment": "cannot_walk_long", "positive": ["沿街有大量咖啡/甜品休整点（攻略强调休息节奏）"], "negative": ["线性街区全程步行量中等偏上"] },
+        { "segment": "slow_pace", "positive": ["每 1-2 小时安排休息的节奏建议与 slow 契合"], "negative": [] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "周末下午为峰值；平日上午较松（EXPERIENCE，Tripmoo/JEEPE）" },
+        { "type": "recommended_time_windows", "note": "平日上午逛竹下通、午后表参道咖啡休整（EXPERIENCE）" }
+      ],
+      "review_adjustment_signal": "neutral",
+      "evidence_summary": { "consensus_level": "medium", "top_positive": "风格分层+街景出片", "top_negative": "竹下通/周末下午拥挤", "notes": "证据以攻略与社区内容为主，评论总量少但避坑模式跨来源一致" },
+      "sources": [
+        { "platform": "Tripmoo（避坑指南）", "url": "https://tripmoo.net/zh-japan-harajuku-omotesando/", "checked_at": "2026-08-30" },
+        { "platform": "乐吃购（原宿完全攻略 2026）", "url": "https://tokyo.letsgojp.com/archives/491652/", "checked_at": "2026-08-30" },
+        { "platform": "JEEPE（路线与礼仪）", "url": "https://www.jeepe.jp/zh/articles/harajuku-area-guide-1546", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 7, "platforms": ["Tripadvisor", "Trip.com(中文攻略)", "Klook", "KKday", "实测帖(vivianexplore/haniseoul)", "WAmazing/Instagram"], "confidence": "high" },
+      "keywords": [
+        { "term": "日落", "weight": 0.95, "sentiment": "positive" },
+        { "term": "售罄", "weight": 0.88, "sentiment": "negative" },
+        { "term": "360度夜景", "weight": 0.85, "sentiment": "positive" },
+        { "term": "提前预约", "weight": 0.85, "sentiment": "positive" },
+        { "term": "露天拥挤", "weight": 0.75, "sentiment": "negative" }
+      ],
+      "positive_themes": [
+        { "theme": "景观顶级", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "被评'东京最值得的体验之一'；从高空俯瞰十字路口是独有亮点" },
+        { "theme": "空间设计合理", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "Tripadvisor：人多但不显拥挤，可找到位置坐下按自己节奏看" },
+        { "theme": "预约渠道成熟", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 3, "representative_notes": "官网+Klook/KKday 即买即用、免排队购票" }
+      ],
+      "negative_themes": [
+        { "theme": "日落档售罄", "frequency": "frequent", "sentiment": "negative", "evidence_strength": "high", "examples_count": 3, "representative_notes": "日落时段票 5 分钟内被抢光（实测帖）；黄金周窗口风险更高" },
+        { "theme": "露天区拥挤", "frequency": "common", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "日落时露天观景位需尽快抢占；需预留排队乘梯与寄物时间" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为当天买票即可", "actual_experience": "日落档需提前约 2 周官网抢票，热门时段秒罄", "affected_group": "所有游客", "evidence_strength": "high" },
+        { "trigger": "以为 1 小时够", "actual_experience": "想从日落看到夜景建议预留 2 小时（含排队占位）", "affected_group": "slow_pace", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "photography", "positive": ["白天→夕阳→夜景一次收齐", "露天 360 度"], "negative": ["热门机位需抢"] },
+        { "segment": "cannot_walk_long", "positive": ["电梯直达、场内平层环游、有座位"], "negative": ["入场高峰需站立排队"] },
+        { "segment": "budget_sensitive", "positive": [], "negative": ["两人 5,400-6,800 日元，为池内最高消费"] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "日落前 30-60 分钟入场档最热门（EXPERIENCE，多源）" },
+        { "type": "queue_experience", "note": "乘梯与寄物排队；入场后露天位需抢（EXPERIENCE）" },
+        { "type": "recommended_time_windows", "note": "平日比周末从容；预约比日落提前约 60 分钟梯次（EXPERIENCE）" }
+      ],
+      "review_adjustment_signal": "neutral",
+      "evidence_summary": { "consensus_level": "high", "top_positive": "日落景观顶级", "top_negative": "日落档售罄（与黄金周窗口叠加风险）", "notes": "票价/预约/时间与 candidates 的 official_confirmed 值一致，无冲突；评论新增'提前 60 分钟梯次/预留 2 小时'体验细节" },
+      "sources": [
+        { "platform": "Trip.com 攻略", "url": "https://tw.trip.com/blog/shibuya-sky/", "checked_at": "2026-08-30" },
+        { "platform": "Tripadvisor（游客点评）", "url": "https://cn.tripadvisor.com/", "checked_at": "2026-08-30" },
+        { "platform": "Klook/KKday（订票实测）", "url": "https://www.klook.com/en-US/activity/70672-shibuya-sky-tokyo/", "checked_at": "2026-08-30" }
+      ]
+    },
+    {
+      "poi_name": "teamLab Borderless（麻布台之丘）",
+      "review_status": "analyzed",
+      "review_volume": { "usable_reviews": 7, "platforms": ["Reddit", "Tripadvisor", "大众点评", "Klook", "GetYourGuide", "攻略博客(bobbytravel/debbiechien)"], "confidence": "high" },
+      "keywords": [
+        { "term": "视觉震撼", "weight": 0.95, "sentiment": "positive" },
+        { "term": "售罄", "weight": 0.85, "sentiment": "negative" },
+        { "term": "好拍", "weight": 0.85, "sentiment": "positive" },
+        { "term": "无地图迷宫", "weight": 0.78, "sentiment": "positive" },
+        { "term": "队伍移动快", "weight": 0.7, "sentiment": "mixed" }
+      ],
+      "positive_themes": [
+        { "theme": "沉浸式视觉体验", "frequency": "frequent", "sentiment": "positive", "evidence_strength": "high", "examples_count": 4, "representative_notes": "'太宁静了，视觉效果超棒'（Reddit）；'超震撼好拍/华丽梦幻'（攻略与点评）" },
+        { "theme": "探索式观展", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "GetYourGuide：无地图迷宫、作品随行走变化、偏离主路更有趣" },
+        { "theme": "20+ 打卡点", "frequency": "common", "sentiment": "positive", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "摄影友好，适合 photography 兴趣" }
+      ],
+      "negative_themes": [
+        { "theme": "门票售罄", "frequency": "common", "sentiment": "negative", "evidence_strength": "high", "examples_count": 2, "representative_notes": "Klook：周末节假日很快售罄，建议提前买指定时段" },
+        { "theme": "现场价更贵", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "medium", "examples_count": 2, "representative_notes": "现场票与网上不同价；工作日晚间比周末便宜（大众点评）" },
+        { "theme": "馆内久站", "frequency": "occasional", "sentiment": "negative", "evidence_strength": "low", "examples_count": 1, "representative_notes": "漫游式动线可随时停，但长时站立对少步行用户仍消耗" }
+      ],
+      "regret_notes": [
+        { "trigger": "以为现场买票即可", "actual_experience": "周末节假日易售罄，现场票更贵", "affected_group": "所有游客", "evidence_strength": "high" },
+        { "trigger": "周末白天前往", "actual_experience": "更贵且人多；工作日晚间便宜且人少（大众点评口径）", "affected_group": "budget_sensitive / photography", "evidence_strength": "medium" }
+      ],
+      "audience_segments": [
+        { "segment": "photography", "positive": ["光影空间出片率高"], "negative": ["部分作品暗光拍摄难度"] },
+        { "segment": "cannot_walk_long", "positive": ["无强制动线、可随坐随停"], "negative": ["整体仍需 1.5-2 小时站立漫游"] },
+        { "segment": "budget_sensitive", "positive": ["工作日晚间票价更低"], "negative": ["3,600-5,600 日元浮动票价为池内高消费（B 层口径）"] }
+      ],
+      "crowd_patterns": [
+        { "type": "crowded_periods", "note": "周末/节假日售罄风险高；工作日晚间人少（EXPERIENCE）" },
+        { "type": "queue_experience", "note": "现场队伍看着多但移动快；网购票扫码入场免排队（EXPERIENCE，Reddit 原话 paraphrase）" },
+        { "type": "recommended_time_windows", "note": "工作日晚间为性价比+体验窗口（EXPERIENCE，大众点评）" }
+      ],
+      "review_adjustment_signal": "positive",
+      "evidence_summary": { "consensus_level": "high", "top_positive": "沉浸式视觉体验", "top_negative": "售罄与票价", "notes": "票价 3,600-5,600 円与开放时间 10:00-20:00 为 B 层口径（candidates 中为 preliminary）——非冲突，作核验线索；雨天花板备选价值被多源印证" },
+      "sources": [
+        { "platform": "Reddit r/JapanTravel", "url": "https://www.reddit.com/r/JapanTravel/comments/b6daq8/teamlab_borderless_line/?tl=zh-hans", "checked_at": "2026-08-30" },
+        { "platform": "大众点评", "url": "https://m.dianping.com/discovery/203805191", "checked_at": "2026-08-30" },
+        { "platform": "Klook（门票售罄口径）", "url": "https://www.klook.com/zh-CN/activity/20707-teamlab-borderless-admission-ticket-tokyo/", "checked_at": "2026-08-30" }
+      ]
+    }
+  ],
+  "cross_poi_patterns": [
+    {
+      "pattern": "头部景点拥挤是跨平台共识，浅草寺最甚",
+      "affected_pois": ["浅草寺（含仲见世通）", "明治神宫", "Shibuya Sky（涩谷 Scramble Square 展望台）", "东京都厅展望室"],
+      "evidence_strength": "high",
+      "note": "Tripadvisor/Reddit/中文攻略在 4 个 POI 上重复出现拥挤主题；Reddit 多帖指浅草寺因仲见世通窄巷布局为黄金周最挤点"
+    },
+    {
+      "pattern": "黄金周放大头部景点客流，非头部区域总体可控",
+      "affected_pois": ["浅草寺（含仲见世通）", "明治神宫", "东京国立博物馆"],
+      "evidence_strength": "medium",
+      "note": "Reddit 黄金周 Trip 报告：热门区之外 'practically quiet' / 'crowded but wasn't bad at all'；与 research.json 中国庆黄金周（10-01~07）窗口叠加，本次行程需按头部景点做避峰预期"
+    },
+    {
+      "pattern": "清晨/上午避峰建议跨 POI 重复出现",
+      "affected_pois": ["浅草寺（含仲见世通）", "明治神宫"],
+      "evidence_strength": "medium",
+      "note": "中文攻略建议清晨/傍晚，英文社区建议 9:30 前到明治神宫——两 POI 独立来源同型建议"
+    },
+    {
+      "pattern": "需预约场馆在节假日售罄风险高",
+      "affected_pois": ["Shibuya Sky（涩谷 Scramble Square 展望台）", "teamLab Borderless（麻布台之丘）"],
+      "evidence_strength": "medium",
+      "note": "Shibuya Sky 日落档秒罄实测 + teamLab 周末售罄警告（Klook 官方口径）——与黄金周窗口叠加"
+    }
+  ],
+  "warnings": [
+    { "topic": "trip_feasibility", "note": "继承 research.json：外交部『避免前往日本』提醒（2026-03-26 更新）解除状态未确认——本分析照常完成，是否出行属用户决策（主 Agent 闸门）", "source": "plan/research.json#warnings" },
+    { "topic": "visa", "note": "继承 research.json：签证政策变动窗口（官方现行规程 vs 媒体拟放宽）", "source": "plan/research.json#conflicts" },
+    { "topic": "crowd_window", "note": "继承 research.json：行程完全落在中国国庆黄金周内，且 Reddit 多帖证实头部景点在长假最挤——拥挤主题在本窗口应按上限解读", "source": "plan/research.json#current_events + cross_poi_patterns" },
+    { "topic": "platform_bias", "note": "评论平台存在自选择偏差：极端体验更易被写出；Klook/GYG 等商业平台内容含营销成分，已按 §4 清洗规则处理", "source": "本 Skill §3" },
+    { "topic": "ai_content", "note": "AI 生成评论仅按明显模式降权，无法保证全部识别——evidence_strength 已保守取值", "source": "本 Skill §4" },
+    { "topic": "sample_limit", "note": "usable_reviews 为本次检索可见且可确认的证据条数，非平台总评论量；不构成统计样本", "source": "本 Skill §4/§13" }
+  ],
+  "provenance_meta": {
+    "checked_at": "2026-08-30",
+    "platform_scope": "Tripadvisor、Reddit、Klook、GetYourGuide、携程、大众点评（摘要）、Trip.com/Trip Moments、知乎、Instagram、Threads、Facebook 旅行社群、Quora、官方站（tnm.jp FAQ、teamlab.art、思出横丁官网、GO TOKYO）、攻略站（gltjp/乐吃购/byFood/MarkTrip/bobbytravel/窝日本/易游网/Tripmoo/JEEPE/MATCHA/Tabirai/Snow Monkey Resorts/TanukiTabi）",
+    "language_scope": "中文为主，英文（Reddit/Tripadvisor/Quora）补充；未使用日文站内评论",
+    "degradation_notes": [
+      "小红书/大众点评存在登录墙，未能直接抓取原文：大众点评仅经搜索摘要引用（teamLab 工作日晚间票价策略），小红书无可靠可引用内容",
+      "搜索服务本次共 3 次超时、3 次请求失败，均换措辞重试后补齐；无一次以编造内容替代",
+      "表参道·原宿首次检索失败，换措辞重试成功；若再失败将按 insufficient_data 处理",
+      "未登录任何平台，评论数量均为检索可见且可确认的证据条数",
+      "12 个 POI 中未发现 insufficient_data 案例；银座中央通为 partial（证据偏购物攻略，垂直游客点评少）"
+    ]
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "destination": { "country": "日本", "region": null, "city": "东京" },
+  "travel_window": {
+    "start": "2026-10-01",
+    "end": "2026-10-05",
+    "days": 5,
+    "forecast_horizon_class": "historical",
+    "needs_nearer_confirmation": true
+  },
+  "forecast": [],
+  "climate_reference": {
+    "period": "early_october",
+    "typical_high": 21.9,
+    "typical_low": 15.8,
+    "rainfall_character": "历史同期 10 月为东京全年降水最多月份之一（多源一致约 195-211mm，约 8 个降雨日），处台风季尾段与秋雨期叠加，降雨概率仍存但总体呈减弱趋势——本描述为常年同期参考，非旅行日期的确定预测",
+    "humidity_character": "体感偏湿润（普遍口径相对湿度约 70-75%，未获官方 10 月精确值，湿度数值字段不给出），雨天体感温度可能低于实际气温",
+    "seasonal_notes": "①台风季尾端：JMA 统计 7-10 月为主台风季、9 月为接近/登陆峰值区（接近约 3.3 个、登陆约 1.0 个），10 月中下旬影响渐减；②昼夜温差约 6°C（常年 15.8-21.9°C 区间），早晚偏凉；③日照充足（历史同期月日照约 163 小时），晴天户外舒适；④雨具需按'可能降雨'而非'一定降雨'准备",
+    "source": {
+      "name": "日本气象厅 JMA（东京平年值/台风平年值）+ A 层气候服务交叉",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662",
+      "tier": "S",
+      "note": "JMA 原页两次直接抓取超时，温度数值经检索摘要转述（平均 18.5 / 最高 21.9 / 最低 15.8°C，1991-2020 平年值口径），并与 A 层多源交叉一致；临近刷新时以 JMA 原表复核"
+    },
+    "confidence": "medium"
+  },
+  "clothing": {
+    "base": [
+      "透气长袖 T 恤或薄长袖衫（历史同期白天约 20-22°C，行走时体感舒适）",
+      "备一件薄内搭应对清晨/夜间约 16°C 的低温段"
+    ],
+    "layer": [
+      "薄针织衫或轻薄抓绒（早晚温差约 6°C + 室内空调场景）",
+      "开衫式穿脱设计优先，便于随体感快速调整"
+    ],
+    "outer": [
+      "轻便防风防雨外套或便携雨衣（10 月降雨概率仍存，兼顾防风；非保暖刚需——历史同期无寒冷基数）"
+    ],
+    "footwear": [
+      "防滑鞋底（雨天石板路/坡道/公园土路湿滑——cannot_walk_long 重点项）",
+      "缓震支撑款（slow 节奏 + 候选池整体步行强度，需支撑长时间站立与步行）",
+      "已磨合的旧鞋，避免穿新鞋出行",
+      "可选防水或速干材质应对降雨"
+    ],
+    "notes": [
+      "分层策略基于常年同期 15.8-21.9°C 历史区间（历史参考，非逐日预报）",
+      "临近出发（≤3 天）按逐日预报刷新厚度与雨具决策",
+      "雨天室内替代安排见 plan_b"
+    ]
+  },
+  "gear": {
+    "umbrella": "optional",
+    "raincoat": "optional",
+    "sun_protection": "optional",
+    "other": [
+      "小型折叠伞（便利店可购得，降低行李负担）——依据：10 月为全年降水最多月份之一，降雨可能存在但非每日",
+      "防水袋/手机雨套——依据：户外展望与街区场景的设备保护"
+    ],
+    "basis_note": "32 天远期（historical 档）无法确定具体某日降雨，故 umbrella/raincoat 给 optional 而非 recommended；依据为常年同期降雨特征（195-211mm/约 8 个降雨日），临近预报刷新后可升级为 recommended。sun_protection 保守给 optional：10 月 UV 较夏季减弱且未获官方 UV 指数数据，不做更强的断言"
+  },
+  "poi_weather_impact": [
+    {
+      "poi_name": "浅草寺（含仲见世通）",
+      "weather_sensitivity": "medium",
+      "rain_impact": "户外参拜体验下降；石板路与坡道湿滑；人流密集时伞具穿行困难",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天保留但缩短户外段，优先有顶棚的仲见世通段移动；清晨时段兼顾避峰；cannot_walk_long：湿滑石板+伞具人流混杂会显著放慢行进，建议控制活动范围",
+      "rain_backup": "东京国立博物馆（同区域室内，rain_backup 候选）",
+      "source_basis": ["candidates: rain_suitability=中", "review-analysis: 拥挤/人挤人 EXPERIENCE"]
+    },
+    {
+      "poi_name": "东京国立博物馆",
+      "weather_sensitivity": "low",
+      "rain_impact": "影响极小（全室内），仅往返上野途中暴露",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天优先启用的室内候选；cannot_walk_long：馆内动线可控且可随停，注意往返途中露天段",
+      "rain_backup": "本 POI 即池内 rain_backup 成员，无需替换",
+      "source_basis": ["candidates: rain_suitability=高（室内）/ candidate_category=rain_backup"]
+    },
+    {
+      "poi_name": "谷中银座·谷根千街区",
+      "weather_sensitivity": "high",
+      "rain_impact": "户外街区型体验大幅下降；坡道与窄巷湿滑泥泞",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天不建议走全区；cannot_walk_long：湿滑坡道+窄巷风险叠加，仅保留谷中银座主街短段或整体改期",
+      "rain_backup": "东京国立博物馆（邻近上野区域室内）",
+      "source_basis": ["candidates: rain_suitability=低（户外街区型）/ walking_intensity=high"]
+    },
+    {
+      "poi_name": "根津神社",
+      "weather_sensitivity": "medium",
+      "rain_impact": "鸟居步道户外段湿滑；拍照排队站立在雨天体感差",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "小雨可保留（社内范围小、步行量低），大雨缩短或改期；cannot_walk_long：雨天排队站立体验差，建议错峰",
+      "rain_backup": "东京国立博物馆（邻近区域室内）",
+      "source_basis": ["candidates: rain_suitability=中", "review-analysis: 鸟居隧道排队抢拍 EXPERIENCE"]
+    },
+    {
+      "poi_name": "新宿御苑",
+      "weather_sensitivity": "high",
+      "rain_impact": "草坪与庭园泥泞、户外庭园体验大幅下降",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天改期或改室内；cannot_walk_long：雨后路面湿滑+环路步行量大，不建议雨天到访",
+      "rain_backup": "东京都厅展望室（新宿同区域、室内免费）",
+      "source_basis": ["candidates: rain_suitability=低（户外庭园）/ walking_intensity=high"]
+    },
+    {
+      "poi_name": "思出横丁（思い出横丁）",
+      "weather_sensitivity": "medium",
+      "rain_impact": "半露天巷弄雨棚有限、地面油湿；窄巷内伞具与人流冲突",
+      "wind_impact": "高架桥下，风影响小",
+      "temperature_impact": "",
+      "recommended_action": "雨天可保留（半遮蔽属性），注意脚下湿滑；cannot_walk_long：窄巷+伞具+人流对少步行者不友好，建议错峰并控制停留时长",
+      "rain_backup": "无需指定替换（自身半遮蔽；同区域可选东京都厅展望室）",
+      "source_basis": ["candidates: rain_suitability=中（半露天巷弄）"]
+    },
+    {
+      "poi_name": "东京都厅展望室",
+      "weather_sensitivity": "low",
+      "rain_impact": "室内不受影响；但雨天/阴天视野与夜景质量下降（review EXPERIENCE：天气不佳看不到富士山）",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天仍可前往（室内+座位），但对'景观回报'的预期下调；作为池内 rain_backup 承接其他户外 POI 的雨天替换",
+      "rain_backup": "本 POI 即池内 rain_backup 成员",
+      "source_basis": ["candidates: candidate_category=rain_backup", "review-analysis: 天气不佳看不到富士山 EXPERIENCE"]
+    },
+    {
+      "poi_name": "银座中央通街区",
+      "weather_sensitivity": "medium",
+      "rain_impact": "户外街景体验下降，但百货室内段承接力强（街区级雨天容错）",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天以百货室内动线为主（GINZA SIX 等），户外段截短；cannot_walk_long：室内休整点多，是雨天友好度较高的街区",
+      "rain_backup": "无需指定替换（自身室内容错强）",
+      "source_basis": ["candidates: rain_suitability=中高（百货室内段）"]
+    },
+    {
+      "poi_name": "明治神宫",
+      "weather_sensitivity": "high",
+      "rain_impact": "长参道雨天泥泞湿滑（碎石/土路混合）；cannot_walk_long 风险显著放大——往返五六千步的必经段在雨天体验与安全双降",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天慎重：缩短至外围或改期；cannot_walk_long 用户雨天不建议进入长参道段",
+      "rain_backup": "东京国立博物馆（历史主题衔接、全室内；跨区域移动由 Planner 权衡）",
+      "source_basis": ["candidates: rain_suitability=中（雨天泥泞风险）/ walking_intensity=high", "review-analysis: 参道往返五六千步 EXPERIENCE"]
+    },
+    {
+      "poi_name": "表参道·原宿街区",
+      "weather_sensitivity": "medium",
+      "rain_impact": "街景与街拍体验下降；沿街店铺可入内避雨",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天以商业设施室内段为主，户外段截短；cannot_walk_long：竹下通窄段雨天伞具与人流冲突，建议避开峰值时段",
+      "rain_backup": "未指定跨 POI 替换（区域自带商业设施室内容错）",
+      "source_basis": ["candidates: rain_suitability=中（沿街店铺可入内）"]
+    },
+    {
+      "poi_name": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "weather_sensitivity": "high",
+      "rain_impact": "露天 SKY STAGE 雨天关闭或视野严重受限——核心体验直接受损；室内 SKY GALLERY 可部分兜底",
+      "wind_impact": "强风时露天层关闭（场馆结构规则）",
+      "temperature_impact": "",
+      "recommended_action": "雨天优先改期或按室内 GALLERY 调整预期；预约改签规则属 ticket-reservation 职责；cannot_walk_long：室内部分仍可用，露天关闭时体验大幅缩水",
+      "rain_backup": "东京都厅展望室（室内展望、免费替补；景观性质不同）",
+      "source_basis": ["candidates: rain_suitability=中（露天层结构特征）", "review-analysis: 天气相关视野 EXPERIENCE"]
+    },
+    {
+      "poi_name": "teamLab Borderless（麻布台之丘）",
+      "weather_sensitivity": "low",
+      "rain_impact": "无（全室内），仅往返途中暴露",
+      "wind_impact": "",
+      "temperature_impact": "",
+      "recommended_action": "雨天优先保留/启用的候选；cannot_walk_long：馆内可随坐随停，雨天无附加风险",
+      "rain_backup": "本 POI 即池内 rain_backup 成员",
+      "source_basis": ["candidates: 全室内结构 / candidate_category=rain_backup"]
+    }
+  ],
+  "weather_risks": [
+    { "type": "typhoon", "status": "seasonal_background", "note": "季节性背景，非当前预警：JMA 统计 7-10 月为主台风季，9 月为接近/登陆峰值区（接近约 3.3 个、登陆约 1.0 个），10 月上旬处于季末、影响呈减弱趋势——临近出发需查 JMA 实时预警", "source": "日本气象厅 台风平年值统计", "checked_at": "2026-08-30", "confidence": "verified_official" },
+    { "type": "heavy_rain", "status": "seasonal_background", "note": "季节性背景，非当前预警：历史同期 10 月为东京全年降水最多月份之一（约 195-211mm，多源一致），秋雨锋面+台风尾段叠加", "source": "Climate-Data.org / WeatherAPI / WeatherSpark（A 层多源）", "checked_at": "2026-08-30", "confidence": "multi_source_consistent" },
+    { "type": "slippery_surface", "status": "conditional", "note": "条件性风险（依赖降雨事件）：雨天石板路/坡道/林道/公园土路湿滑——对 cannot_walk_long 用户为候选池主要叠加风险，已在 poi_weather_impact 逐项体现" }
+  ],
+  "plan_b": [
+    { "for": "浅草寺·上野区域户外段（含根津神社）", "trigger": "rain", "swap_to": "东京国立博物馆", "reason": "同区域室内场馆，rain_backup 候选" },
+    { "for": "谷中银座·谷根千街区", "trigger": "rain", "swap_to": "东京国立博物馆", "reason": "邻近上野区域室内场馆" },
+    { "for": "新宿御苑", "trigger": "rain", "swap_to": "东京都厅展望室", "reason": "新宿同区域、全室内、免费" },
+    { "for": "明治神宫", "trigger": "rain", "swap_to": "东京国立博物馆", "reason": "历史主题衔接、全室内；跨区域移动代价由 Planner 权衡" },
+    { "for": "Shibuya Sky（露天层关闭/受限时）", "trigger": "rain", "swap_to": "东京都厅展望室", "reason": "室内展望替补，免费（景观性质与高度不同，预期需调整）" }
+  ],
+  "warnings": [
+    { "topic": "forecast_horizon", "note": "historical 档输出：本文件不含任何 2026-10-01~05 的逐日预测，forecast=[]；逐日预报须临近（≤3 天）刷新，届时 forecast_horizon_class 升级为 near_term/live" },
+    { "topic": "source_degradation", "note": "JMA 东京平年值页两次直接抓取超时——温度数值（18.5/21.9/15.8°C）经检索摘要转述，并与 A 层多源（WeatherAPI：均值约 19°C/低温约 16°C）交叉一致；confidence=medium，临近刷新时以 JMA 原表复核" },
+    { "topic": "data_gap", "note": "未获得官方 10 月相对湿度精确值（仅普遍口径约 70-75%）与 UV 指数数据——humidity 数值不给出，sun_protection 仅保守给 optional" },
+    { "topic": "typhoon_seasonal", "note": "台风风险为季节性背景（JMA 统计口径），非 2026-10-01 当前预警；临近出发须查询 JMA 实时台风与预警信息" },
+    { "topic": "sensitivity_evidence", "note": "POI 敏感性评估基于 candidates 结构字段 + review EXPERIENCE + 官网结构信息；未做逐 POI 实地天气脆弱性核验，个别判定（如明治神宫林道泥泞程度）属结构推断" },
+    { "topic": "trip_feasibility", "note": "继承 research.json：外交部『避免前往日本』提醒（2026-03-26 更新）解除状态未确认——weather 分析照常完成，是否出行属用户决策（主 Agent 闸门），本文件不含任何取消/改期决定", "source": "plan/research.json#warnings" }
+  ],
+  "provenance_meta": {
+    "checked_at": "2026-08-30",
+    "data_sources": [
+      { "source": "日本气象厅 JMA·台风平年值统计", "url": "https://www.data.jma.go.jp/typhoon/statistics/average/average.html", "source_tier": "S", "checked_at": "2026-08-30", "confidence": "verified_official" },
+      { "source": "日本气象厅 JMA·东京月别平年值（经检索摘要转述）", "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662", "source_tier": "S", "checked_at": "2026-08-30", "confidence": "medium（原页抓取超时，转述口径）" },
+      { "source": "Climate-Data.org（东京月度气候）", "url": "https://en.climate-data.org/asia/japan/tokyo/tokyo-3292/", "source_tier": "A", "checked_at": "2026-08-30", "confidence": "multi_source_consistent" },
+      { "source": "WeatherAPI.com（东京 10 月历史气候）", "url": "https://www.weatherapi.com/history/october/q/tokyo-3125553", "source_tier": "A", "checked_at": "2026-08-30", "confidence": "multi_source_consistent" },
+      { "source": "WeatherSpark / Weather-and-Climate.com / Climates to Travel（湿季区间与降雨量交叉）", "url": "https://weatherspark.com/y/143809/Average-Weather-in-Tokyo-Japan-Year-Round", "source_tier": "A", "checked_at": "2026-08-30", "confidence": "multi_source_consistent" }
+    ],
+    "degradation_notes": [
+      "JMA 东京平年值页两次直接抓取超时（60s），温度数值降级为'检索摘要转述 + A 层交叉一致'口径，confidence 由 verified_official 降为 medium",
+      "JMA 平年值页首猜 URL（nml_amd_ann.php）404，后经检索定位正确页面（nml_sfc_ym.php）",
+      "10 月官方相对湿度与 UV 指数未获得，相应字段不输出数值",
+      "英文检索 2 次超时/失败、1 次 captcha，均换措辞或换语言重试后补齐关键来源",
+      "无 2026-10-01 当前气象预警可查（远期本就不存在），weather_risks 全部标注为季节性背景/条件性，未伪装成当前预警"
+    ]
+  }
+}

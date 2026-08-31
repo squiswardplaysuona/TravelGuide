@@ -1,0 +1,870 @@
+{
+  "destination": {
+    "country": "日本",
+    "region": null,
+    "city": "东京"
+  },
+  "anchors": {
+    "hotel": [
+      {
+        "name": "新宿（住宿区域锚点）",
+        "address": "新宿（区域级，来自 profile.booked.hotel）",
+        "city": "东京",
+        "anchor_type": "hotel",
+        "anchor_scope": "area",
+        "geo": null,
+        "note": "profile 仅提供区域级住宿信息（新宿），未虚构具体酒店名称/坐标；矩阵以新宿站周边为空间原点"
+      }
+    ],
+    "gateway": [
+      {
+        "type": "airport",
+        "name": "东京成田国际机场（NRT）",
+        "geo": null,
+        "note": "基础机场交通事实继承 research.json.gateway_transport（N'EX/Skyliner/利木津巴士），本文件仅建立 成田→新宿锚点 的具体衔接项"
+      }
+    ]
+  },
+  "clusters": [
+    {
+      "cluster_id": "C1",
+      "name": "浅草·上野",
+      "pois": [
+        "浅草寺（含仲见世通）",
+        "东京国立博物馆"
+      ],
+      "center": "上野—浅草一带（台东区，地址级定位）",
+      "character": "历史文化密集区（research 口径）",
+      "internal_walkability": "两 POI 间银座线约 5 分钟或步行约 30 分钟，中间为上野公园/阿美横町连续步行带",
+      "recommended_for": [
+        "history/culture",
+        "slow（可选步行或 1 站电车）"
+      ]
+    },
+    {
+      "cluster_id": "C2",
+      "name": "谷根千",
+      "pois": [
+        "谷中银座·谷根千街区",
+        "根津神社"
+      ],
+      "center": "谷中—根津一带（台东区北部，地址级定位）",
+      "character": "下町老街区（research/B 层口径）",
+      "internal_walkability": "谷中银座主街约 175 公尺；商店街—根津神社经蛇道步行可及，整体步行链约 1-1.5 公里",
+      "recommended_for": [
+        "photography",
+        "slow（短段可截）"
+      ],
+      "geo_note": "POI geo 均为 null，按区域与地址文本定位，坐标 unverified"
+    },
+    {
+      "cluster_id": "C3",
+      "name": "新宿（住宿锚点区）",
+      "pois": [
+        "新宿御苑",
+        "思出横丁（思い出横丁）",
+        "东京都厅展望室"
+      ],
+      "center": "新宿站西口—都厅一带（地址级定位）",
+      "character": "轨道枢纽+商业区（research 口径）",
+      "internal_walkability": "三点均在新宿站周边步行圈（约 2-20 分钟），内部折返成本低",
+      "recommended_for": [
+        "slow",
+        "cannot_walk_long（短步行+室内组合）"
+      ]
+    },
+    {
+      "cluster_id": "C4",
+      "name": "银座·东京站",
+      "pois": [
+        "银座中央通街区"
+      ],
+      "center": "中央通沿线（中央区，地址级定位）",
+      "character": "高端商业区（research 口径）",
+      "internal_walkability": "单 POI，沿线线性步行",
+      "recommended_for": [
+        "food",
+        "雨天室内容错"
+      ]
+    },
+    {
+      "cluster_id": "C5",
+      "name": "涩谷·原宿",
+      "pois": [
+        "明治神宫",
+        "表参道·原宿街区",
+        "Shibuya Sky（涩谷 Scramble Square 展望台）"
+      ],
+      "center": "原宿—涩谷线性带（地址级定位：明治神宫为渋谷区代々木神園町1-1）",
+      "character": "历史神社+时尚街区+城市观景（research 口径）",
+      "internal_walkability": "线性步行链：原宿站→明治神宫（1-5 分钟）→表参道→猫街→涩谷（约 15-20 分钟/段）",
+      "recommended_for": [
+        "photography",
+        "classic"
+      ],
+      "geo_note": "三 POI 呈步行连续带，是池内空间效率最高的线性结构之一"
+    },
+    {
+      "cluster_id": "C6",
+      "name": "麻布台之丘（港区）※research 未覆盖，凭 teamLab 官网来源新增",
+      "pois": [
+        "teamLab Borderless（麻布台之丘）"
+      ],
+      "center": "麻布台之丘（港区，地址级定位）",
+      "character": "数字艺术场馆（全室内）",
+      "internal_walkability": "单 POI，馆内漫游动线",
+      "recommended_for": [
+        "photography",
+        "rain_backup"
+      ],
+      "geo_note": "与 C5 涩谷·原宿、C4 银座·东京站方向相邻（结构判断，无逐站耗时来源）"
+    }
+  ],
+  "travel_time_matrix": [
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "浅草寺（含仲见世通）",
+      "distance": "约 10-12 公里",
+      "walk_time": "两端步行段合计约 10 分钟",
+      "transit_time": "JR 中央线约 12 分钟（新宿→神田）+ 银座线约 17 分钟（神田→浅草）",
+      "recommended_mode": "mixed",
+      "transfers": 1,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "medium",
+        "complexity": "medium"
+      },
+      "notes": "无直达线路（Rome2Rio 口径）；全程约 30-35 分钟；cannot_walk_long：仅 1 次换乘且神田站换乘结构简单，为跨区低复杂度选项",
+      "source": {
+        "source": "Rome2Rio/东武铁道交通口径 + GO TOKYO 地铁指南",
+        "url": "https://www.rome2rio.com/Train/Shinjuku/Asakusa-Station",
+        "source_tier": "A",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "东京国立博物馆",
+      "distance": null,
+      "walk_time": null,
+      "transit_time": null,
+      "recommended_mode": "railway",
+      "transfers": null,
+      "mobility_cost": {
+        "walk": "unknown",
+        "transfers": "unknown",
+        "complexity": "unknown"
+      },
+      "notes": "UNVERIFIED：JR 山手线连结新宿—上野（乐吃购山手线攻略确认线路关系），但本次检索三次未获得精确耗时；上野站至博物馆有步行段（来源：博物馆地址为上野公园13-9）。临近用 Navitime/Jorudan 确认",
+      "source": {
+        "source": "未获得可引用的耗时来源",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "unverified"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "谷中银座·谷根千街区",
+      "distance": null,
+      "walk_time": "日暮里站至谷中银座有步行段（KKday 路线起点口径）",
+      "transit_time": null,
+      "recommended_mode": "railway",
+      "transfers": null,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "unknown",
+        "complexity": "unknown"
+      },
+      "notes": "UNVERIFIED：谷根千常规入口为 JR 日暮里站（KKday 路线起点），新宿→日暮里耗时本次未获得",
+      "source": {
+        "source": "未获得可引用的耗时来源",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "unverified"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "根津神社",
+      "distance": null,
+      "walk_time": null,
+      "transit_time": null,
+      "recommended_mode": "railway",
+      "transfers": null,
+      "mobility_cost": {
+        "walk": "unknown",
+        "transfers": "unknown",
+        "complexity": "unknown"
+      },
+      "notes": "UNVERIFIED：未获得新宿→根津的可引用线路耗时",
+      "source": {
+        "source": "未获得可引用的耗时来源",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "unverified"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "新宿御苑",
+      "distance": null,
+      "walk_time": "自新宿站步行约 15-20 分钟",
+      "transit_time": "或东京 Metro 丸之内线 1 站至新宿御苑前站 + 步行约 5 分钟（1 号出口）",
+      "recommended_mode": "walking",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "住宿锚点区内；cannot_walk_long：建议乘 1 站电车减少步行，园内另有步行量（见 candidates.constraint_risk）",
+      "source": {
+        "source": "Klook 行前须知/环境省官网口径（candidates 阶段已登记）",
+        "url": "https://policies.env.go.jp/national-garden/shinjukugyoen/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "思出横丁（思い出横丁）",
+      "distance": null,
+      "walk_time": "新宿站西口步行约 2-5 分钟",
+      "transit_time": null,
+      "recommended_mode": "walking",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "候选池内距住宿锚点最近的 POI；cannot_walk_long/slow 双重友好",
+      "source": {
+        "source": "思出横丁官网 + 攻略口径（candidates 阶段已登记）",
+        "url": "https://cn.shinjuku-omoide.com/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "东京都厅展望室",
+      "distance": null,
+      "walk_time": "新宿站步行约 10 分钟",
+      "transit_time": null,
+      "recommended_mode": "walking",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "住宿锚点区内；都厅前站亦可直达",
+      "source": {
+        "source": "易游网/bobbytravel 口径（candidates 阶段已登记）",
+        "url": "https://bobbytravel.tw/tokyo-metropolitan/",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "银座中央通街区",
+      "distance": null,
+      "walk_time": "两端步行段合计约 5-10 分钟",
+      "transit_time": "丸之内线直达约 15-17 分钟（新宿→银座，约 8 站，无换乘）",
+      "recommended_mode": "metro",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "cannot_walk_long/slow 双友好：零换乘直达",
+      "source": {
+        "source": "东京 Metro 官方线路页 + 乐吃购丸之内线攻略",
+        "url": "https://www.tokyometro.jp/lang_cn/station/line_marunouchi/index.html",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "明治神宫",
+      "distance": null,
+      "walk_time": "新宿站内换乘步行（口径约 15 分钟含候车）；原宿站出站 1-5 分钟至入口；南参道入口至正殿约 10 分钟",
+      "transit_time": "JR 山手线 新宿→原宿约 5-7 分钟",
+      "recommended_mode": "railway",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "high",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "总耗时约 20-30 分钟；cannot_walk_long：walk=high 来自站内换乘+参道+社内步行的合计，非乘车时间",
+      "source": {
+        "source": "NAVITIME（新宿→原宿）+ 乐吃购明治神宫攻略 + gltjp",
+        "url": "https://www.navitime.co.jp/zh-tw/transfer/searchlist?orvStationCode=00006668&dnvStationCode=00029257",
+        "source_tier": "A",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "表参道·原宿街区",
+      "distance": null,
+      "walk_time": "原宿站/明治神宫前站出站即达街区，站内+出站步行约 5-10 分钟",
+      "transit_time": "JR 山手线 新宿→原宿约 5-7 分钟（或千代田线至明治神宫前）",
+      "recommended_mode": "railway",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "与明治神宫同一下车点，空间连续",
+      "source": {
+        "source": "NAVITIME + 乐吃购（原宿完全攻略）",
+        "url": "https://tokyo.letsgojp.com/archives/491652/",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "distance": null,
+      "walk_time": "涩谷站宫益坂口步行约 5 分钟",
+      "transit_time": "JR 山手线 新宿→涩谷约 6-7 分钟（班次 2-4 分钟/班）",
+      "recommended_mode": "railway",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "cannot_walk_long/slow 双友好：零换乘 + 短步行",
+      "source": {
+        "source": "NAVITIME 时刻表 + SHIBUYA SKY 官网入口指引",
+        "url": "https://japantravel.navitime.com/",
+        "source_tier": "A",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "新宿（住宿区域锚点）",
+      "to": "teamLab Borderless（麻布台之丘）",
+      "distance": null,
+      "walk_time": null,
+      "transit_time": null,
+      "recommended_mode": "metro",
+      "transfers": null,
+      "mobility_cost": {
+        "walk": "unknown",
+        "transfers": "unknown",
+        "complexity": "unknown"
+      },
+      "notes": "UNVERIFIED：teamLab 位于麻布台之丘（官网确认），新宿出发的线路组合与耗时本次两次检索均未获得",
+      "source": {
+        "source": "未获得可引用的耗时来源",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "unverified"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "from": "浅草寺（含仲见世通）",
+      "to": "东京国立博物馆",
+      "distance": null,
+      "walk_time": "银座线方案含两端步行约 10-15 分钟；或全程步行约 30 分钟（经阿美横町/合羽桥）",
+      "transit_time": "银座线 浅草→上野约 5 分钟（G19→G16）",
+      "recommended_mode": "mixed",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "同区双模式：cannot_walk_long 选银座线；slow 且体力允许可选步行观光带（阿美横町）",
+      "source": {
+        "source": "东京 Metro 银座线官方页 + All About Japan + Matcha",
+        "url": "https://www.tokyometro.jp/lang_tcn/station/line_ginza/index.html",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "谷中银座·谷根千街区",
+      "to": "根津神社",
+      "distance": null,
+      "walk_time": "经蛇道步行约 10-15 分钟",
+      "transit_time": null,
+      "recommended_mode": "walking",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "蛇道为两点间的步行捷径（约 15 个转弯的窄巷）",
+      "source": {
+        "source": "KKday 谷根千散步路线",
+        "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "single_source"
+      },
+      "confidence": "single_source"
+    },
+    {
+      "from": "新宿御苑",
+      "to": "思出横丁（思い出横丁）",
+      "distance": null,
+      "walk_time": "约 15-25 分钟（由各自距新宿站步行时间推算，未直查）",
+      "transit_time": null,
+      "recommended_mode": "walking",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "推算口径：两点均在新宿站西侧步行圈",
+      "source": {
+        "source": "由已登记的各自距站步行时间推算（composition）",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "from": "思出横丁（思い出横丁）",
+      "to": "东京都厅展望室",
+      "distance": null,
+      "walk_time": "约 10-15 分钟（由各自距新宿站步行时间推算）",
+      "transit_time": null,
+      "recommended_mode": "walking",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "推算口径：同新宿站西口侧",
+      "source": {
+        "source": "由已登记的各自距站步行时间推算（composition）",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "from": "新宿御苑",
+      "to": "东京都厅展望室",
+      "distance": null,
+      "walk_time": "约 15-25 分钟（推算）",
+      "transit_time": "或丸之内线 1 站（新宿御苑前→新宿）+ 步行",
+      "recommended_mode": "mixed",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "推算+结构组合口径",
+      "source": {
+        "source": "由已登记数据推算（composition）",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "from": "明治神宫",
+      "to": "表参道·原宿街区",
+      "distance": null,
+      "walk_time": "约 10-15 分钟（原宿站周边连续街区，出神宫南参道即达表参道/竹下通）",
+      "transit_time": null,
+      "recommended_mode": "walking",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "空间连续带，无需乘车",
+      "source": {
+        "source": "JEEPE 原宿路线与礼仪 + 乐吃购原宿动线",
+        "url": "https://www.jeepe.jp/zh/articles/harajuku-area-guide-1546",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "表参道·原宿街区",
+      "to": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+      "distance": null,
+      "walk_time": "沿猫街（Cat Street）步行约 15-20 分钟至涩谷",
+      "transit_time": "或 JR 山手线 原宿→涩谷约 2 分钟",
+      "recommended_mode": "mixed",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "步行链末段；cannot_walk_long 建议 JR 1 站替代步行",
+      "source": {
+        "source": "乐吃购原宿攻略（猫街连接原宿—涩谷）+ NAVITIME",
+        "url": "https://tokyo.letsgojp.com/archives/491652/",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "根津神社（谷根千）",
+      "to": "东京国立博物馆（浅草·上野）",
+      "distance": null,
+      "walk_time": "根津—上野步行可及（谷根千路线延伸口径，约 15-20 分钟）",
+      "transit_time": "或 JR 日暮里→上野约 2 分钟",
+      "recommended_mode": "mixed",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "medium",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "相邻区连接：谷根千与浅草·上野步行连续",
+      "source": {
+        "source": "KKday 谷根千路线（延伸至入谷/上野）",
+        "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "single_source"
+      },
+      "confidence": "single_source"
+    },
+    {
+      "from": "东京成田国际机场（NRT）",
+      "to": "新宿（住宿区域锚点）",
+      "distance": null,
+      "walk_time": null,
+      "transit_time": "N'EX 成田特快约 80-85 分钟直达新宿（成田→东京站最速 53 分钟）；或 Skyliner 至日暮里/上野换乘；或利木津巴士约 80-100 分钟",
+      "recommended_mode": "railway",
+      "transfers": 0,
+      "mobility_cost": {
+        "walk": "low",
+        "transfers": "low",
+        "complexity": "low"
+      },
+      "notes": "N'EX 为 cannot_walk_long/slow 最优：点对点直达、行李空间；基础事实继承 research.json.gateway_transport（官方三来源已登记）",
+      "source": {
+        "source": "JR 东日本 N'EX 官方 + NAVITIME（成田→新宿）+ 利木津巴士官网（research/candidates 阶段登记）",
+        "url": "https://www.jreast.co.jp/multi/nex/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      "confidence": "multi_source_consistent"
+    },
+    {
+      "from": "浅草·上野",
+      "to": "涩谷·原宿",
+      "distance": null,
+      "walk_time": null,
+      "transit_time": null,
+      "recommended_mode": "metro",
+      "transfers": null,
+      "mobility_cost": {
+        "walk": "unknown",
+        "transfers": "unknown",
+        "complexity": "unknown"
+      },
+      "notes": "UNVERIFIED：高频跨区连接。由已 sourced 分段推算（浅草→新宿约 30-35 分钟 + 新宿→涩谷约 6-7 分钟）区间约 40-50 分钟，但未直查直通方案（银座线—半藏门线直通等）",
+      "source": {
+        "source": "分段推算（composition），未直查",
+        "url": "",
+        "source_tier": null,
+        "checked_at": "2026-08-30",
+        "confidence": "unverified"
+      },
+      "confidence": "unverified"
+    }
+  ],
+  "cluster_connections": [
+    {
+      "from_cluster": "C1 浅草·上野",
+      "to_cluster": "C2 谷根千",
+      "recommended_modes": [
+        "walking",
+        "railway"
+      ],
+      "approx_time": "步行约 15-20 分钟或 JR 1 站",
+      "complexity": "low",
+      "notes": "相邻区，步行连续（谷根千路线延伸至入谷/上野）",
+      "source": {
+        "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi",
+        "tier": "B"
+      }
+    },
+    {
+      "from_cluster": "C1 浅草·上野",
+      "to_cluster": "C3 新宿（住宿锚点区）",
+      "recommended_modes": [
+        "mixed"
+      ],
+      "approx_time": "约 30-35 分钟（1 次换乘）",
+      "complexity": "medium",
+      "notes": "JR 中央线+银座线组合；详见矩阵项",
+      "source": {
+        "url": "https://www.rome2rio.com/Train/Shinjuku/Asakusa-Station",
+        "tier": "A"
+      }
+    },
+    {
+      "from_cluster": "C2 谷根千",
+      "to_cluster": "C3 新宿（住宿锚点区）",
+      "recommended_modes": [
+        "railway"
+      ],
+      "approx_time": "unverified",
+      "complexity": "unknown",
+      "notes": "新宿→日暮里/根津耗时未获得（degradation_notes）",
+      "source": null
+    },
+    {
+      "from_cluster": "C3 新宿（住宿锚点区）",
+      "to_cluster": "C5 涩谷·原宿",
+      "recommended_modes": [
+        "railway"
+      ],
+      "approx_time": "约 6-7 分钟（JR 山手线直达）",
+      "complexity": "low",
+      "notes": "相邻区、零换乘",
+      "source": {
+        "url": "https://japantravel.navitime.com/",
+        "tier": "A"
+      }
+    },
+    {
+      "from_cluster": "C1 浅草·上野",
+      "to_cluster": "C5 涩谷·原宿",
+      "recommended_modes": [
+        "metro"
+      ],
+      "approx_time": "约 40-50 分钟级（unverified，分段推算）",
+      "complexity": "high",
+      "notes": "远距离跨区：跨区成本 high 的代表对",
+      "source": null
+    },
+    {
+      "from_cluster": "C4 银座·东京站",
+      "to_cluster": "C5 涩谷·原宿",
+      "recommended_modes": [
+        "railway"
+      ],
+      "approx_time": "unverified",
+      "complexity": "unknown",
+      "notes": "未直查；银座↔涩谷为本矩阵未覆盖项，临近补查",
+      "source": null
+    }
+  ],
+  "spatial_efficiency": [
+    {
+      "cluster": "C1 浅草·上野",
+      "internal_efficiency": "high",
+      "reason": "两 POI 相邻（银座线 5 分钟/步行 30 分钟），且有阿美横町等连续步行带，两 POI 间有 1 站电车替代步行，slow 友好"
+    },
+    {
+      "cluster": "C2 谷根千",
+      "internal_efficiency": "high",
+      "reason": "主街 175 公尺+蛇道步行链，两点空间连续；但全区步行量对 cannot_walk_long 需截段"
+    },
+    {
+      "cluster": "C3 新宿（住宿锚点区）",
+      "internal_efficiency": "high",
+      "reason": "三点均在新宿站 2-20 分钟步行圈，折返成本低，且为住宿锚点所在，slow 友好：短步行圈+室内组合"
+    },
+    {
+      "cluster": "C4 银座·东京站",
+      "internal_efficiency": "medium",
+      "reason": "单 POI，无内部组合；线性街区"
+    },
+    {
+      "cluster": "C5 涩谷·原宿",
+      "internal_efficiency": "high",
+      "reason": "三 POI 构成原宿→表参道→涩谷线性步行链，段间 2-20 分钟，slow 可步行或 JR 1 站替代段间移动"
+    },
+    {
+      "cluster": "C6 麻布台之丘",
+      "internal_efficiency": "medium",
+      "reason": "单 POI；与 C5/C4 方向相邻但无逐站耗时来源"
+    }
+  ],
+  "weather_mobility_notes": [
+    {
+      "cluster": "C1 浅草·上野",
+      "note": "雨天户外段体验下降：浅草寺户外段缩短、谷根千（相邻区）不建议走全程——室内替换项为东京国立博物馆",
+      "source": "weather.json"
+    },
+    {
+      "cluster": "C3 新宿（住宿锚点区）",
+      "note": "雨天：新宿御苑改期或改室内，都厅展望室为同区室内承接项",
+      "source": "weather.json"
+    },
+    {
+      "cluster": "C5 涩谷·原宿",
+      "note": "雨天：Shibuya Sky 露天层受限（强风亦关闭）、明治神宫参道泥泞慎重——都厅展望室为室内替补（跨区）",
+      "source": "weather.json"
+    },
+    {
+      "cluster": "C2 谷根千",
+      "note": "雨天坡道窄巷湿滑，cannot_walk_long 不建议走全程",
+      "source": "weather.json"
+    }
+  ],
+  "warnings": [
+    {
+      "topic": "trip_feasibility",
+      "note": "继承 research.json：外交部『避免前往日本』提醒（2026-03-26 更新）解除状态未确认——空间分析照常完成，是否出行属用户决策（主 Agent 闸门）",
+      "source": "plan/research.json#warnings"
+    },
+    {
+      "topic": "hotel_anchor_scope",
+      "note": "profile.booked.hotel 仅为区域级（新宿），未虚构具体酒店坐标——矩阵以新宿站周边为原点，酒店确定后需补充酒店↔最近站的精确步行段"
+    },
+    {
+      "topic": "geo_unverified",
+      "note": "12 个 POI 的 geo 字段均为 null（candidates 阶段即未核验坐标）——本文件按地址/区域文本定位，坐标级定位全部 unverified，不得用于精确测距"
+    },
+    {
+      "topic": "realtime_rule",
+      "note": "本文件全部耗时为结构性/常规口径（官方与交通平台历史数据），非 2026-10-01 实时预测；实时路况与当日班次须临近查询并单独标注 checked_at"
+    },
+    {
+      "topic": "unverified_items",
+      "note": "5 项矩阵/连接 unverified（新宿→上野/谷中银座/根津/teamLab、浅草↔涩谷直通）——Planner 使用这些 OD 时须以临近查询补齐，不得引用本文件的空值做校验"
+    }
+  ],
+  "provenance_meta": {
+    "checked_at": "2026-08-30",
+    "data_sources": [
+      {
+        "source": "东京 Metro 官方（丸之内线/银座线线路页）",
+        "url": "https://www.tokyometro.jp/lang_cn/station/line_marunouchi/index.html",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      },
+      {
+        "source": "Rome2Rio（新宿—浅草线路结构）",
+        "url": "https://www.rome2rio.com/Train/Shinjuku/Asakusa-Station",
+        "source_tier": "A",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      {
+        "source": "NAVITIME（新宿—原宿/涩谷时刻与步行）",
+        "url": "https://www.navitime.co.jp/zh-tw/transfer/searchlist?orvStationCode=00006668&dnvStationCode=00029257",
+        "source_tier": "A",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      {
+        "source": "乐吃购（山手线攻略/原宿攻略/明治神宫攻略）",
+        "url": "https://tokyo.letsgojp.com/archives/726550/",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      {
+        "source": "All About Japan / Matcha（浅草—上野双模式）",
+        "url": "https://allabout-japan.com/zh-cn/article/5366/",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      {
+        "source": "KKday（谷根千步行路线/蛇道）",
+        "url": "https://www.kkday.com/zh-tw/blog/18254/asia-japan-tokyo-shimachi",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "single_source"
+      },
+      {
+        "source": "JEEPE（原宿路线与礼仪）",
+        "url": "https://www.jeepe.jp/zh/articles/harajuku-area-guide-1546",
+        "source_tier": "B",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      {
+        "source": "JR 东日本 N'EX 官方（gateway 衔接，继承自 research 阶段登记）",
+        "url": "https://www.jreast.co.jp/multi/nex/",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "multi_source_consistent"
+      },
+      {
+        "source": "GO TOKYO（地铁指南，继承）",
+        "url": "https://www.gotokyo.org/cn/plan/getting-around/subways/index.html",
+        "source_tier": "S",
+        "checked_at": "2026-08-30",
+        "confidence": "verified_official"
+      }
+    ],
+    "matrix_coverage": {
+      "total": 22,
+      "hotel_poi": 12,
+      "same_cluster": 7,
+      "adjacent_cluster": 1,
+      "gateway_hotel": 1,
+      "cross_cluster": 1,
+      "note": "覆盖策略：住宿锚点区（新宿）内部三点由矩阵+推算覆盖；跨区仅做高频代表对（浅草↔涩谷），未做 N² 全排列；返回方向视为结构性对称，未重复登记"
+    },
+    "degradation_notes": [
+      "新宿→上野、新宿→日暮里（谷中银座）、新宿→根津、新宿→teamLab（麻布台之丘）共 4 项耗时检索 6 次均失败/超时/captcha——按规则标 unverified，未编造数字",
+      "浅草↔涩谷直通方案未直查，矩阵项为分段推算（composition）并标 unverified",
+      "部分同区短途（新宿区内三点互达）为'由各自距站步行时间推算'的组合口径（composition），confidence=low",
+      "搜索服务本次 2 次超时、2 次 captcha/失败、1 次 404（JMA 平年值页为 weather 阶段），均换措辞重试",
+      "未做 12×12 全排列——按 SKILL §5 优先级裁剪"
+    ]
+  }
+}

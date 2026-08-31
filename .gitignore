@@ -1,0 +1,20 @@
+# ---- Runtime planning outputs ----
+# plan/ 是 TravelGuide 的运行时工作区：Skill 产生的行程资产默认不提交。
+# 示范数据保存在 examples/tokyo-demo/，请勿在 plan/ 中长期存放。
+plan/*.json
+
+# ---- Local environment ----
+.env
+.env.*
+!.env.example
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---- Temporary files ----
+*.tmp
+*.log
+*.bak

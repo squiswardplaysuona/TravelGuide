@@ -1,0 +1,1194 @@
+{
+  "trip_meta": {
+    "profile_reference": "plan/profile.json",
+    "candidates_reference": "plan/candidates.json",
+    "review_reference": "plan/review-analysis.json",
+    "weather_reference": "plan/weather.json",
+    "map_reference": "plan/map-route.json",
+    "food_reference": "plan/food-restaurant.json",
+    "ticket_reference": "plan/ticket-reservation.json",
+    "generated_at": "2026-08-30",
+    "status": "draft",
+    "planner_preferences": {
+      "day_start_time": "09:00",
+      "day_end_time": "21:00",
+      "lunch_duration": 75,
+      "dinner_duration": 90,
+      "rest_frequency": "at_least_one_major_rest_per_day",
+      "transport_preference": "minimize_walking_and_transfers",
+      "walking_tolerance": "low",
+      "photo_time": "moderate",
+      "shopping_time": "optional"
+    },
+    "selected_pois_count": 8,
+    "selected_food_count": 4,
+    "revision_round": 2
+  },
+  "days": [
+    {
+      "date": "2026-10-01",
+      "day_label": "10-01（四）抵达日：成田→新宿（大交通日减负）",
+      "base": "新宿（住宿区域锚点，area 级）",
+      "activities": [
+        {
+          "type": "transfer",
+          "name": "成田机场入境+行李+通关（缓冲 90-120 分钟）",
+          "start": "13:30",
+          "end": "15:30",
+          "duration": "约 120 分钟",
+          "source_reference": "plan/profile.json#booked.transport（13:30 到达成田）",
+          "constraints_satisfied": [
+            "L1 固定航班",
+            "主文件 §7.1 大交通日减负"
+          ],
+          "risk_flags": [
+            "入境耗时为规划缓冲，非实测"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "N'EX 成田特快：成田→新宿",
+          "start": "15:45",
+          "end": "17:10",
+          "duration": "约 85 分钟",
+          "source_reference": "plan/map-route.json#travel_time_matrix[东京成田国际机场（NRT）→新宿（住宿区域锚点）]",
+          "constraints_satisfied": [
+            "L1 已订交通衔接",
+            "cannot_walk_long：点对点直达"
+          ],
+          "risk_flags": [
+            "具体班次时刻需临近核对（结构性耗时，非当日实况）"
+          ]
+        },
+        {
+          "type": "rest",
+          "name": "酒店 check-in + 稍事休整",
+          "start": "17:15",
+          "end": "18:00",
+          "duration": "约 45 分钟",
+          "source_reference": "plan/profile.json#booked.hotel（新宿区域锚点）",
+          "constraints_satisfied": [
+            "L1 酒店 check-in"
+          ],
+          "risk_flags": [
+            "酒店为区域级锚点，check-in 具体位置待用户确认"
+          ]
+        },
+        {
+          "type": "free_time",
+          "name": "酒店周边晚餐（未选定餐厅；可选方案见 optional_items·思出横丁）",
+          "start": "18:00",
+          "end": "19:30",
+          "duration": "约 90 分钟",
+          "source_reference": "plan/food-restaurant.json#restaurants（C3 无 dinner 已选候选，按 SKILL §7 默认策略）",
+          "constraints_satisfied": [
+            "餐饮插槽策略"
+          ],
+          "risk_flags": [
+            "dinner 候选未由用户指定"
+          ]
+        },
+        {
+          "type": "rest",
+          "name": "休息（首日疲劳缓冲）",
+          "start": "19:30",
+          "end": "21:00",
+          "duration": "约 90 分钟",
+          "source_reference": "profile.pace=slow + 主文件 §7.1 大交通日减负",
+          "constraints_satisfied": [
+            "pace=slow"
+          ],
+          "risk_flags": []
+        }
+      ],
+      "meals": [
+        {
+          "slot": "dinner",
+          "type": "free_time",
+          "name": "酒店周边晚餐（未选定餐厅；可选方案见 optional_items·思出横丁）",
+          "start": "18:00",
+          "end": "19:30"
+        }
+      ],
+      "transfers": [
+        {
+          "from": "东京成田国际机场（NRT）",
+          "to": "新宿（住宿区域锚点）",
+          "travel_time": "约 85 分钟",
+          "mode": "railway（N'EX）",
+          "walk_time": "低（站内直达）",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[东京成田→新宿] (multi_source_consistent)"
+        }
+      ],
+      "buffers": [
+        {
+          "after": "入境",
+          "duration": "已含 90-120 分钟入境缓冲",
+          "reason": "入境/取行李耗时不可精确预估"
+        }
+      ],
+      "risks": [
+        "入境耗时按规划缓冲处理",
+        "当日无核心 POI（大交通日减负，主文件 §7.1）"
+      ],
+      "load": {
+        "walking_load": "low",
+        "transfer_load": "medium",
+        "activity_load": "low",
+        "time_pressure": "low",
+        "overall_load": "acceptable"
+      },
+      "day_summary": "抵达日：无核心 POI，仅完成成田→新宿转移与 check-in，晚间酒店周边自由用餐与休整。"
+    },
+    {
+      "date": "2026-10-02",
+      "day_label": "10-02（五）浅草·上野历史文化日（C1）",
+      "base": "新宿（住宿区域锚点）",
+      "activities": [
+        {
+          "type": "transfer",
+          "name": "新宿→浅草",
+          "start": "09:00",
+          "end": "09:35",
+          "duration": "约 30-35 分钟（1 次换乘）",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→浅草寺] (multi_source_consistent)",
+          "constraints_satisfied": [
+            "交通时间来自矩阵"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "poi",
+          "name": "浅草寺（含仲见世通）",
+          "start": "09:40",
+          "end": "11:10",
+          "duration": "约 90 分钟（suggested_duration 1-1.5h 上限）",
+          "source_reference": "plan/candidates.json#pois[浅草寺（含仲见世通）]",
+          "constraints_satisfied": [
+            "官方境内 24h/本堂 6:30-17:00",
+            "review：清晨避峰",
+            "cannot_walk_long：核心区不大、路线固定"
+          ],
+          "risk_flags": [
+            "人流密集（review EXPERIENCE）"
+          ]
+        },
+        {
+          "type": "buffer",
+          "name": "缓冲（步行至午餐/找路）",
+          "start": "11:10",
+          "end": "11:35",
+          "duration": "约 25 分钟",
+          "source_reference": "SKILL §5 buffer 规则",
+          "constraints_satisfied": [
+            "禁止无缝衔接"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "meal",
+          "name": "午餐：とん久（Masaru，浅草天妇罗老铺）",
+          "start": "11:35",
+          "end": "12:50",
+          "duration": "约 75 分钟（lunch_duration）",
+          "source_reference": "plan/food-restaurant.json#restaurants[とん久（Masaru，浅草天妇罗老铺）]",
+          "constraints_satisfied": [
+            "C1 空间就近",
+            "opening unknown 已标风险"
+          ],
+          "risk_flags": [
+            "reservation_unknown",
+            "opening_unknown"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "浅草→上野（银座线）",
+          "start": "13:00",
+          "end": "13:20",
+          "duration": "约 5 分钟车程 + 步行 10-15 分钟",
+          "source_reference": "plan/map-route.json#travel_time_matrix[浅草寺↔东京国立博物馆] (multi_source_consistent)",
+          "constraints_satisfied": [
+            "交通时间来自矩阵"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "poi",
+          "name": "东京国立博物馆",
+          "start": "13:35",
+          "end": "16:05",
+          "duration": "约 150 分钟（suggested_duration 1.5-3h 中值；周五开馆至 20:00 有容错）",
+          "source_reference": "plan/candidates.json#pois[东京国立博物馆]",
+          "constraints_satisfied": [
+            "10-02 非闭馆日",
+            "ticket adult ¥1,000（官方）",
+            "全室内——雨天适合度高"
+          ],
+          "risk_flags": [
+            "reservation_required + availability unknown（官方要求全员网上预约，开放窗口 cannot_confirm）"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "上野→新宿（返程）",
+          "start": "16:20",
+          "end": "16:55",
+          "duration": "unverified（矩阵未获得该 OD）",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→东京国立博物馆] (unverified)——反向对称未核验",
+          "constraints_satisfied": [],
+          "risk_flags": [
+            "od_unverified"
+          ]
+        },
+        {
+          "type": "rest",
+          "name": "major rest（当日主要休整）",
+          "start": "17:00",
+          "end": "18:00",
+          "duration": "约 60 分钟",
+          "source_reference": "planner_preferences.rest_frequency",
+          "constraints_satisfied": [
+            "at_least_one_major_rest_per_day"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "meal",
+          "name": "晚餐：自由（C1 无已选 dinner 候选，默认策略）",
+          "start": "18:00",
+          "end": "19:30",
+          "duration": "约 90 分钟",
+          "source_reference": "plan/food-restaurant.json#restaurants（C1 dinner 槽默认策略）",
+          "constraints_satisfied": [
+            "餐饮插槽策略"
+          ],
+          "risk_flags": [
+            "dinner_not_selected"
+          ]
+        },
+        {
+          "type": "free_time",
+          "name": "夜间自由（仲见世通夜景/酒店周边）",
+          "start": "19:30",
+          "end": "21:00",
+          "duration": "约 90 分钟",
+          "source_reference": "planner_preferences.day_end_time=21:00",
+          "constraints_satisfied": [
+            "day_end_time"
+          ],
+          "risk_flags": []
+        }
+      ],
+      "meals": [
+        {
+          "slot": "lunch",
+          "type": "meal",
+          "name": "午餐：とん久（Masaru，浅草天妇罗老铺）",
+          "start": "11:35",
+          "end": "12:50",
+          "risk_flags": [
+            "opening_unknown"
+          ]
+        },
+        {
+          "slot": "dinner",
+          "type": "free_time",
+          "name": "晚餐：自由（C1 无已选 dinner 候选，默认策略）",
+          "start": "18:00",
+          "end": "19:30"
+        }
+      ],
+      "transfers": [
+        {
+          "from": "新宿（住宿区域锚点）",
+          "to": "浅草寺（含仲见世通）",
+          "travel_time": "约 30-35 分钟",
+          "mode": "mixed",
+          "walk_time": "两端合计约 10 分钟",
+          "transfers": 1,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[新宿→浅草寺]"
+        },
+        {
+          "from": "浅草寺（含仲见世通）",
+          "to": "东京国立博物馆",
+          "travel_time": "银座线约 5 分钟 + 步行 10-15 分钟",
+          "mode": "mixed",
+          "walk_time": "上野站至博物馆约 10-15 分钟",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[浅草寺↔博物馆]"
+        },
+        {
+          "from": "东京国立博物馆（上野）",
+          "to": "新宿（住宿区域锚点）",
+          "travel_time": "unverified",
+          "mode": "railway",
+          "walk_time": null,
+          "transfers": null,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[新宿→东京国立博物馆]（unverified，反向对称未核验）"
+        }
+      ],
+      "buffers": [
+        {
+          "after": "浅草寺",
+          "duration": "25 分钟",
+          "reason": "找路+入座缓冲"
+        },
+        {
+          "after": "博物馆",
+          "duration": "15 分钟",
+          "reason": "出馆步行缓冲"
+        }
+      ],
+      "risks": [
+        "博物馆 reservation_required + availability unknown",
+        "返程 OD unverified",
+        "浅草寺人流（review EXPERIENCE）"
+      ],
+      "load": {
+        "walking_load": "medium",
+        "transfer_load": "medium",
+        "activity_load": "medium",
+        "time_pressure": "low",
+        "overall_load": "acceptable"
+      },
+      "day_summary": "C1 同日：浅草寺（晨间避峰）→ 天妇罗老铺午餐 → 国立博物馆（室内，周五 20:00 闭馆容错）。2 个核心 POI，跨区大移动 1 次（新宿↔C1）。"
+    },
+    {
+      "date": "2026-10-03",
+      "day_label": "10-03（六）涩谷·原宿线性日（C5）※步行负荷最高日",
+      "base": "新宿（住宿区域锚点）",
+      "activities": [
+        {
+          "type": "transfer",
+          "name": "新宿→原宿（JR 山手线）",
+          "start": "09:00",
+          "end": "09:20",
+          "duration": "车程约 5-7 分钟 + 站内/出站步行",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→明治神宫] (multi_source_consistent)",
+          "constraints_satisfied": [
+            "交通时间来自矩阵"
+          ],
+          "risk_flags": [
+            "站内换乘步行计入 walk=high 的构成"
+          ]
+        },
+        {
+          "type": "poi",
+          "name": "明治神宫",
+          "start": "09:30",
+          "end": "11:30",
+          "duration": "约 120 分钟（suggested_duration 1.5-2h）",
+          "source_reference": "plan/candidates.json#pois[明治神宫]",
+          "constraints_satisfied": [
+            "10 月闭门 16:40——上午参拜远早于闭门",
+            "清晨/上午避峰（review crowd_patterns）"
+          ],
+          "risk_flags": [
+            "high_walk：参道往返约五六千步（review EXPERIENCE）；用户已明确选择，保留并暴露"
+          ]
+        },
+        {
+          "type": "rest",
+          "name": "major rest（参道步行后休整）",
+          "start": "11:30",
+          "end": "12:15",
+          "duration": "约 45 分钟",
+          "source_reference": "planner_preferences.rest_frequency + cannot_walk_long 联动",
+          "constraints_satisfied": [
+            "at_least_one_major_rest_per_day"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "free_time",
+          "name": "自由午餐（原宿/涩谷，未选定正餐候选）",
+          "start": "12:15",
+          "end": "13:30",
+          "duration": "约 75 分钟",
+          "source_reference": "plan/food-restaurant.json（C5 仅 cafe/dessert 候选，默认策略）",
+          "constraints_satisfied": [
+            "餐饮插槽策略"
+          ],
+          "risk_flags": [
+            "lunch 候选未由用户指定"
+          ]
+        },
+        {
+          "type": "meal",
+          "name": "A Happy Pancake（The Shibuya）——cafe/甜品插槽",
+          "start": "15:00",
+          "end": "16:15",
+          "duration": "约 75 分钟",
+          "source_reference": "plan/food-restaurant.json#restaurants[A Happy Pancake（The Shibuya）]",
+          "constraints_satisfied": [
+            "meal_period=cafe/dessert",
+            "C5 空间就近"
+          ],
+          "risk_flags": [
+            "reservation_unknown",
+            "周末午后等位（review EXPERIENCE）"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "表参道/原宿→涩谷（猫街步行 或 JR 1 站）",
+          "start": "16:30",
+          "end": "17:00",
+          "duration": "步行约 15-20 分钟",
+          "source_reference": "plan/map-route.json#travel_time_matrix[表参道↔Shibuya Sky] (multi_source_consistent)",
+          "constraints_satisfied": [
+            "交通时间来自矩阵"
+          ],
+          "risk_flags": [
+            "cannot_walk_long：可改 JR 1 站替代步行"
+          ]
+        },
+        {
+          "type": "free_time",
+          "name": "涩谷十字路口/周边（购物 optional）",
+          "start": "17:00",
+          "end": "18:15",
+          "duration": "约 75 分钟",
+          "source_reference": "planner_preferences.shopping_time=optional + review photography 口径",
+          "constraints_satisfied": [
+            "photo_time=moderate"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "poi",
+          "name": "Shibuya Sky（涩谷 Scramble Square 展望台）——日落至夜景",
+          "start": "18:30",
+          "end": "20:00",
+          "duration": "约 90 分钟",
+          "source_reference": "plan/candidates.json#pois[Shibuya Sky] + plan/ticket-reservation.json#poi_constraints[Shibuya Sky]",
+          "constraints_satisfied": [
+            "opening 10:00-22:30/最后入场 21:20",
+            "15:00 后入场 ¥3,400（官方）"
+          ],
+          "risk_flags": [
+            "not_open_for_booking（10-03 场次约 09-19 开票）+ 售罄风险（黄金周叠加）",
+            "reservation_required"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "涩谷→新宿（JR 山手线）",
+          "start": "20:15",
+          "end": "20:25",
+          "duration": "约 6-7 分钟",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→Shibuya Sky] (multi_source_consistent，反向对称)",
+          "constraints_satisfied": [
+            "末班车充足（山手线营运至 01:00，B 层口径）"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "rest",
+          "name": "休整（超出 day_end 15 分钟——保留 Shibuya Sky 日落 slots 的 trade-off）",
+          "start": "21:15",
+          "end": "21:30",
+          "duration": "约 15 分钟",
+          "source_reference": "planner_preferences.day_end_time=21:00",
+          "constraints_satisfied": [
+            "day_end_time"
+          ],
+          "risk_flags": [
+            "day_end_exceeded_15min"
+          ]
+        },
+        {
+          "type": "free_time",
+          "name": "自由晚餐（涩谷/新宿晚间轻食——受日落展望安排挤压，slow 用户可接受或自行调整）",
+          "start": "20:30",
+          "end": "21:15",
+          "duration": "约 45 分钟（压缩——90 分钟偏好无法在 day_end 21:00 前满足）",
+          "source_reference": "planner_preferences.day_end_time=21:00 + day_end_time 边界",
+          "constraints_satisfied": [
+            "day_end_time 21:00"
+          ],
+          "risk_flags": [
+            "dinner_compressed_45min",
+            "day_end_exceeded_15min"
+          ]
+        }
+      ],
+      "meals": [
+        {
+          "slot": "lunch",
+          "type": "free_time",
+          "name": "自由午餐（原宿/涩谷，未选定正餐候选）",
+          "start": "12:15",
+          "end": "13:30"
+        },
+        {
+          "slot": "cafe",
+          "type": "meal",
+          "name": "A Happy Pancake（The Shibuya）——cafe/甜品插槽",
+          "start": "15:00",
+          "end": "16:15",
+          "risk_flags": [
+            "reservation_unknown"
+          ]
+        },
+        {
+          "slot": "dinner",
+          "type": "free_time",
+          "name": "自由晚餐（涩谷/新宿晚间轻食——受日落展望安排挤压，slow 用户可接受或自行调整）",
+          "start": "20:30",
+          "end": "21:15"
+        }
+      ],
+      "transfers": [
+        {
+          "from": "新宿（住宿区域锚点）",
+          "to": "明治神宫",
+          "travel_time": "JR 约 5-7 分钟 + 步行",
+          "mode": "railway",
+          "walk_time": "站内换乘+出站 1-5 分钟+参道 10 分钟",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[新宿→明治神宫]"
+        },
+        {
+          "from": "明治神宫",
+          "to": "表参道·原宿街区",
+          "travel_time": "步行约 10-15 分钟",
+          "mode": "walking",
+          "walk_time": "出神宫南参道即达表参道",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[明治神宫↔表参道·原宿街区] (multi_source_consistent)"
+        },
+        {
+          "from": "表参道·原宿街区",
+          "to": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+          "travel_time": "步行约 15-20 分钟（猫街）或 JR 1 站",
+          "mode": "mixed",
+          "walk_time": "约 15-20 分钟",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[表参道·原宿街区→Shibuya Sky] (multi_source_consistent)"
+        },
+        {
+          "from": "Shibuya Sky（涩谷 Scramble Square 展望台）",
+          "to": "新宿（住宿区域锚点）",
+          "travel_time": "JR 约 6-7 分钟",
+          "mode": "railway",
+          "walk_time": "短",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[新宿→Shibuya Sky]（反向对称）"
+        }
+      ],
+      "buffers": [
+        {
+          "after": "明治神宫",
+          "duration": "45 分钟 major rest",
+          "reason": "参道步行后休整（cannot_walk_long 联动）"
+        },
+        {
+          "after": "Pancake",
+          "duration": "15 分钟",
+          "reason": "移步缓冲"
+        }
+      ],
+      "risks": [
+        "walking_load=high：明治神宫参道（用户明确选择，trade-off 已展示未删除）",
+        "Shibuya Sky 未开票（9-19 开票）+ 黄金周售罄风险",
+        "周末人流（review EXPERIENCE）",
+        "晚餐被日落展望挤压为晚间轻食（trade-off 已暴露，未隐藏）",
+        "晚餐压缩为 45 分钟轻食 + 休整延至 21:30（超出 day_end 偏好 15 分钟）——保留日落展望 slots 的 trade-off，已暴露"
+      ],
+      "load": {
+        "walking_load": "high",
+        "transfer_load": "low",
+        "activity_load": "medium",
+        "time_pressure": "medium",
+        "overall_load": "high"
+      },
+      "day_summary": "C5 线性日：明治神宫（上午避峰）→ 原宿/表参道 → 涩谷 → Shibuya Sky 日落夜景。2 个核心 POI + 1 cafe；步行负荷为全行程最高（用户选择的 trade-off，已暴露）。"
+    },
+    {
+      "date": "2026-10-04",
+      "day_label": "10-04（日）新宿庭园 + 麻布台数字艺术（C3+C6）",
+      "base": "新宿（住宿区域锚点）",
+      "activities": [
+        {
+          "type": "transfer",
+          "name": "新宿→新宿御苑（步行或丸之内线 1 站）",
+          "start": "09:00",
+          "end": "09:15",
+          "duration": "步行约 15-20 分钟或电车+步行 5 分钟",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→新宿御苑] (multi_source_consistent)",
+          "constraints_satisfied": [
+            "cannot_walk_long：建议电车 1 站替代步行"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "poi",
+          "name": "新宿御苑",
+          "start": "09:15",
+          "end": "11:45",
+          "duration": "约 150 分钟（suggested_duration 1.5-2.5h；10 月档 9:00-16:30，最后入园 16:00——上午时段宽裕）",
+          "source_reference": "plan/candidates.json#pois[新宿御苑]",
+          "constraints_satisfied": [
+            "10-04 非闭园日（10-05 周一休园已避开）",
+            "ticket adult ¥500（官方）"
+          ],
+          "risk_flags": [
+            "园内步行量 high（constraint_risk）——cannot_walk_long：可浅游大草坪区"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "新宿御苑→中村屋（新宿站周边）",
+          "start": "11:45",
+          "end": "12:00",
+          "duration": "约 15 分钟",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→新宿御苑]（反向，结构性）",
+          "constraints_satisfied": [
+            "交通时间来自矩阵"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "meal",
+          "name": "午餐：中村屋 本店（老铺洋食/印度咖喱）",
+          "start": "12:00",
+          "end": "13:15",
+          "duration": "约 75 分钟（lunch_duration）",
+          "source_reference": "plan/food-restaurant.json#restaurants[中村屋 本店（新宿老铺洋食/印度咖喱）]",
+          "constraints_satisfied": [
+            "C3 空间就近",
+            "meal_period lunch/dinner"
+          ],
+          "risk_flags": [
+            "reservation_unknown",
+            "opening_unknown"
+          ]
+        },
+        {
+          "type": "rest",
+          "name": "major rest（回酒店/咖啡休整）",
+          "start": "13:15",
+          "end": "13:45",
+          "duration": "约 30 分钟",
+          "source_reference": "planner_preferences.rest_frequency",
+          "constraints_satisfied": [
+            "at_least_one_major_rest_per_day"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "transfer",
+          "name": "新宿→teamLab Borderless（麻布台之丘）",
+          "start": "13:45",
+          "end": "14:10",
+          "duration": "unverified（矩阵未获得该 OD）",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→teamLab] (unverified)",
+          "constraints_satisfied": [],
+          "risk_flags": [
+            "od_unverified"
+          ]
+        },
+        {
+          "type": "poi",
+          "name": "teamLab Borderless（麻布台之丘）",
+          "start": "14:15",
+          "end": "16:15",
+          "duration": "约 120 分钟（suggested_duration 1.5-2h；10-04 闭馆 21:00——日间时段宽裕）",
+          "source_reference": "plan/candidates.json#pois[teamLab Borderless（麻布台之丘）]",
+          "constraints_satisfied": [
+            "ticket adult ¥3,800 起（官方，变动料金制）",
+            "10-04 非 22:00 闭馆日（21:00 闭馆）",
+            "全室内——雨天适合度高"
+          ],
+          "risk_flags": [
+            "ticket_required：日时指定制须提前购票（已开售）",
+            "黄金周售罄风险（官方口径）"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "麻布台之丘→新宿（返程）",
+          "start": "16:30",
+          "end": "17:00",
+          "duration": "unverified（矩阵未获得该 OD 反向）",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→teamLab]（unverified）",
+          "constraints_satisfied": [],
+          "risk_flags": [
+            "od_unverified"
+          ]
+        },
+        {
+          "type": "free_time",
+          "name": "自由（未选定）晚餐+夜间（可选方案见 optional_items·鸟辰）",
+          "start": "18:00",
+          "end": "19:30",
+          "duration": "约 90 分钟",
+          "source_reference": "plan/food-restaurant.json（dinner 槽默认策略）",
+          "constraints_satisfied": [
+            "餐饮插槽策略"
+          ],
+          "risk_flags": [
+            "dinner 候选未由用户指定"
+          ]
+        },
+        {
+          "type": "rest",
+          "name": "休整",
+          "start": "19:30",
+          "end": "21:00",
+          "duration": "约 90 分钟",
+          "source_reference": "planner_preferences.day_end_time=21:00",
+          "constraints_satisfied": [
+            "day_end_time"
+          ],
+          "risk_flags": []
+        }
+      ],
+      "meals": [
+        {
+          "slot": "lunch",
+          "type": "meal",
+          "name": "午餐：中村屋 本店（老铺洋食/印度咖喱）",
+          "start": "12:00",
+          "end": "13:15",
+          "risk_flags": [
+            "reservation_unknown",
+            "opening_unknown"
+          ]
+        },
+        {
+          "slot": "dinner",
+          "type": "free_time",
+          "name": "自由（未选定）晚餐+夜间（可选方案见 optional_items·鸟辰）",
+          "start": "18:00",
+          "end": "19:30"
+        }
+      ],
+      "transfers": [
+        {
+          "from": "新宿（住宿区域锚点）",
+          "to": "新宿御苑",
+          "travel_time": "步行 15-20 分钟或电车 1 站+步行 5 分钟",
+          "mode": "mixed",
+          "walk_time": "低-中（建议电车段）",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[新宿→新宿御苑]"
+        },
+        {
+          "from": "新宿（住宿区域锚点）",
+          "to": "teamLab Borderless（麻布台之丘）",
+          "travel_time": "unverified",
+          "mode": "metro",
+          "walk_time": null,
+          "transfers": null,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[新宿→teamLab]（unverified）"
+        }
+      ],
+      "buffers": [
+        {
+          "after": "御苑",
+          "duration": "15 分钟",
+          "reason": "步行至午餐缓冲"
+        },
+        {
+          "after": "中村屋",
+          "duration": "30 分钟 major rest",
+          "reason": "rest_frequency 联动"
+        }
+      ],
+      "risks": [
+        "teamLab 往返 OD unverified",
+        "teamLab 门票须提前购票（已开售）+ 黄金周售罄风险",
+        "御苑园内步行量 high（浅游策略缓解）"
+      ],
+      "load": {
+        "walking_load": "medium",
+        "transfer_load": "medium",
+        "activity_load": "medium",
+        "time_pressure": "low",
+        "overall_load": "acceptable"
+      },
+      "day_summary": "C3+C6：新宿御苑（上午）→ 老铺午餐 → teamLab（下午，室内雨天友好）。2 个核心 POI；teamLab 往返 OD unverified 已暴露。"
+    },
+    {
+      "date": "2026-10-05",
+      "day_label": "10-05（一）都厅+根津 轻量日※返程交通缺失，无法完整排程",
+      "base": "新宿（住宿区域锚点）",
+      "activities": [
+        {
+          "type": "transfer",
+          "name": "新宿→都厅展望室（步行）",
+          "start": "09:15",
+          "end": "09:30",
+          "duration": "约 10 分钟",
+          "source_reference": "plan/map-route.json#travel_time_matrix[新宿→东京都厅展望室] (multi_source_consistent)",
+          "constraints_satisfied": [
+            "cannot_walk_long：短步行"
+          ],
+          "risk_flags": [
+            "设施点检日不定期（官方）——当日开放需临近核对财务局日历"
+          ]
+        },
+        {
+          "type": "poi",
+          "name": "东京都厅展望室",
+          "start": "09:30",
+          "end": "10:30",
+          "duration": "约 60 分钟（suggested_duration 0.5-1h）",
+          "source_reference": "plan/candidates.json#pois[东京都厅展望室]",
+          "constraints_satisfied": [
+            "10-05 为第 1 个周一——非北休室日（第 2/4 周一），南北开放（官方规则推断）",
+            "免费（官方）"
+          ],
+          "risk_flags": [
+            "点检日 unknown"
+          ]
+        },
+        {
+          "type": "transfer",
+          "name": "都厅→根津神社（谷根千）",
+          "start": "undetermined（transfer unverified）",
+          "end": "undetermined",
+          "duration": "unverified",
+          "source_reference": "plan/map-route.json#travel_time_matrix（无该 OD，unverified）",
+          "constraints_satisfied": [],
+          "risk_flags": [
+            "od_unverified"
+          ]
+        },
+        {
+          "type": "poi",
+          "name": "根津神社",
+          "start": "undetermined（前序 transfer unverified）",
+          "end": "undetermined（约 60 分钟）",
+          "duration": "约 60 分钟（suggested_duration 0.5-1h）",
+          "source_reference": "plan/candidates.json#pois[根津神社]",
+          "constraints_satisfied": [
+            "步行量低-medium，适配 cannot_walk_long"
+          ],
+          "risk_flags": [
+            "od_unverified",
+            "opening_unverified"
+          ]
+        },
+        {
+          "type": "buffer",
+          "name": "缓冲",
+          "start": "12:15",
+          "end": "12:30",
+          "duration": "约 15 分钟",
+          "source_reference": "SKILL §5 buffer 规则",
+          "constraints_satisfied": [
+            "禁止无缝衔接"
+          ],
+          "risk_flags": []
+        },
+        {
+          "type": "meal",
+          "name": "午餐：东京拉面街（东京站一番街 B1，8 店集合）",
+          "start": "12:30",
+          "end": "13:45",
+          "duration": "约 75 分钟（lunch_duration；含往返站内步行）",
+          "source_reference": "plan/food-restaurant.json#restaurants[东京拉面街（东京站一番街 B1，8 店集合）]",
+          "constraints_satisfied": [
+            "官方位置：与东京站直通",
+            "cannot_walk_long：零露天步行"
+          ],
+          "risk_flags": [
+            "transfer unverified（根津/都厅→东京站耗时未获得）",
+            "opening preliminary"
+          ]
+        },
+        {
+          "type": "free_time",
+          "name": "午后自由 + 返程待定（profile 未提供返程交通）",
+          "start": "undetermined（ lunch 后）",
+          "end": "undecided",
+          "duration": "undecided",
+          "source_reference": "profile.booked.transport（仅去程已订）",
+          "constraints_satisfied": [],
+          "risk_flags": [
+            "return_transport_missing"
+          ]
+        },
+        {
+          "type": "rest",
+          "name": "根据返程安排休整",
+          "start": "undecided",
+          "end": "undecided",
+          "duration": "undecided",
+          "source_reference": "待返程信息补充",
+          "constraints_satisfied": [],
+          "risk_flags": [
+            "return_transport_missing"
+          ]
+        }
+      ],
+      "meals": [
+        {
+          "slot": "lunch",
+          "type": "meal",
+          "name": "午餐：东京拉面街（东京站一番街 B1，8 店集合）",
+          "start": "undetermined（transfer unverified）",
+          "end": "undetermined（约 75 分钟）",
+          "risk_flags": [
+            "transfer_unverified",
+            "opening_preliminary"
+          ]
+        }
+      ],
+      "transfers": [
+        {
+          "from": "新宿（住宿区域锚点）",
+          "to": "东京都厅展望室",
+          "travel_time": "unverified",
+          "mode": "walking",
+          "walk_time": "约 10 分钟",
+          "transfers": 0,
+          "matrix_reference": "plan/map-route.json#travel_time_matrix[新宿→东京都厅展望室]"
+        },
+        {
+          "from": "东京都厅展望室",
+          "to": "根津神社",
+          "travel_time": "unverified",
+          "mode": "metro",
+          "walk_time": null,
+          "transfers": null,
+          "matrix_reference": "plan/map-route.json（无该 OD，unverified）"
+        },
+        {
+          "from": "根津神社",
+          "to": "东京拉面街（东京站一番街 B1，8 店集合）",
+          "travel_time": "unverified",
+          "mode": "metro",
+          "walk_time": null,
+          "transfers": null,
+          "matrix_reference": "plan/map-route.json（无该 OD，unverified）"
+        }
+      ],
+      "buffers": [
+        {
+          "after": "根津神社",
+          "duration": "15 分钟",
+          "reason": "转场缓冲"
+        }
+      ],
+      "risks": [
+        "返程交通缺失——最后一天无法完整排程（global_warning）",
+        "2 个转移 OD unverified",
+        "根津神社 opening unverified",
+        "都厅点检日 unknown",
+        "D5 时间轴部分 undetermined：都厅→根津、根津→拉面街 两段 transfer 无矩阵来源（round 2 已移除虚构时刻），等待临近补查"
+      ],
+      "load": {
+        "walking_load": "low",
+        "transfer_load": "medium",
+        "activity_load": "low",
+        "time_pressure": "low",
+        "overall_load": "acceptable"
+      },
+      "day_summary": "轻量收尾日：都厅（上午免费夜景平台）→ 根津神社 → 拉面街午餐；午后 free_time/undecided。博物馆与御苑当日闭馆（硬约束），已避排。"
+    }
+  ],
+  "booking_reminders": [
+    {
+      "date": "2026-08-30（尽快）",
+      "target": "teamLab Borderless（10-04 场次）",
+      "booking_type": "ticket",
+      "action": "官网在线购票（日时指定制；黄金周售罄风险——官方口径）",
+      "source_reference": "plan/ticket-reservation.json#booking_windows[teamLab]"
+    },
+    {
+      "date": "2026-08-30（尽快，开放窗口 cannot_confirm）",
+      "target": "东京国立博物馆（10-02 场次）",
+      "booking_type": "reservation",
+      "action": "官网在线预约（全员须预约——官方；开放窗口未载明需关注）",
+      "source_reference": "plan/ticket-reservation.json#booking_windows[东京国立博物馆]"
+    },
+    {
+      "date": "2026-09-19（官方 2 周规则推算）",
+      "target": "Shibuya Sky（10-03 场次 18:30 后入场）",
+      "booking_type": "ticket",
+      "action": "官网抢购（黄金周日落档秒罄风险——review/官方口径）",
+      "source_reference": "plan/ticket-reservation.json#booking_windows[Shibuya Sky]"
+    },
+    {
+      "date": "2026-09-下旬（B 层口径：热门店提前数周）",
+      "target": "寿司 Takahiro（若用户启用 optional）",
+      "booking_type": "reservation",
+      "action": "预约平台订位（preliminary）",
+      "source_reference": "plan/ticket-reservation.json#booking_windows[寿司 Takahiro]"
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "type": "od_unverified",
+      "target": "新宿↔东京国立博物馆（上野）返程",
+      "reason": "map-route 矩阵未获得该 OD 耗时（检索 6 次失败）",
+      "impact": "D2 返程时间不确定，行程总时长留白",
+      "requires_user_decision": false,
+      "action": "临近补查 map-route（Navitime/Jorudan）后回填"
+    },
+    {
+      "type": "od_unverified",
+      "target": "新宿↔teamLab Borderless（麻布台之丘）往返",
+      "reason": "map-route 矩阵未获得该 OD 耗时",
+      "impact": "D4 下午转场时间不确定",
+      "requires_user_decision": false,
+      "action": "临近补查 map-route"
+    },
+    {
+      "type": "od_unverified",
+      "target": "都厅/根津↔东京站（拉面街）与 根津神社 opening",
+      "reason": "map-route 无该 OD；根津神社 opening 无官方来源",
+      "impact": "D5 午餐转场与根津开放时间不确定",
+      "requires_user_decision": false,
+      "action": "临近补查"
+    },
+    {
+      "type": "reservation_unknown",
+      "target": "东京国立博物馆（10-02）",
+      "reason": "reservation_required=true（官方）但 availability=unknown",
+      "impact": "能否如期入场未确认",
+      "requires_user_decision": true,
+      "action": "用户确认后尽快官网预约；若无法预约，启用 optional 替代（谷中银座/上野公园方向）"
+    },
+    {
+      "type": "constraint_conflict",
+      "target": "明治神宫",
+      "reason": "用户明确选择（walking_intensity=high）与 hard_constraint cannot_walk_long 紧张",
+      "impact": "D3 步行负荷 high（参道往返约五六千步——review EXPERIENCE）",
+      "requires_user_decision": true,
+      "minimal_cost": "JR 原宿站直达南参道入口 + 回程打车/电车 + 削减同日其他步行（已执行：当日仅保留 Pancake 一个步行附加项）"
+    },
+    {
+      "type": "return_transport_missing",
+      "target": "2026-10-05 返程",
+      "reason": "profile.booked.transport 仅含去程",
+      "impact": "最后一天午后无法完整排程",
+      "requires_user_decision": true,
+      "action": "用户提供返程航班/车次后补排"
+    },
+    {
+      "type": "od_unverified",
+      "target": "都厅→根津→拉面街（D5 链）",
+      "reason": "map-route 无该两段 OD（round 2 已移除 round 1 的虚构时刻，改为相对顺序）",
+      "impact": "D5 确定时间轴不可用；都厅/根津/拉面街 顺序保留、时刻待定",
+      "requires_user_decision": false,
+      "action": "临近补查 map-route 后回填时刻"
+    }
+  ],
+  "optional_items": [
+    {
+      "name": "思出横丁（思い出横丁）",
+      "reason": "未选入正式 POI 池；D1 晚餐可选方案（住宿锚点步行 2-5 分钟）",
+      "best_fit_day": "2026-10-01 晚",
+      "trigger": "用户希望体验昭和居酒屋氛围"
+    },
+    {
+      "name": "谷中银座·谷根千街区",
+      "reason": "未选入正式池；D2 上午可在浅草·上野动线上延长（相邻区步行可及）",
+      "best_fit_day": "2026-10-02 上午",
+      "trigger": "体力允许且希望增加下町街区体验"
+    },
+    {
+      "name": "银座中央通街区",
+      "reason": "未选入正式池；雨天室内容错强",
+      "best_fit_day": "任意雨天（临近天气刷新后决定）",
+      "trigger": "rain_after_forecast_refresh 或购物需求"
+    },
+    {
+      "name": "寿司 Takahiro（新宿）",
+      "reason": "已选餐饮外的优质候选（D5 午餐若启用）",
+      "best_fit_day": "2026-10-05 午餐",
+      "trigger": "用户希望 omakase 体验并完成预约"
+    }
+  ],
+  "global_warnings": [
+    {
+      "topic": "trip_feasibility",
+      "note": "继承 research.json：外交部『避免前往日本』提醒（2026-03-26 更新）解除状态未确认——行程草案照常生成，是否出行属用户决策（主 Agent 闸门）",
+      "source": "plan/research.json#warnings"
+    },
+    {
+      "topic": "reservation_unknown",
+      "note": "东京国立博物馆：reservation_required=true（官方）但 availability=unknown——10-02 入场未确认，reservation_feasibility 不给 high"
+    },
+    {
+      "topic": "not_open_for_booking",
+      "note": "Shibuya Sky 10-03 场次 09-19 才开票（官方 2 周规则）——booking_reminder 已设，开票后需立即抢购（黄金周日落档秒罄风险）"
+    },
+    {
+      "topic": "weather_historical",
+      "note": "weather.json 为 historical 档：无逐日预测——Plan B 仅备用结构，出发前 ≤3 天刷新后重新校验雨天安排"
+    },
+    {
+      "topic": "return_transport_missing",
+      "note": "10-05 返程交通未提供——最后一天午后为 undecided"
+    },
+    {
+      "topic": "budget_currency_mismatch",
+      "note": "预算 8,000 CNY/person vs 价格 JPY：系统无汇率来源，未做换算——预算匹配未完成，全部费用保留 JPY 原价"
+    },
+    {
+      "topic": "walking_overload",
+      "note": "D3 walking_load=high：明治神宫参道为用户明确选择的 trade-off（未删除）；cannot_walk_long 用户当日应使用 JR 替代段间步行并安排 45 分钟 major rest"
+    },
+    {
+      "topic": "od_unverified",
+      "note": "4 组转移 OD unverified（上野返程/teamLab 往返/D5 都厅→根津→拉面街）——相应 transfer 已标 unverified，临近补查 map-route"
+    }
+  ],
+  "quality_summary": {
+    "constraint_satisfaction": "high",
+    "spatial_efficiency": "high",
+    "pace_fit": "medium",
+    "walking_fit": "medium",
+    "weather_resilience": "medium",
+    "reservation_feasibility": "medium",
+    "overall_feasibility": "medium"
+  },
+  "provenance_meta": {
+    "checked_at": "2026-08-30",
+    "data_sources": [
+      {
+        "source": "plan/profile.json（旅行背景与硬约束）",
+        "reference": "plan/profile.json"
+      },
+      {
+        "source": "plan/candidates.json（8 个已选 POI 画像与 suggested_duration）",
+        "reference": "plan/candidates.json"
+      },
+      {
+        "source": "plan/review-analysis.json（拥挤/步行/排队 EXPERIENCE）",
+        "reference": "plan/review-analysis.json"
+      },
+      {
+        "source": "plan/weather.json（historical 档 + plan_b）",
+        "reference": "plan/weather.json"
+      },
+      {
+        "source": "plan/map-route.json（交通时间矩阵——唯一交通来源）",
+        "reference": "plan/map-route.json"
+      },
+      {
+        "source": "plan/food-restaurant.json（4 个已选餐饮）",
+        "reference": "plan/food-restaurant.json"
+      },
+      {
+        "source": "plan/ticket-reservation.json（硬约束最高来源）",
+        "reference": "plan/ticket-reservation.json"
+      }
+    ],
+    "degradation_notes": [
+      "3 组转移 OD unverified（上野返程/teamLab 往返/根津-东京站方向）——如实暴露，未估算",
+      "选定餐饮 4 个覆盖 10 个用餐槽位中的 5 个（とん久/中村屋/拉面街/Happy Pancake），其余槽位 free_time 默认策略",
+      "无汇率来源——预算匹配未完成，JPY 原价保留",
+      "明治神宫 10 月时刻（5:40-16:40）来自官网规则+月别表转述（B 层），已标注",
+      "浅草寺 90 分钟等时长取 suggested_duration 范围内值，未虚构精确耗时"
+    ]
+  }
+}

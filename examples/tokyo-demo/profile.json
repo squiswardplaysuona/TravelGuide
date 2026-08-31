@@ -1,0 +1,98 @@
+{
+  "destination": {
+    "country": "日本",
+    "region": null,
+    "city": "东京",
+    "status": "user_provided",
+    "hint": "城市'东京'为用户原话；country=日本为常识补全"
+  },
+  "dates": {
+    "start": "2026-10-01",
+    "end": "2026-10-05",
+    "trip_days": 5,
+    "status": "user_provided",
+    "hint": null
+  },
+  "origin": {
+    "country": "中国",
+    "city": "上海",
+    "status": "user_provided",
+    "hint": "country=中国为常识补全"
+  },
+  "party": {
+    "adults": 2,
+    "children": 0,
+    "seniors": 0,
+    "mobility_constraints": [],
+    "status": "user_provided",
+    "hint": null
+  },
+  "budget": {
+    "amount": 8000,
+    "currency": "CNY",
+    "amount_basis": "per_person",
+    "level": null,
+    "status": "user_provided",
+    "hint": "用户原话：人均预算 8000 元"
+  },
+  "pace": {
+    "value": "slow",
+    "status": "user_provided",
+    "hint": "用户原话：想轻松一点（口语映射 → slow）"
+  },
+  "interests": [
+    {
+      "tag": "history",
+      "source": "user_provided",
+      "note": "历史文化"
+    },
+    {
+      "tag": "culture",
+      "source": "user_provided",
+      "note": "历史文化"
+    },
+    {
+      "tag": "photography",
+      "source": "user_provided",
+      "note": "摄影"
+    },
+    {
+      "tag": "food",
+      "source": "user_provided",
+      "note": "美食"
+    }
+  ],
+  "hard_constraints": [
+    {
+      "type": "cannot_walk_long",
+      "detail": "不想走太多路",
+      "source": "user_provided"
+    }
+  ],
+  "assumptions": [],
+  "booked": {
+    "transport": [
+      {
+        "type": "flight",
+        "departure": "上海浦东",
+        "arrival": "东京成田",
+        "time": "2026-10-01 09:00",
+        "arrive_time": "2026-10-01 13:30",
+        "location": null,
+        "booking_status": "confirmed"
+      }
+    ],
+    "hotel": [
+      {
+        "name": null,
+        "address": "新宿（区域级）",
+        "city": "东京",
+        "check_in": "2026-10-01",
+        "check_out": "2026-10-05",
+        "booking_status": "confirmed"
+      }
+    ],
+    "status": "user_provided",
+    "hint": "机票日期'10月1日'未带年份，按行程年份2026归一化；酒店仅提供区域'新宿'，名称与详细地址未提供"
+  }
+}
