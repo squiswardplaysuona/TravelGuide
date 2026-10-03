@@ -1,6 +1,6 @@
 ---
 name: web-research
-description: TravelGuide 的目的地综合信息研究 Skill：以结构化旅行画像（profile.json）为输入做多源联网研究，建立目的地基础认知——概况、大交通衔接、当地交通、证件签证、影响行程的当前事件、游览区域、住宿带——产出结构化 research.json 与可复用的官方信息源清单 source_registry，供主 Agent 及 POI/餐饮/票务/行程等后续 Skill 使用。只做"目的地基础研究 + 信息源"：不做景点推荐与画像、评论分析、天气预报、景点间交通矩阵、路线规划、餐厅推荐、逐景点票务核验与行程规划。
+description: Multi-source web research on the destination: overview, inter-city transport, local transit, visa/documents, current events affecting the trip, sightseeing areas, accommodation zones. Produces research.json plus a reusable registry of official sources. Research only — no POI picks, reviews, weather, routing, or itinerary. 中文：TravelGuide 的目的地综合信息研究 Skill：以结构化旅行画像（profile.json）为输入做多源联网研究，建立目的地基础认知——概况、大交通衔接、当地交通、证件签证、影响行程的当前事件、游览区域、住宿带——产出结构化 research.json 与可复用的官方信息源清单 source_registry，供主 Agent 及 POI/餐饮/票务/行程等后续 Skill 使用。只做"目的地基础研究 + 信息源"：不做景点推荐与画像、评论分析、天气预报、景点间交通矩阵、路线规划、餐厅推荐、逐景点票务核验与行程规划。
 ---
 
 # web-research — 目的地综合信息研究

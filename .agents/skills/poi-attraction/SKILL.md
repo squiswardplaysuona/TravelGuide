@@ -1,6 +1,6 @@
 ---
 name: poi-attraction
-description: TravelGuide 的景点/活动候选池构建 Skill：以结构化旅行画像（profile.json）与目的地研究（research.json）为输入，在 research 的区域结构内发现、筛选并建立标准化 POI 候选画像，产出 candidates.json，供主 Agent 向用户分类呈现"可选择的候选地点"。只做候选池构建：不做评论聚合分析（review-analysis）、天气预报（weather）、POI↔POI 交通矩阵（map-route）、逐景点票务官方核验（ticket-reservation）、餐厅推荐、行程规划，也不替用户做最终选择。
+description: Builds the attraction/activity candidate pool — discovers and standardizes POI candidates within researched areas and outputs candidates.json for the user to choose from. Candidate building only — no review aggregation, weather, transport matrix, per-POI ticket verification, or final picks. 中文：TravelGuide 的景点/活动候选池构建 Skill：以结构化旅行画像（profile.json）与目的地研究（research.json）为输入，在 research 的区域结构内发现、筛选并建立标准化 POI 候选画像，产出 candidates.json，供主 Agent 向用户分类呈现"可选择的候选地点"。只做候选池构建：不做评论聚合分析（review-analysis）、天气预报（weather）、POI↔POI 交通矩阵（map-route）、逐景点票务官方核验（ticket-reservation）、餐厅推荐、行程规划，也不替用户做最终选择。
 ---
 
 # poi-attraction — 景点与活动候选池构建

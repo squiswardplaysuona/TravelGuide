@@ -1,7 +1,7 @@
 ---
 name: travel-guide
 description: >-
-  旅行规划主 Agent（编排器）：把需求变成可执行、已核验、按天分时段的结构化旅行计划。凡涉及旅游、出行、行程、攻略的请求都应触发——规划某地几日游、定制路线、比较与筛选景点、查营业时间/门票/预约规则、分析天气对行程的影响、评估已有行程是否顺路可行、旅行途中临时改行程等，即使用户没有明说"规划"二字。本 Skill 不亲自承担全部专业工作，而是作为总协调器：建立旅行画像 → 多源研究与候选收集 → 评论画像与天气影响分析 → 空间聚类 → 官方核验营业时间/门票/预约 → 分类呈现候选并由用户做最终选择 → 编排逐日行程 → 强制行程校验、不通过则重排 → 输出计划；旅行期间按临时需求重算当天及后续行程。核心原则：官方信息验证事实、评论只作体验判断、多源信息与降级策略、不输出不可执行路线、冲突优先修正、用户拥有最终选择权。
+  Main travel-planning orchestrator: coordinates 11 specialized sub-skills to turn a one-line request into a verified, day-by-day itinerary (research → POIs → reviews → weather → routing → dining → tickets → planning → validation → in-trip replanning). Trigger for any travel/trip/itinerary/attraction request, even without the word "plan". 中文：旅行规划主 Agent（编排器）：把需求变成可执行、已核验、按天分时段的结构化旅行计划。凡涉及旅游、出行、行程、攻略的请求都应触发——规划某地几日游、定制路线、比较与筛选景点、查营业时间/门票/预约规则、分析天气对行程的影响、评估已有行程是否顺路可行、旅行途中临时改行程等，即使用户没有明说"规划"二字。本 Skill 不亲自承担全部专业工作，而是作为总协调器：建立旅行画像 → 多源研究与候选收集 → 评论画像与天气影响分析 → 空间聚类 → 官方核验营业时间/门票/预约 → 分类呈现候选并由用户做最终选择 → 编排逐日行程 → 强制行程校验、不通过则重排 → 输出计划；旅行期间按临时需求重算当天及后续行程。核心原则：官方信息验证事实、评论只作体验判断、多源信息与降级策略、不输出不可执行路线、冲突优先修正、用户拥有最终选择权。
 ---
 
 # TravelGuide — 旅行决策与动态行程规划主 Agent

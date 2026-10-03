@@ -1,6 +1,6 @@
 ---
 name: ticket-reservation
-description: TravelGuide 的票务、预约、开放时间与可用性核验 Skill：以 profile.json + research.json + candidates.json + food-restaurant.json 为输入，以官方来源确认旅行窗口内的营业时间、票价、预约规则、预约开放窗口与可用性，产出可供 Planner 直接消费的硬约束与事实层；不负责最终行程、用户选择与订位执行。
+description: Verifies opening hours, ticket prices, reservation rules, booking windows and availability against official sources for the travel window, producing hard constraints the planner can consume directly. Verification only — no itinerary, no user choices, no actual booking. 中文：TravelGuide 的票务、预约、开放时间与可用性核验 Skill：以 profile.json + research.json + candidates.json + food-restaurant.json 为输入，以官方来源确认旅行窗口内的营业时间、票价、预约规则、预约开放窗口与可用性，产出可供 Planner 直接消费的硬约束与事实层；不负责最终行程、用户选择与订位执行。
 ---
 
 # ticket-reservation — 票务、预约与可用性核验

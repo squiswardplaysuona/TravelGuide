@@ -1,6 +1,6 @@
 ---
 name: itinerary-planner
-description: TravelGuide 的最终行程规划 Skill：仅在用户确认的 POI/餐饮之上，依据 profile、weather、map-route、ticket-reservation 的硬约束生成 draft itinerary——负责时间窗建模、空间聚类排日、餐饮插槽、缓冲与 Plan B、负荷评估与冲突暴露；不验证行程合法性（trip-validator）、不替用户取舍、不重新调研任何事实。
+description: Generates the day-by-day draft itinerary on user-confirmed POIs/dining only, honoring hard constraints from profile, weather, map-route and ticket data — time-window modeling, spatial clustering per day, dining slots, buffers and Plan B, load assessment. Does not validate (that is trip-validator), re-research, or make final picks for the user. 中文：TravelGuide 的最终行程规划 Skill：仅在用户确认的 POI/餐饮之上，依据 profile、weather、map-route、ticket-reservation 的硬约束生成 draft itinerary——负责时间窗建模、空间聚类排日、餐饮插槽、缓冲与 Plan B、负荷评估与冲突暴露；不验证行程合法性（trip-validator）、不替用户取舍、不重新调研任何事实。
 ---
 
 # itinerary-planner — 最终行程生成与优化

@@ -1,6 +1,6 @@
 ---
 name: food-restaurant
-description: TravelGuide 的餐饮候选构建 Skill：以 profile.json + research.json + map-route.json 为主要输入（candidates.json 可选），在旅行区域与集群空间内发现并标准化餐厅、居酒屋、市场、美食街及特色饮食体验候选，分析价格口径、营业时间、预约线索、排队体验、用餐时段与用户适配；只产出候选池，不负责最终餐厅选择、完整评论分析与用餐时间表。
+description: Builds the dining candidate pool — finds and standardizes restaurants, izakayas, markets, food streets and signature food experiences within trip areas, analyzing prices, hours, reservation cues, queueing experience and user fit. Candidate pool only — no final picks, full review analysis, or dining schedule. 中文：TravelGuide 的餐饮候选构建 Skill：以 profile.json + research.json + map-route.json 为主要输入（candidates.json 可选），在旅行区域与集群空间内发现并标准化餐厅、居酒屋、市场、美食街及特色饮食体验候选，分析价格口径、营业时间、预约线索、排队体验、用餐时段与用户适配；只产出候选池，不负责最终餐厅选择、完整评论分析与用餐时间表。
 ---
 
 # food-restaurant — 餐饮与用餐候选构建

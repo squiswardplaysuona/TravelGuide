@@ -1,6 +1,6 @@
 ---
 name: weather
-description: TravelGuide 的天气与天气影响分析 Skill：以 profile.json + research.json + candidates.json 为输入，按预测时效分层（历史气候/趋势/临近预报/实时）输出天气依据、常年气候参考、穿衣与装备策略、逐 POI 天气敏感性与雨天 Plan B 约束，供 Planner 消费；不做 POI 发现、评论分析、地图路线、票务核验、最终行程与用户决策。
+description: Weather and weather-impact analysis by forecast horizon (historical climate / trend / near-term forecast / live) — climate baselines, clothing and gear strategy, per-POI weather sensitivity, and rain Plan-B constraints for the planner. Analysis only — no POI discovery, reviews, routing, tickets, or itinerary. 中文：TravelGuide 的天气与天气影响分析 Skill：以 profile.json + research.json + candidates.json 为输入，按预测时效分层（历史气候/趋势/临近预报/实时）输出天气依据、常年气候参考、穿衣与装备策略、逐 POI 天气敏感性与雨天 Plan B 约束，供 Planner 消费；不做 POI 发现、评论分析、地图路线、票务核验、最终行程与用户决策。
 ---
 
 # weather — 天气与天气影响分析

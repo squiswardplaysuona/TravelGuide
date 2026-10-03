@@ -1,6 +1,6 @@
 ---
 name: travel-profile
-description: 从用户旅行需求中提取、标准化并生成结构化旅行画像（profile.json），处理缺失信息、默认假设和基础合法性检查，为 TravelGuide 主 Agent 及后续子 Skill 提供统一输入。仅负责需求标准化：不做景点/攻略搜索、天气、地图、路线、票务与行程规划。当用户提出旅行计划或需要整理出行需求、或主 Agent travel-guide 启动规划流程建立旅行画像时使用。
+description: Turns a free-form travel request into a structured traveler profile (profile.json): normalizes requirements, marks missing info as explicit assumptions, runs basic validity checks. Input normalization only — no search, weather, mapping, or planning. 中文：从用户旅行需求中提取、标准化并生成结构化旅行画像（profile.json），处理缺失信息、默认假设和基础合法性检查，为 TravelGuide 主 Agent 及后续子 Skill 提供统一输入。仅负责需求标准化：不做景点/攻略搜索、天气、地图、路线、票务与行程规划。当用户提出旅行计划或需要整理出行需求、或主 Agent travel-guide 启动规划流程建立旅行画像时使用。
 ---
 
 # travel-profile — 旅行需求标准化

@@ -1,6 +1,6 @@
 ---
 name: map-route
-description: TravelGuide 的空间分析与交通矩阵 Skill：以 profile.json + research.json + candidates.json 为主要输入（weather/review-analysis 为可选背景），建立区域聚类、酒店与大交通锚点、POI↔POI 及锚点交通时间矩阵、mobility_cost 与跨区移动成本；输出空间事实与交通成本，不负责最终路线排序、行程规划与景点取舍。
+description: Spatial analysis and transport time matrices — clusters sightseeing areas, anchors hotels and inter-city hubs, and builds POI-to-POI and anchor travel-time matrices with mobility costs. Outputs spatial facts and transport costs only — no route ordering, itinerary, or POI selection. 中文：TravelGuide 的空间分析与交通矩阵 Skill：以 profile.json + research.json + candidates.json 为主要输入（weather/review-analysis 为可选背景），建立区域聚类、酒店与大交通锚点、POI↔POI 及锚点交通时间矩阵、mobility_cost 与跨区移动成本；输出空间事实与交通成本，不负责最终路线排序、行程规划与景点取舍。
 ---
 
 # map-route — 空间分析与交通矩阵

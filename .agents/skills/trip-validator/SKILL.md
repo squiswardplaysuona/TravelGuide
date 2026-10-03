@@ -1,6 +1,6 @@
 ---
 name: trip-validator
-description: TravelGuide 的只读行程验证 Skill：以 itinerary.json 为核心输入，对时间冲突、交通引用、营业时间、票务、预约、用户约束、天气语义和每日负荷进行独立验证，输出 error/warning、repair_hint 与 pass/pass_with_warnings/fail 结论；绝对只读，不修改行程、不重新规划、不调用 Planner。
+description: Read-only itinerary validation — independently checks time conflicts, transport references, opening hours, tickets, reservations, user constraints, weather semantics and daily load; outputs errors/warnings, repair hints and a pass/fail verdict. Strictly read-only — never modifies the itinerary or replans. 中文：TravelGuide 的只读行程验证 Skill：以 itinerary.json 为核心输入，对时间冲突、交通引用、营业时间、票务、预约、用户约束、天气语义和每日负荷进行独立验证，输出 error/warning、repair_hint 与 pass/pass_with_warnings/fail 结论；绝对只读，不修改行程、不重新规划、不调用 Planner。
 ---
 
 # trip-validator — 行程合法性与可执行性验证

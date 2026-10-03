@@ -14,6 +14,14 @@ Thumbs.db
 .vscode/
 .idea/
 
+# ---- WorkBuddy local assistant data ----
+.workbuddy/
+
+# ---- temp audit dumps ----
+.git-status.txt
+.git-diff.txt
+.status-final.txt
+
 # ---- Temporary files ----
 *.tmp
 *.log

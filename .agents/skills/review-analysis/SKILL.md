@@ -1,6 +1,6 @@
 ---
 name: review-analysis
-description: 基于候选 POI 的多源游客评论分析 Skill：以 profile.json + research.json + candidates.json 为输入，将多平台游客评论清洗、聚类为关键词、正负主题、踩雷点、人群差异、拥挤规律与体验信号，为主 Agent 提供"游客真实体验"评价画像；不负责景点发现、事实核验、天气、路线、餐厅推荐或最终决策，不覆盖 POI 的 verdict。
+description: Multi-platform tourist review analysis for candidate POIs — clusters reviews into keywords, positive/negative themes, pitfalls, crowd differences and congestion patterns to build an experience profile. Experience judgment only — never writes facts, no discovery, verification, weather, routing, or final decisions. 中文：基于候选 POI 的多源游客评论分析 Skill：以 profile.json + research.json + candidates.json 为输入，将多平台游客评论清洗、聚类为关键词、正负主题、踩雷点、人群差异、拥挤规律与体验信号，为主 Agent 提供"游客真实体验"评价画像；不负责景点发现、事实核验、天气、路线、餐厅推荐或最终决策，不覆盖 POI 的 verdict。
 ---
 
 # review-analysis — 游客评论与体验画像分析

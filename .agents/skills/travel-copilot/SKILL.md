@@ -1,6 +1,6 @@
 ---
 name: travel-copilot
-description: TravelGuide 的旅行中动态局部重规划 Skill：以 itinerary.json 及全部上游资产为事实基础，根据当前时间、位置、突发事件（天气/交通/POI/体力）、live 天气与实时交通，在保护航班/酒店/预约等硬锚点的前提下，对受影响的局部行程提出结构化 delta 与 next_steps；只调整最小范围（local first），不重新规划整趟旅程、不修改原 itinerary、不替用户做最终决策。
+description: In-trip local replanning — using current time, location, live weather/traffic and unexpected events, proposes minimal structured deltas to affected parts of the itinerary while protecting hard anchors (flights, hotels, reservations). Local changes only — never replans the whole trip or overwrites the original itinerary. 中文：TravelGuide 的旅行中动态局部重规划 Skill：以 itinerary.json 及全部上游资产为事实基础，根据当前时间、位置、突发事件（天气/交通/POI/体力）、live 天气与实时交通，在保护航班/酒店/预约等硬锚点的前提下，对受影响的局部行程提出结构化 delta 与 next_steps；只调整最小范围（local first），不重新规划整趟旅程、不修改原 itinerary、不替用户做最终决策。
 ---
 
 # travel-copilot — 旅行中动态调整与局部重规划
