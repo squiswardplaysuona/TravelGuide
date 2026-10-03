@@ -57,6 +57,15 @@ travel-guide (orchestrator)
 
 No Python / Node / npm / pip. **Pure Markdown skills** — you only need an agent platform that can discover and execute `SKILL.md` files and browse the web.
 
+### Install as a Claude Code plugin (recommended)
+
+```bash
+claude plugin marketplace add squiswardplaysuona/TravelGuide
+claude plugin install travelguide@travelguide-marketplace
+```
+
+### Or clone and run from the project root
+
 ```bash
 # 1. Clone the repo
 git clone https://github.com/squiswardplaysuona/TravelGuide.git
@@ -66,12 +75,14 @@ cd TravelGuide
 #    "Two of us, early December, 5 days in Kyoto from Shanghai, we love temples
 #     and photography — build the itinerary."
 
-# Optional: install the skills for your platform (Agent Skills / Claude Code style)
+# Optional: install the skills for your platform (Agent Skills style)
 #   per-user:    cp -r .agents/skills/* ~/.claude/skills/
 #   per-project: cp -r .agents/skills/* .claude/skills/
 ```
 
 Tested end-to-end on ZCode; any platform that loads `SKILL.md` files (Claude Code, Codex, etc.) can run them — point it at `.agents/skills/` or copy the folders into your platform's skills directory. Note: the skills read/write `plan/*.json` relative to the working directory, so run from a project root.
+
+> **Layout note**: `.agents/skills/` is the source of truth; `skills/` is the distribution copy used by the Claude Code plugin packaging (keep them in sync via `python scripts/sync-skills.py`).
 
 ## What you get
 

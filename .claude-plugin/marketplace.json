@@ -1,0 +1,24 @@
+{
+  "name": "travelguide-marketplace",
+  "owner": {
+    "name": "squiswardplaysuona",
+    "url": "https://github.com/squiswardplaysuona"
+  },
+  "plugins": [
+    {
+      "name": "travelguide",
+      "description": "Modular AI travel agent: 1 orchestrator + 11 specialized skills — from a one-line request to a verified, day-by-day itinerary, with in-trip local replanning.",
+      "version": "1.0.0",
+      "author": {
+        "name": "squiswardplaysuona"
+      },
+      "source": "./",
+      "category": "productivity",
+      "keywords": [
+        "travel",
+        "itinerary",
+        "trip-planning"
+      ]
+    }
+  ]
+}

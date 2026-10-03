@@ -57,6 +57,15 @@ travel-guide（orchestrator，主编排器）
 
 纯 Skill / Markdown 驱动：没有 Python / Node / npm / pip 依赖，只需要一个能发现并执行 `SKILL.md` 的 Agent 平台，以及联网搜索能力。
 
+### 方式一：Claude Code 插件安装（推荐）
+
+```bash
+claude plugin marketplace add squiswardplaysuona/TravelGuide
+claude plugin install travelguide@travelguide-marketplace
+```
+
+### 方式二：克隆仓库后在项目根目录运行
+
 ```bash
 # 1. 克隆仓库
 git clone https://github.com/squiswardplaysuona/TravelGuide.git
@@ -65,12 +74,14 @@ cd TravelGuide
 # 2. 在项目根目录打开你的 Agent，用自然语言直接发起，例如：
 #    "12 月初两个人从上海去京都 5 天，喜欢寺庙和摄影，帮我做个行程"
 
-# 可选：把 Skill 安装到平台级目录（Agent Skills / Claude Code 风格）
+# 可选：把 Skill 安装到平台级目录（Agent Skills 风格）
 #   用户级：    cp -r .agents/skills/* ~/.claude/skills/
 #   项目级：    cp -r .agents/skills/* .claude/skills/
 ```
 
 已在 ZCode 上完成全部真实运行测试；任何能加载 `SKILL.md` 的平台（Claude Code、Codex 等）都可运行——把平台指向 `.agents/skills/`，或将 Skill 文件夹复制到对应 skills 目录。注意：Skill 以相对路径读写 `plan/*.json`，请从项目根目录运行。
+
+> **目录说明**：`.agents/skills/` 是源文件；`skills/` 是 Claude Code 插件打包用的分发副本（用 `python scripts/sync-skills.py` 保持同步）。
 
 ## 数据可信度
 

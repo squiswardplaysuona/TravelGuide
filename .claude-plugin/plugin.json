@@ -1,0 +1,20 @@
+{
+  "name": "travelguide",
+  "description": "Modular AI travel agent: 1 orchestrator + 11 specialized skills that take you from a one-line request to a verified, day-by-day itinerary, with in-trip local replanning. Fact-checked output with explicit uncertainty.",
+  "version": "1.0.0",
+  "author": {
+    "name": "squiswardplaysuona",
+    "url": "https://github.com/squiswardplaysuona"
+  },
+  "homepage": "https://github.com/squiswardplaysuona/TravelGuide",
+  "repository": "https://github.com/squiswardplaysuona/TravelGuide",
+  "license": "MIT",
+  "keywords": [
+    "travel",
+    "itinerary",
+    "trip-planning",
+    "travel-agent",
+    "skills",
+    "agent-skills"
+  ]
+}
